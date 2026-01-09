@@ -1,17 +1,36 @@
-# Virtual env.
-venv/
-env/
-.venv/
-venv*/
-.env
-
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+env/
+venv/
+.venv/
+*.env
 
-*.log
+# Node/JS
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# C
+*.o
+*.out
+*.exe
+*.dll
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Assets
 *.tmp
 *.temp
