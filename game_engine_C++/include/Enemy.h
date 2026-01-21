@@ -24,12 +24,10 @@ private:
     int dropDistance;
     int level;
     
-    // Shooting
     uint32_t lastShootTime;
     uint32_t shootCooldown;
     float shootChance;
     
-    // Boundaries
     int minX, maxX, maxY;
 };
 
