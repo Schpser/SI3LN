@@ -27,7 +27,7 @@ def create_app():
               version='1.0', 
               title='Game API', 
               description='Space Invaders Game API', 
-              doc='/docs/',
+              doc='/',
               authorizations=authorizations,
               security='Bearer Auth',
               serve_challenge_on_401=True)
@@ -56,11 +56,5 @@ def create_app():
     api.add_namespace(score_namespace, path='/api/v1/scores')
     api.add_namespace(profile_namespace, path='/api/v1/profile')
     api.add_namespace(levels_namespace, path='/api/v1/levels')
-    
-    # Add root endpoint
-    @app.route('/')
-    def index():
-        from flask import redirect
-        return redirect('/docs/')
     
     return app
