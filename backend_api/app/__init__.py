@@ -57,4 +57,10 @@ def create_app():
     api.add_namespace(profile_namespace, path='/api/v1/profile')
     api.add_namespace(levels_namespace, path='/api/v1/levels')
     
+    # Add root endpoint
+    @app.route('/')
+    def index():
+        from flask import redirect
+        return redirect('/docs/')
+    
     return app
