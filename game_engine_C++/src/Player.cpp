@@ -37,8 +37,8 @@ void Player::render(SDL_Renderer* renderer) {
 }
 
 void Player::move(float dx, float dy) {    
-    velocity.x = dx * Speed; // Utiliser une variable personnalisée pour la vitesse
-    velocity.y = dy * Speed; // Utiliser une variable personnalisée pour la vitesse
+    velocity.x = dx * Speed; 60.0f; // Utiliser une variable personnalisée pour la vitesse
+    velocity.y = dy * Speed; 60.0f; // Utiliser une variable personnalisée pour la vitesse
 }
 
 void Player::handleInput(const uint8_t* keyState) {
