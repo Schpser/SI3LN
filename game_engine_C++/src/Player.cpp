@@ -7,7 +7,7 @@ Player::Player(float x, float y, SDL_Texture* texture, int screenWidth, int scre
     , texture(texture)
     , screenWidth(screenWidth)
     , screenHeight(screenHeight)
-    , speed(customSpeed) // Utiliser une variable personnalisée pour la vitesse
+    , customSpeed(3.0f) // Vitesse initiale
     , lastShootTime(0)
     , shootCooldown(200) // 200ms between shots
 {
@@ -20,7 +20,7 @@ Player::Player(float x, float y, SDL_Texture* texture, int screenWidth, int scre
 
 void Player::update(float deltaTime) {
     // Update position based on velocity
-    position += velocity * deltaTime;
+    position += velocity * deltaTime * customSpeed;
     
     // Clamp position to boundaries
     if (position.x - width / 2 < minX) position.x = minX + width / 2;
@@ -77,6 +77,11 @@ bool Player::canShoot() const {
 
 void Player::resetShootCooldown() {
     lastShootTime = SDL_GetTicks();
+}
+
+// Ajout de la méthode pour modifier la vitesse
+void Player::setSpeed(float newSpeed) {
+    customSpeed = newSpeed;
 }
 
 } // namespace SI3LN
