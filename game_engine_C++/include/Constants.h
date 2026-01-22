@@ -9,7 +9,7 @@ namespace SI3LN {
 // Screen settings
 constexpr int DEFAULT_SCREEN_WIDTH = 1280;
 constexpr int DEFAULT_SCREEN_HEIGHT = 720;
-constexpr int FPS = 60;
+constexpr int FPS = 60; // Le jeu tourne à 60 FPS
 constexpr int FRAME_DELAY = 1000 / FPS;
 
 // Colors (RGBA format)
