@@ -42,11 +42,7 @@ class UserList(Resource):
             return {'error': 'Email already registered'}, 400
         
         try:
-            user_data_copy = user_data.copy()
-            password = user_data_copy.pop('password')
-            new_user = facade.create_user(user_data_copy)
-            new_user.hash_password(password)
-            facade.update_user(new_user.id, {'password': new_user.password})
+            new_user = facade.create_user(user_data)
             
             return {
                 'id': new_user.id, 
