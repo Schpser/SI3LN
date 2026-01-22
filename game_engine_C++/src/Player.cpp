@@ -7,7 +7,7 @@ Player::Player(float x, float y, SDL_Texture* texture, int screenWidth, int scre
     , texture(texture)
     , screenWidth(screenWidth)
     , screenHeight(screenHeight)
-    , Speed(50000000.0f) // Vitesse initiale
+    , Speed(100.0f) // Vitesse initiale augmentée
     , lastShootTime(0)
     , shootCooldown(200) // 200ms between shots
 {
@@ -20,7 +20,7 @@ Player::Player(float x, float y, SDL_Texture* texture, int screenWidth, int scre
 
 void Player::update(float deltaTime) {
  // Update position based on velocity
-    position += velocity * Speed * 60.0f; // Adjust speed multiplier as needed
+    position += velocity * Speed * deltaTime; // Utilisation de deltaTime pour ajuster la vitesse
 
     // Clamp position to boundaries
     if (position.x - width / 2 < minX) position.x = minX + width / 2;
@@ -39,8 +39,8 @@ void Player::render(SDL_Renderer* renderer) {
 void Player::move(float dx, float dy) {
     // Normalize diagonal movement
     if (dx != 0.0f && dy != 0.0f) {
-        dx *= 0.107f;
-        dy *= 0.107f;
+        dx *= 0.707f;
+        dy *= 0.707f;
     }
     
     velocity.x = dx * Speed; // Utiliser une variable personnalisée pour la vitesse
