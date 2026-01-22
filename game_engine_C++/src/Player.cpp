@@ -36,13 +36,7 @@ void Player::render(SDL_Renderer* renderer) {
     SDL_RenderCopy(renderer, texture, nullptr, &destRect);
 }
 
-void Player::move(float dx, float dy) {
-    // Normalize diagonal movement
-    if (dx != 0.0f && dy != 0.0f) {
-        dx *= 0.707f;
-        dy *= 0.707f;
-    }
-    
+void Player::move(float dx, float dy) {    
     velocity.x = dx * Speed; // Utiliser une variable personnalisée pour la vitesse
     velocity.y = dy * Speed; // Utiliser une variable personnalisée pour la vitesse
 }
