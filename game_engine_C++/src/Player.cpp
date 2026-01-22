@@ -47,18 +47,18 @@ void Player::handleInput(const uint8_t* keyState) {
     
     // Horizontal movement
     if (keyState[SDL_SCANCODE_LEFT] || keyState[SDL_SCANCODE_A]) {
-        dx = -1.0f;
+        dx = -100.0f;
     }
     if (keyState[SDL_SCANCODE_RIGHT] || keyState[SDL_SCANCODE_D]) {
-        dx = 1.0f;
+        dx = 100.0f;
     }
     
     // Vertical movement
     if (keyState[SDL_SCANCODE_UP] || keyState[SDL_SCANCODE_W]) {
-        dy = -1.0f;
+        dy = -100.0f;
     }
     if (keyState[SDL_SCANCODE_DOWN] || keyState[SDL_SCANCODE_S]) {
-        dy = 1.0f;
+        dy = 100.0f;
     }
     
     move(dx, dy);
