@@ -42,8 +42,8 @@ void Player::move(float dx, float dy) {
 }
 
 void Player::handleInput(const uint8_t* keyState) {
-    float dx = 0.0f;
-    float dy = 0.0f;
+    float dx = 100.0f;
+    float dy = 100.0f;
     
     // Horizontal movement
     if (keyState[SDL_SCANCODE_LEFT] || keyState[SDL_SCANCODE_A]) {
