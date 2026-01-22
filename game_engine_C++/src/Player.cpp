@@ -19,9 +19,10 @@ Player::Player(float x, float y, SDL_Texture* texture, int screenWidth, int scre
 }
 
 void Player::update(float deltaTime) {
-    // Update position based on velocity
+ // Update position based on velocity
+    std::cout << "Current speed: " << customSpeed << std::endl;  // Ajoutez cette ligne pour suivre la vitesse courante
     position += velocity * deltaTime * customSpeed;
-    
+
     // Clamp position to boundaries
     if (position.x - width / 2 < minX) position.x = minX + width / 2;
     if (position.x + width / 2 > maxX) position.x = maxX - width / 2;
