@@ -7,7 +7,7 @@ Player::Player(float x, float y, SDL_Texture* texture, int screenWidth, int scre
     , texture(texture)
     , screenWidth(screenWidth)
     , screenHeight(screenHeight)
-    , customSpeed(3.0f) // Vitesse initiale
+    , customSpeed(50000000.0f) // Vitesse initiale
     , lastShootTime(0)
     , shootCooldown(200) // 200ms between shots
 {
