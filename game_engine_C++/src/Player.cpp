@@ -7,7 +7,7 @@ Player::Player(float x, float y, SDL_Texture* texture, int screenWidth, int scre
     , texture(texture)
     , screenWidth(screenWidth)
     , screenHeight(screenHeight)
-    , speed(PLAYER_SPEED)
+    , speed(PLAYER_SPEED * 2) // Augmenter la vitesse du joueur
     , lastShootTime(0)
     , shootCooldown(200) // 200ms between shots
 {
