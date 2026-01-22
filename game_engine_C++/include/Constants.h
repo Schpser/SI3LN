@@ -41,7 +41,7 @@ namespace Colors {
 // Game settings
 constexpr int MAX_LIVES = 5;
 constexpr int MAX_PLAYER_BULLETS = 3;
-constexpr int PLAYER_SPEED = 16; // Augmenter la vitesse de base du joueur
+constexpr int PLAYER_SPEED = 500; // Augmenter la vitesse de base du joueur
 constexpr int ENEMY_SPEED = 1;
 constexpr int PLAYER_BULLET_SPEED = 10;
 constexpr int ENEMY_BULLET_SPEED = 5;
