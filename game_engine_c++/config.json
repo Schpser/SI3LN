@@ -1,0 +1,119 @@
+{
+  "game": {
+    "title": "SI3LN - Space Invaders III Last Night",
+    "version": "1.0.0",
+    "engine_version": "1.0.0"
+  },
+  
+  "display": {
+    "default_width": 1024,
+    "default_height": 768,
+    "fullscreen": false,
+    "fps": 60
+  },
+  
+  "gameplay": {
+    "max_lives": 5,
+    "starting_lives": 5,
+    "player_speed": 5,
+    "enemy_speed": 2,
+    "bullet_speed": 7,
+    "enemy_bullet_speed": 4
+  },
+  
+  "difficulty": {
+    "base_enemy_count": 8,
+    "difficulty_multiplier": 1.2,
+    "levels_per_world": 5,
+    "waves_per_level": 3
+  },
+  
+  "bonuses": {
+    "shield_duration_ms": 3000,
+    "mega_shot_duration_ms": 5000,
+    "freeze_duration_ms": 2000,
+    "bonus_lifetime_ms": 10000,
+    "drop_chance_percent": 15
+  },
+  
+  "scoring": {
+    "enemy_basic": 100,
+    "enemy_fast": 150,
+    "enemy_tank": 200,
+    "enemy_shooter": 180,
+    "boss": 1000,
+    "level_multiplier": 50
+  },
+  
+  "worlds": [
+    {
+      "id": "Space",
+      "name": "Space World",
+      "difficulty_multiplier": 1.0,
+      "background": "worlds/space_bg.jpg",
+      "music": "music/space.mp3",
+      "theme_color": "#0080FF"
+    },
+    {
+      "id": "Desert",
+      "name": "Desert World",
+      "difficulty_multiplier": 1.2,
+      "background": "worlds/desert_bg.jpg",
+      "music": "music/desert.mp3",
+      "theme_color": "#FFD700"
+    },
+    {
+      "id": "Forest",
+      "name": "Forest World",
+      "difficulty_multiplier": 1.3,
+      "background": "worlds/forest_bg.jpg",
+      "music": "music/forest.mp3",
+      "theme_color": "#228B22"
+    },
+    {
+      "id": "Marine",
+      "name": "Marine World",
+      "difficulty_multiplier": 1.4,
+      "background": "worlds/marine_bg.jpg",
+      "music": "music/marine.mp3",
+      "theme_color": "#1E90FF"
+    },
+    {
+      "id": "Apocalyptic",
+      "name": "Apocalyptic World",
+      "difficulty_multiplier": 1.5,
+      "background": "worlds/apocalyptic_bg.jpg",
+      "music": "music/apocalyptic.mp3",
+      "theme_color": "#8B0000"
+    }
+  ],
+  
+  "characters": [
+    {"id": 0, "name": "Red Fighter", "sprite": "players/player_0.png"},
+    {"id": 1, "name": "Blue Cruiser", "sprite": "players/player_1.png"},
+    {"id": 2, "name": "Green Striker", "sprite": "players/player_2.png"},
+    {"id": 3, "name": "Yellow Blaster", "sprite": "players/player_3.png"},
+    {"id": 4, "name": "Purple Phantom", "sprite": "players/player_4.png"},
+    {"id": 5, "name": "Orange Nova", "sprite": "players/player_5.png"},
+    {"id": 6, "name": "Cyan Comet", "sprite": "players/player_6.png"},
+    {"id": 7, "name": "White Lightning", "sprite": "players/player_7.png"}
+  ],
+  
+  "controls": {
+    "move_left": ["ArrowLeft", "a", "A"],
+    "move_right": ["ArrowRight", "d", "D"],
+    "move_up": ["ArrowUp", "w", "W"],
+    "move_down": ["ArrowDown", "s", "S"],
+    "shoot": [" ", "Space"],
+    "pause": ["Escape", "p", "P"],
+    "fullscreen": ["F11"]
+  },
+  
+  "debug": {
+    "enabled": false,
+    "show_fps": true,
+    "show_collisions": false,
+    "show_ai_info": false,
+    "god_mode": false
+  }
+}
