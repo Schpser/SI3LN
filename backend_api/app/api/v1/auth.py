@@ -38,16 +38,14 @@ class InitAdmin(Resource):
     def post(self):
         """Create initial admin user (à utiliser une seule fois)"""
         try:
-            # Vérifier si un admin existe déjà
-            existing_admin = facade.get_user_by_email("admin@hbnb.com")
+            existing_admin = facade.get_user_by_email("admin@si3ln.com")
             if existing_admin:
                 return {'error': 'Admin user already exists'}, 400
-            
-            # Créer l'admin
+
             admin_data = {
                 "first_name": "Super",
                 "last_name": "Admin", 
-                "email": "admin@hbnb.com",
+                "email": "admin@si3ln.com",
                 "password": "admin123",
                 "is_admin": True
             }

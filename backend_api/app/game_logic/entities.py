@@ -38,12 +38,12 @@ class Enemy:
         self.height = 32
         self.screen_width = screen_width
         
-        # Movement - Speed increases with level
+        # Movements
         self.speed = ENEMY_SPEED + (level * 0.2)
         self.direction = 1
         self.drop_distance = 20
         
-        # Shooting - More aggressive at higher levels
+        # Shooting
         self.last_shot = 0
         self.shoot_cooldown = max(700, 3000 - level * 100)
         self.shoot_chance = min(0.1 * level, 0.5)
@@ -128,7 +128,7 @@ class Explosion:
         self.x = x
         self.y = y
         self.current_frame = 0
-        self.max_frames = 18  # 6 sizes * 3 animation_speed
+        self.max_frames = 18
         self.animation_speed = 3
         self.counter = 0
         self.active = True

@@ -4,21 +4,21 @@ from app.services.facade import facade
 
 profile_namespace = Namespace('profile', description='User profile and preferences')
 
-# Models for Swagger documentation
+# Models for Swagger
 profile_model = profile_namespace.model('UserProfile', {
-    'selected_character': fields.Integer(required=False, description='Selected character (0-7)', default=0),
+    'selected_character': fields.Integer(required=False, description='Selected character (1-8)', default=1),
     'highest_level_reached': fields.Integer(required=False, description='Highest level reached', default=1),
     'total_playtime': fields.Float(required=False, description='Total playtime in seconds', default=0.0),
     'unlocked_worlds': fields.String(required=False, description='Comma-separated unlocked worlds', default='Space')
 })
 
 profile_update_model = profile_namespace.model('ProfileUpdate', {
-    'selected_character': fields.Integer(required=False, description='Selected character (0-7)'),
+    'selected_character': fields.Integer(required=False, description='Selected character (1-8)'),
     'total_playtime': fields.Float(required=False, description='Total playtime in seconds')
 })
 
 world_unlock_model = profile_namespace.model('WorldUnlock', {
-    'world': fields.String(required=True, description='World to unlock (Space, Ocean, Desert, Forest, City)')
+    'world': fields.String(required=True, description='World to unlock (Space, Ocean, Desert, Forest, SpaceShip)')
 })
 
 @profile_namespace.route('/me')
@@ -32,7 +32,6 @@ class MyProfile(Resource):
         profile = facade.get_user_profile_by_user(current_user_id)
         
         if not profile:
-            # Create default profile if doesn't exist
             profile = facade.create_user_profile({
                 'user_id': current_user_id,
                 'selected_character': 0,
@@ -40,8 +39,7 @@ class MyProfile(Resource):
                 'total_playtime': 0.0,
                 'unlocked_worlds': 'Space'
             })
-        
-        # Include user info
+
         user = facade.get_user(current_user_id)
         result = profile.to_dict()
         result['user'] = {
@@ -92,7 +90,7 @@ class UnlockWorld(Resource):
             })
         
         world = profile_namespace.payload.get('world')
-        valid_worlds = ['Space', 'Ocean', 'Desert', 'Forest', 'City']
+        valid_worlds = ['Space', 'Ocean', 'Desert', 'Forest', 'SpaceShip']
         
         if world not in valid_worlds:
             return {'error': f'Invalid world. Must be one of: {valid_worlds}'}, 400
@@ -113,8 +111,7 @@ class ProfileStats(Resource):
     def get(self):
         """Get detailed statistics for current user"""
         current_user_id = get_jwt_identity()
-        
-        # Get profile
+
         profile = facade.get_user_profile_by_user(current_user_id)
         if not profile:
             profile = facade.create_user_profile({
@@ -124,19 +121,15 @@ class ProfileStats(Resource):
                 'total_playtime': 0.0,
                 'unlocked_worlds': 'Space'
             })
-        
-        # Get level completions
+
         completions = facade.get_user_completions(current_user_id)
-        
-        # Get scores
+
         scores = facade.get_scores_by_user(current_user_id)
-        
-        # Calculate stats
+
         total_levels_completed = len(completions)
         total_score = sum(s.value for s in scores)
         best_score = max([s.value for s in scores], default=0)
-        
-        # Group completions by world
+
         worlds_progress = {}
         for comp in completions:
             if comp.world not in worlds_progress:
@@ -158,5 +151,5 @@ class ProfileStats(Resource):
             'total_score': total_score,
             'best_score': best_score,
             'worlds_progress': worlds_progress,
-            'recent_scores': [s.to_dict() for s in scores[-5:]]  # Last 5 scores
+            'recent_scores': [s.to_dict() for s in scores[-5:]]
         }, 200

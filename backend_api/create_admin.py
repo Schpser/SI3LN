@@ -2,7 +2,6 @@ import sys
 import os
 from flask import Flask
 
-# Add the project root to the Python path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from app.services import facade
@@ -15,7 +14,6 @@ def create_admin(first_name, last_name, email, password):
 
     with app.app_context():
         try:
-            # Check if user already exists
             if facade.get_user_by_email(email):
                 print(f"User with email {email} already exists.")
                 return

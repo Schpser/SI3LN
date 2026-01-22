@@ -36,7 +36,6 @@ def create_app():
     jwt.init_app(app)
     db.init_app(app)
 
-    # Import models before creating tables
     from app.models import User, Game, Score, UserProfile, LevelCompletion
 
     with app.app_context():

@@ -7,7 +7,7 @@ game_namespace = Namespace('games', description='Game operations')
 # Models for Swagger documentation
 game_start_model = game_namespace.model('GameStart', {
     'player_name': fields.String(required=True, description='Player name'),
-    'level': fields.Integer(required=False, default=1, description='Game level (1-10)'),
+    'level': fields.Integer(required=False, default=1, description='Game level (1-5)'),
     'world': fields.String(required=False, default='Space', description='Game world (Space, Ocean, Desert, Forest, City)')
 })
 
@@ -19,7 +19,7 @@ game_update_model = game_namespace.model('GameUpdate', {
 })
 
 level_selection_model = game_namespace.model('LevelSelection', {
-    'level': fields.Integer(required=True, description='Level to start (1-10)'),
+    'level': fields.Integer(required=True, description='Level to start (1-5)'),
     'world': fields.String(required=False, default='Space', description='World selection')
 })
 
@@ -117,7 +117,7 @@ class AvailableLevels(Resource):
     def get(self):
         """Get available levels and worlds"""
         levels = [
-            {'level': i, 'name': f'Level {i}', 'difficulty': 'Easy' if i <= 3 else 'Medium' if i <= 7 else 'Hard'}
+            {'level': i, 'name': f'Level {i}', 'difficulty': 'Easy' if i <= 2 else 'Medium' if i <= 3 else 'Hard'}
             for i in range(1, 11)
         ]
         worlds = ['Space', 'Ocean', 'Desert', 'Forest', 'City']
@@ -160,10 +160,8 @@ class CompleteGame(Resource):
             return {'error': 'Not authorized'}, 403
         
         try:
-            # Mark game as completed
             updated_game = facade.update_game(game_id, {'status': 'completed'})
-            
-            # Create score record
+
             score_data = {
                 'player_name': game.player_name,
                 'value': game.score,
@@ -172,8 +170,6 @@ class CompleteGame(Resource):
                 'game_id': game_id
             }
             score = facade.create_score(score_data)
-            
-            # Record level completion
             completion = facade.record_level_completion(
                 user_id=current_user_id,
                 world=game.world,

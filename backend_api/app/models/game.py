@@ -10,7 +10,8 @@ class Game(BaseModel):
     level = db.Column(db.Integer, default=1, nullable=False)
     world = db.Column(db.String(50), default="Space", nullable=False)
     score = db.Column(db.Integer, default=0)
-    status = db.Column(db.String(20), default="active")  # active, completed, game_over
+    status = db.Column(db.String(20), default="active")
+    high_score = db.Column(db.Integer, default=0)
     time_elapsed = db.Column(db.Float, default=0.0)
     
     # Foreign key to user
@@ -18,13 +19,13 @@ class Game(BaseModel):
     
     @validates('level')
     def validate_level(self, key, level):
-        if level < 1 or level > 10:
-            raise ValueError("Level must be between 1 and 10")
+        if level < 1 or level > 5:
+            raise ValueError("Level must be between 1 and 5")
         return level
     
     @validates('world')
     def validate_world(self, key, world):
-        valid_worlds = ["Space", "Ocean", "Desert", "Forest", "City"]
+        valid_worlds = ["Space", "Ocean", "Desert", "Forest", "SpaceShip"]
         if world not in valid_worlds:
             raise ValueError(f"World must be one of {valid_worlds}")
         return world

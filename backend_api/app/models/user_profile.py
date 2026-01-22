@@ -10,21 +10,23 @@ class UserProfile(BaseModel):
     selected_character = db.Column(db.Integer, default=0)
     highest_level_reached = db.Column(db.Integer, default=1)
     total_playtime = db.Column(db.Float, default=0.0)
-    unlocked_worlds = db.Column(db.String(255), default='Space')  # Comma-separated
-    
-    # Relationship
+    unlocked_worlds = db.Column(db.String(255), default='Space')
+    achievements = db.Column(db.String(255), default='Space')
+    settings = db.Column(db.String(255), default='Space')
+    last_play_date = db.Column(db.DateTime(10), default=db.func.now())
+
     user = db.relationship('User', backref=db.backref('profile', uselist=False, cascade='all, delete-orphan'))
     
     @validates('selected_character')
     def validate_character(self, key, character):
-        if character < 0 or character > 7:
-            raise ValueError("Character must be between 0 and 7")
+        if character < 1 or character > 8:
+            raise ValueError("Character must be between 1 and 8")
         return character
     
     @validates('highest_level_reached')
     def validate_level(self, key, level):
-        if level < 1 or level > 10:
-            raise ValueError("Level must be between 1 and 10")
+        if level < 1 or level > 5:
+            raise ValueError("Level must be between 1 and 5")
         return level
     
     def get_unlocked_worlds(self):

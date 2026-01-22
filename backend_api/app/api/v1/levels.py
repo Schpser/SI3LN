@@ -59,16 +59,14 @@ class CompleteLevelEndpoint(Resource):
                     profile.unlock_world(world)
                     from app import db
                     db.session.commit()
-            
-            # Determine next level/world unlock
+
             next_level_unlocked = False
             next_world_unlocked = None
             
-            if level < 10:
+            if level < 5:
                 next_level_unlocked = True
-            elif level == 10:
-                # Completed a world, unlock next world
-                world_order = ['Space', 'Ocean', 'Desert', 'Forest', 'City']
+            elif level == 5:
+                world_order = ['Space', 'Ocean', 'Desert', 'Forest', 'Spaceship']
                 try:
                     current_idx = world_order.index(world)
                     if current_idx < len(world_order) - 1:
@@ -128,8 +126,7 @@ class AvailableLevels(Resource):
     def get(self):
         """Get available/unlocked levels and worlds for current user"""
         current_user_id = get_jwt_identity()
-        
-        # Get profile
+
         profile = facade.get_user_profile_by_user(current_user_id)
         if not profile:
             profile = facade.create_user_profile({
@@ -139,11 +136,9 @@ class AvailableLevels(Resource):
                 'total_playtime': 0.0,
                 'unlocked_worlds': 'Space'
             })
-        
-        # Get completions
+
         completions = facade.get_user_completions(current_user_id)
-        
-        # Build available levels per world
+
         unlocked_worlds = profile.get_unlocked_worlds()
         world_levels = {}
         
@@ -155,7 +150,7 @@ class AvailableLevels(Resource):
                 'unlocked': True,
                 'completed_levels': sorted(completed_levels),
                 'available_levels': list(range(1, min(max_completed + 2, 11))),  # Next level unlocked
-                'total_levels': 10
+                'total_levels': 5
             }
         
         return {

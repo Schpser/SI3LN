@@ -12,22 +12,20 @@ class LevelCompletion(BaseModel):
     best_score = db.Column(db.Integer, default=0)
     best_time = db.Column(db.Float, default=0.0)
     completed_at = db.Column(db.DateTime, nullable=False)
-    
-    # Relationship
+
     user = db.relationship('User', backref=db.backref('level_completions', lazy=True, cascade='all, delete-orphan'))
-    
-    # Unique constraint
+
     __table_args__ = (db.UniqueConstraint('user_id', 'world', 'level', name='_user_world_level_uc'),)
     
     @validates('level')
     def validate_level(self, key, level):
-        if level < 1 or level > 10:
-            raise ValueError("Level must be between 1 and 10")
+        if level < 1 or level > 5:
+            raise ValueError("Level must be between 1 and 5")
         return level
     
     @validates('world')
     def validate_world(self, key, world):
-        valid_worlds = ["Space", "Ocean", "Desert", "Forest", "City"]
+        valid_worlds = ["Space", "Ocean", "Desert", "Forest", "SpaceShip"]
         if world not in valid_worlds:
             raise ValueError(f"World must be one of {valid_worlds}")
         return world

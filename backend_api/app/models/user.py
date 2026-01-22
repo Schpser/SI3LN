@@ -12,7 +12,6 @@ class User(BaseModel):
     password = db.Column(db.String(255), nullable=False)
     is_admin = db.Column(db.Boolean, default=False)
 
-    # Relationships
     games = db.relationship('Game', backref='owner', lazy=True, cascade='all, delete-orphan')
     scores = db.relationship('Score', backref='owner', lazy=True, cascade='all, delete-orphan')
 

@@ -4,11 +4,11 @@ from app.services.facade import facade
 
 score_namespace = Namespace('scores', description='Score operations')
 
-# Models for Swagger documentation
+# Models for Swagger
 score_model = score_namespace.model('Score', {
     'player_name': fields.String(required=True, description='Player name'),
     'value': fields.Integer(required=True, description='Score value'),
-    'level': fields.Integer(required=True, description='Level achieved (1-10)'),
+    'level': fields.Integer(required=True, description='Level achieved (1-5)'),
     'game_id': fields.String(required=False, description='Associated game ID')
 })
 
@@ -44,12 +44,10 @@ class ScoreList(Resource):
         world = request.args.get('world', type=str)
         
         try:
-            # If world is specified, get scores from games in that world
             if world:
                 from app import db
                 from app.models.game import Game
-                
-                # Get scores for games in the specified world
+
                 scores = db.session.query(Score).join(Game).filter(
                     Game.world == world
                 )
@@ -78,25 +76,6 @@ class ScoreResource(Resource):
             return {'error': 'Score not found'}, 404
         
         return score.to_dict(), 200
-    
-    @jwt_required()
-    @score_namespace.response(204, 'Score successfully deleted')
-    @score_namespace.response(404, 'Score not found')
-    @score_namespace.response(403, 'Not authorized')
-    def delete(self, score_id):
-        """Delete a score (user's own or admin)"""
-        current_user_id = get_jwt_identity()
-        current_user = facade.get_user(current_user_id)
-        score = facade.get_score(score_id)
-        
-        if not score:
-            return {'error': 'Score not found'}, 404
-        
-        if score.user_id != current_user_id and not current_user.is_admin:
-            return {'error': 'Not authorized to delete this score'}, 403
-        
-        facade.delete_score(score_id)
-        return '', 204
 
 @score_namespace.route('/user/<string:user_id>')
 class UserScores(Resource):

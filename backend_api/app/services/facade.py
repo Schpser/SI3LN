@@ -5,7 +5,7 @@ from app.models.user_profile import UserProfile
 from app.models.level_completion import LevelCompletion
 from app.persistence.repository import SQLAlchemyRepository
 
-class HBnBFacade:
+class SI3LNFacade:
     def __init__(self):
         self.user_repo = SQLAlchemyRepository(User)
         self.game_repo = SQLAlchemyRepository(Game)
@@ -44,7 +44,6 @@ class HBnBFacade:
     def delete_user(self, user_id):
         return self.user_repo.delete(user_id)
 
-    # Game methods
     def create_game(self, game_data):
         game = Game(**game_data)
         return self.game_repo.add(game)
@@ -73,7 +72,6 @@ class HBnBFacade:
     def delete_game(self, game_id):
         return self.game_repo.delete(game_id)
 
-    # Score methods
     def create_score(self, score_data):
         score = Score(**score_data)
         return self.score_repo.add(score)
@@ -103,81 +101,6 @@ class HBnBFacade:
     def delete_score(self, score_id):
         return self.score_repo.delete(score_id)
 
-    def create_place(self, place_data):
-        place_data_copy = place_data.copy()
-
-        amenity_ids = place_data_copy.pop('amenities', [])
-
-        place = Place(**place_data_copy)
-
-        for amenity_id in amenity_ids:
-            amenity = self.amenity_repo.get(amenity_id)
-            if amenity:
-                place.amenities.append(amenity)
-    
-        return self.place_repo.add(place)
-
-    def get_place(self, place_id):
-        return self.place_repo.get(place_id)
-
-    def get_all_places(self):
-        return self.place_repo.get_all()
-
-    def update_place(self, place_id, place_data):
-        place_data_copy = place_data.copy()
-        amenity_ids = place_data_copy.pop('amenities', None)
-
-        place = self.place_repo.update(place_id, place_data_copy)
-
-        if place and amenity_ids is not None:
-            place.amenities = []
-
-            for amenity_id in amenity_ids:
-                amenity = self.amenity_repo.get(amenity_id)
-                if amenity:
-                    place.amenities.append(amenity)
-
-            from app import db
-            db.session.commit()
-
-        return place
-
-    def delete_place(self, place_id):
-        return self.place_repo.delete(place_id)
-
-    def get_places_by_owner(self, owner_id):
-        return self.place_repo.get_by_attribute('owner_id', owner_id)
-
-    def create_review(self, review_data):
-        review = Review(**review_data)
-        return self.review_repo.add(review)
-
-    def get_review(self, review_id):
-        return self.review_repo.get(review_id)
-
-    def get_all_reviews(self):
-        return self.review_repo.get_all()
-
-    def get_reviews_by_place(self, place_id):
-        return self.review_repo.get_by_attribute('place_id', place_id)
-
-    def get_reviews_by_user(self, user_id):
-        return self.review_repo.get_by_attribute('user_id', user_id)
-
-    def create_amenity(self, amenity_data):
-        amenity = Amenity(**amenity_data)
-        return self.amenity_repo.add(amenity)
-
-    def get_amenity(self, amenity_id):
-        return self.amenity_repo.get(amenity_id)
-
-    def get_all_amenities(self):
-        return self.amenity_repo.get_all()
-
-    def get_amenity_by_name(self, name):
-        return self.amenity_repo.get_by_attribute('name', name)
-
-    # UserProfile methods
     def create_user_profile(self, profile_data):
         profile = UserProfile(**profile_data)
         return self.user_profile_repo.add(profile)
@@ -194,7 +117,6 @@ class HBnBFacade:
     def delete_user_profile(self, profile_id):
         return self.user_profile_repo.delete(profile_id)
 
-    # LevelCompletion methods
     def create_level_completion(self, completion_data):
         from datetime import datetime
         if 'completed_at' not in completion_data:
@@ -255,4 +177,4 @@ class HBnBFacade:
                 'completed_at': datetime.utcnow()
             })
 
-facade = HBnBFacade()
+facade = SI3LNFacade()

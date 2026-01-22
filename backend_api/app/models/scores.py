@@ -22,8 +22,8 @@ class Score(BaseModel):
     
     @validates('level')
     def validate_level(self, key, level):
-        if level < 1 or level > 10:
-            raise ValueError("Level must be between 1 and 10")
+        if level < 1 or level > 5:
+            raise ValueError("Level must be between 1 and 5")
         return level
     
     def to_dict(self):
