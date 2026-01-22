@@ -7,7 +7,7 @@ Player::Player(float x, float y, SDL_Texture* texture, int screenWidth, int scre
     , texture(texture)
     , screenWidth(screenWidth)
     , screenHeight(screenHeight)
-    , speed(PLAYER_SPEED * 2) // Augmenter la vitesse du joueur
+    , speed(customSpeed) // Utiliser une variable personnalisée pour la vitesse
     , lastShootTime(0)
     , shootCooldown(200) // 200ms between shots
 {
@@ -43,8 +43,8 @@ void Player::move(float dx, float dy) {
         dy *= 0.707f;
     }
     
-    velocity.x = dx * speed;
-    velocity.y = dy * speed;
+    velocity.x = dx * customSpeed; // Utiliser une variable personnalisée pour la vitesse
+    velocity.y = dy * customSpeed; // Utiliser une variable personnalisée pour la vitesse
 }
 
 void Player::handleInput(const uint8_t* keyState) {
