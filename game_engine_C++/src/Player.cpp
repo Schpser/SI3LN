@@ -20,7 +20,6 @@ Player::Player(float x, float y, SDL_Texture* texture, int screenWidth, int scre
 
 void Player::update(float deltaTime) {
  // Update position based on velocity
-    std::cout << "Current speed: " << customSpeed << std::endl;  // Ajoutez cette ligne pour suivre la vitesse courante
     position += deltaTime * velocity * customSpeed * 60.0f; // Adjust speed multiplier as needed
 
     // Clamp position to boundaries
@@ -44,10 +43,8 @@ void Player::move(float dx, float dy) {
         dy *= 0.707f;
     }
     
-    std::cout << "Setting velocity: dx = " << dx << ", dy = " << dy << std::endl;  // Ajoutez cette ligne pour suivre la vitesse
-
-    velocity.x = dx * customSpeed; // Utiliser une variable personnalisée pour la vitesse
-    velocity.y = dy * customSpeed; // Utiliser une variable personnalisée pour la vitesse
+    velocity.x = dx * customSpeed * deltaTime; // Utiliser une variable personnalisée pour la vitesse
+    velocity.y = dy * customSpeed * deltaTime; // Utiliser une variable personnalisée pour la vitesse
 }
 
 void Player::handleInput(const uint8_t* keyState) {
