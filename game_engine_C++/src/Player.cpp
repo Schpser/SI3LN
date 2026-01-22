@@ -44,6 +44,8 @@ void Player::move(float dx, float dy) {
         dy *= 0.707f;
     }
     
+    std::cout << "Setting velocity: dx = " << dx << ", dy = " << dy << std::endl;  // Ajoutez cette ligne pour suivre la vitesse
+
     velocity.x = dx * customSpeed; // Utiliser une variable personnalisée pour la vitesse
     velocity.y = dy * customSpeed; // Utiliser une variable personnalisée pour la vitesse
 }
