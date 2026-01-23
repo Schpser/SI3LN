@@ -366,7 +366,6 @@ void Game::spawnEnemies() {
         }
     }
     
-    std::cout << "Spawned " << enemies.size() << " enemies for level " << currentLevel << std::endl;
 }
 
 void Game::render() {
@@ -451,7 +450,6 @@ void Game::renderText(const std::string& text, int x, int y, TTF_Font* font, con
 
 void Game::changeState(GameState newState) {
     currentState = newState;
-    std::cout << "State changed to: " << static_cast<int>(newState) << std::endl;
 }
 
 } // namespace SI3LN
