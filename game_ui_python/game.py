@@ -9,9 +9,27 @@ import os
 import subprocess
 from constants import *
 
-# Chemin vers le moteur C++
-CPP_GAME_DIR = "/home/ramos/SI3LN/game_engine_C++/build"
-CPP_GAME_EXE = os.path.join(CPP_GAME_DIR, "SI3LN")
+def find_cpp_game_exe():
+    """
+    Dynamically find the C++ game executable in common locations.
+    Returns (exe_path, exe_dir) or (None, None) if not found.
+    """
+    exe_name = "SI3LN.exe" if platform.system() == "Windows" else "SI3LN"
+    search_dirs = [
+        os.path.join(os.getcwd(), "game_engine_C++", "build"),
+        os.path.join(os.path.dirname(__file__), "game_engine_C++", "build"),
+        os.path.expanduser("~/SI3LN/game_engine_C++/build"),
+        os.path.expanduser("~/game_engine_C++/build"),
+        os.path.join(os.getcwd(), "build"),
+        os.path.dirname(os.path.abspath(__file__)),
+    ]
+    for d in search_dirs:
+        exe_path = os.path.join(d, exe_name)
+        if os.path.isfile(exe_path) and os.access(exe_path, os.X_OK):
+            return exe_path, d
+    return None, None
+
+CPP_GAME_EXE, CPP_GAME_DIR = find_cpp_game_exe()
 
 # Option pour utiliser le moteur C++ pour le gameplay
 USE_CPP_ENGINE = True  # Mettre à False pour revenir au gameplay Python
