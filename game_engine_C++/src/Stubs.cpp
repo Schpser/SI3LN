@@ -1,55 +1,57 @@
-// Stub files for future implementation
+// Stubs.cpp
+
+// Fichiers stubs pour une future implémentation
 #include <SDL2/SDL.h>
 #include <string>
 
 namespace SI3LN {
 
-// Renderer stub
+// Stub de Renderer
 class Renderer {
 public:
-    Renderer(SDL_Renderer* renderer) {}
+    Renderer(SDL_Renderer* renderer) {} // Constructeur prenant un pointeur vers le renderer SDL
 };
 
-// InputManager stub  
+// Stub d'InputManager
 class InputManager {
 public:
-    void update() {}
+    void update() {} // Méthode pour mettre à jour les entrées
 };
 
-// CollisionManager stub
+// Stub de CollisionManager
 class CollisionManager {
 public:
-    void checkCollisions() {}
+    void checkCollisions() {} // Méthode pour vérifier les collisions
 };
 
-// EntityManager stub
+// Stub d'EntityManager
 class EntityManager {
 public:
-    void update() {}
+    void update() {} // Méthode pour mettre à jour les entités
 };
 
-// AssetManager stub
+// Stub d'AssetManager
 class AssetManager {
 public:
-    AssetManager(SDL_Renderer* renderer) {}
+    AssetManager(SDL_Renderer* renderer) {} // Constructeur prenant un pointeur vers le renderer SDL
 };
 
-// AudioManager stub
+// Stub d'AudioManager
 class AudioManager {
 public:
-    void playSound(const std::string& name) {}
+    void playSound(const std::string& name) {} // Méthode pour jouer un son en fonction de son nom
 };
 
-// ScoreManager stub
+// Stub de ScoreManager
 class ScoreManager {
 public:
-    void addScore(int score) {}
+    void addScore(int score) {} // Méthode pour ajouter des points au score
 };
 
-// AuthSystem stub
+// Stub d'AuthSystem
 class AuthSystem {
 public:
-    bool login(const std::string& user, const std::string& pass) { return true; }
+    bool login(const std::string& user, const std::string& pass) { return true; } // Méthode de connexion simulée
 };
 
 } // namespace SI3LN
