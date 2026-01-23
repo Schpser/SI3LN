@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 	// Parse command line arguments (passed from Python UI)
 	std::string world = "Space";  // Default world
 	int level = 1;                // Default level
+	int playerIndex = 0; // Default player index
 	
 	if (argc >= 2)
 	{
@@ -31,11 +32,20 @@ int main(int argc, char *argv[])
 			level = 1;
 		}
 	}
+	if (argc >= 4) {
+        try {
+            playerIndex = std::stoi(argv[3]);
+            std::cout << "Player selected: " << playerIndex << std::endl;
+        } catch (...) {
+            playerIndex = 0;
+        }
+    }
 
 	try
 	{
 		SI3LN::Game game; // Création d'une instance de la classe Game
 		game.setWorldAndLevel(world, level);  // Set world and level from Python UI
+		game.setPlayerIndex(playerIndex); // Nouvelle méthode à ajouter dans Game
 		game.run();		  // Appel de la méthode run() pour démarrer le jeu
 	}
 	catch (const std::exception &e)

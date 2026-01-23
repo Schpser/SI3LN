@@ -51,6 +51,10 @@ namespace SI3LN
 	void Game::setWorldAndLevel(const std::string& world, int level)
 	{
 		currentWorld = world;
+		currentWorld = world; // Garde la casse d'origine pour les ennemis
+		// Stocker aussi la version minuscule pour le background
+		currentWorldLower = world;
+		std::transform(currentWorldLower.begin(), currentWorldLower.end(), currentWorldLower.begin(), [](unsigned char c){ return std::tolower(c); });
 		currentLevel = level;
 		std::cout << "Game configured: World=" << currentWorld << ", Level=" << currentLevel << std::endl;
 	}
@@ -134,10 +138,42 @@ namespace SI3LN
 			std::cerr << "Warning: Could not load fonts. Using system default." << std::endl;
 		}
 
-		// Charger les textures des entités du jeu (chemins temporaires - à mettre à jour)
-		playerTexture = loadTexture("assets/players/player_1/AnimateDiff_00001.001.png"); // Texture du joueur
-		enemyTexture = loadTexture("assets/enemies/Apocalyptic_world/boss_enemy.png");	  // Texture des ennemis
-		backgroundTexture = loadTexture("assets/worlds/background_apocalyptic.jpg");	  // Texture de l'arrière-plan
+		// Mapping des mondes pour les dossiers
+		std::string worldKey = currentWorld;
+		if (worldKey == "Apocalyptic") worldKey = "Apocalyptic_world";
+		else if (worldKey == "Desert") worldKey = "Desert_world";
+		else if (worldKey == "Forest") worldKey = "Forest_world";
+		else if (worldKey == "Marine") worldKey = "Marine_world";
+		else if (worldKey == "Space") worldKey = "Space_world";
+
+		// Charger la texture du joueur
+		std::string playerPath = "assets/players/player_" + std::to_string(playerIndex + 1) + "/AnimateDiff_00001.001.png";
+		playerTexture = loadTexture(playerPath);
+
+		// Charger la texture d'un ennemi générique (tester plusieurs noms)
+		std::string enemyPath1 = "assets/enemies/" + worldKey + "/enemy (1).png";
+		std::string enemyPath2 = "assets/enemies/" + worldKey + "/enemy_1.png";
+		std::string enemyPath3 = "assets/enemies/" + worldKey + "/enemy.png";
+		enemyTexture = loadTexture(enemyPath1);
+		if (!enemyTexture) enemyTexture = loadTexture(enemyPath2);
+		if (!enemyTexture) enemyTexture = loadTexture(enemyPath3);
+
+		// Charger le background du monde (détection dynamique de l'extension, insensible à la casse)
+		std::string bgBase = "assets/worlds/background_" + currentWorldLower;
+		backgroundTexture = loadTexture(bgBase + ".jpg");
+		if (!backgroundTexture) {
+			backgroundTexture = loadTexture(bgBase + ".png");
+		}
+		// Si toujours rien, essayer avec la première lettre en majuscule (compatibilité)
+		if (!backgroundTexture && !currentWorldLower.empty()) {
+			std::string worldCap = currentWorldLower;
+			worldCap[0] = std::toupper(worldCap[0]);
+			std::string bgBaseCap = "assets/worlds/background_" + worldCap;
+			backgroundTexture = loadTexture(bgBaseCap + ".jpg");
+			if (!backgroundTexture) {
+				backgroundTexture = loadTexture(bgBaseCap + ".png");
+			}
+		}
 
 		std::cout << "Assets loaded!" << std::endl;
 	}
@@ -589,9 +625,16 @@ namespace SI3LN
 	// Fonction de rendu qui affiche tous les éléments du jeu selon l'état actuel
 	void Game::render()
 	{
-		// Effacer l'écran avec une couleur noire (RGB: 0,0,0 avec alpha: 255)
+		// Effacer l'écran avec une couleur noire
 		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 		SDL_RenderClear(renderer);
+
+		// Afficher le background dynamique si disponible
+		if (backgroundTexture)
+		{
+			SDL_Rect bgRect = {0, 0, screenWidth, screenHeight};
+			SDL_RenderCopy(renderer, backgroundTexture, nullptr, &bgRect);
+		}
 
 		// Afficher différentes choses selon l'état actuel du jeu
 		switch (currentState)

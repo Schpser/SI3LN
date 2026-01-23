@@ -27,6 +27,9 @@ namespace SI3LN
 		// Définir le monde et le niveau (appelé depuis Python)
 		void setWorldAndLevel(const std::string& world, int level);
 
+		// Définir le personnage sélectionné (appelé depuis Python)
+		void setPlayerIndex(int index) { playerIndex = index; }
+
 	private:
 		// ==================== Initialisation et nettoyage ====================
 		bool init();	   // Initialise SDL et les ressources
@@ -74,6 +77,7 @@ namespace SI3LN
 		int currentScore;		  // Score actuel du joueur
 		int currentLevel;		  // Niveau actuel
 		std::string currentWorld; // Monde actuel
+		std::string currentWorldLower; // Monde en minuscules (pour le background)
 		int lives;				  // Nombre de vies restantes
 
 		// ==================== Entités du jeu ====================
@@ -92,6 +96,9 @@ namespace SI3LN
 		// ==================== Fonctions utilitaires ====================
 		SDL_Texture *loadTexture(const std::string &path);											// Charge une texture à partir d'un chemin
 		void renderText(const std::string &text, int x, int y, TTF_Font *font, const Color &color); // Affiche du texte à l'écran
+
+		// ==================== Index du personnage sélectionné ====================
+		int playerIndex = 0; // Index du personnage sélectionné
 	};
 
 } // namespace SI3LN // Fin de l'espace de noms SI3LN

@@ -114,9 +114,9 @@ class Game:
 
         # Lance le moteur C++ dans son dossier (pour que les chemins relatifs fonctionnent)
         try:
-            # Passer le monde et le niveau en arguments si nécessaire
+            # Passer le monde, le niveau et le personnage sélectionné en arguments
             result = subprocess.run(
-                [CPP_GAME_EXE, self.current_world, str(self.current_level)],
+                [CPP_GAME_EXE, self.current_world, str(self.current_level), str(self.selected_character)],
                 cwd=CPP_GAME_DIR
             )
             info(f"C++ game exited with code: {result.returncode}")
