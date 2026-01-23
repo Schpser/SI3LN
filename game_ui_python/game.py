@@ -1,10 +1,10 @@
-
 # Classe principale du jeu SI3LN
 # Intègre tous les écrans et la logique du jeu
 """
 Classe principale du jeu SI3LN
 Intègre tous les écrans et la logique du jeu
 """
+
 
 import pygame  # Bibliothèque pour l'affichage et le jeu
 import random  # Pour les nombres aléatoires
@@ -13,6 +13,66 @@ import sys  # Pour quitter le programme
 import os  # Pour la gestion des fichiers et dossiers
 import subprocess  # Pour lancer le jeu C++
 from constants import *  # Importation des constantes du jeu
+from utils.logger import setup_logging, get_logger, info, warning, error, debug
+from utils.game_utils import load_image, create_bullet_surface
+from ui_components import Button, InputField, Panel, ImageButton, AnimatedPlayer, PopUp
+from profile import ProfileScreen
+from level_selector import LevelSelector
+from managers.collision_manager import CollisionManager
+from managers.entity_manager import EntityManager
+from managers.game_state import GameState
+from entities import Player, Bullet, SpecialAttack
+
+# Variables globales pour le moteur C++
+
+# Fonction pour trouver dynamiquement l'exécutable du jeu C++
+def find_cpp_game_exe():
+    """
+    Recherche l'exécutable du jeu C++ dans les emplacements courants.
+    Retourne (chemin_exe, dossier_exe) ou (None, None) si non trouvé.
+    """
+    exe_name = "SI3LN.exe" if platform.system() == "Windows" else "SI3LN"  # Nom selon l'OS
+    search_dirs = [
+        os.path.join(os.getcwd(), "game_engine_C++", "build"),  # Dossier build local
+        os.path.join(os.path.dirname(__file__), "game_engine_C++", "build"),  # Dossier build relatif au script
+        os.path.expanduser("~/SI3LN/game_engine_C++/build"),  # Dossier home
+        os.path.expanduser("~/game_engine_C++/build"),
+        os.path.join(os.getcwd(), "build"),
+        os.path.dirname(os.path.abspath(__file__)),
+    ]
+    for d in search_dirs:
+        exe_path = os.path.join(d, exe_name)
+        if os.path.isfile(exe_path):
+            return exe_path, d
+    return None, None
+
+CPP_GAME_EXE, CPP_GAME_DIR = find_cpp_game_exe()
+if not CPP_GAME_EXE:
+    # Fallback valeurs par défaut si non trouvé
+    CPP_GAME_EXE = "SI3LN"
+    CPP_GAME_DIR = "game_engine_C++/build"
+USE_CPP_ENGINE = True  # Mettre à True pour activer le moteur C++
+from auth import AuthSystem
+from scores import ScoreManager
+from constants import STATE_MAIN_MENU
+from level_selector import LevelSelector
+from managers.collision_manager import CollisionManager
+from managers.entity_manager import EntityManager
+from constants import DEFAULT_SCREEN_WIDTH, DEFAULT_SCREEN_HEIGHT, MAX_LIVES, SHIELD_DURATION, MEGA_SHOT_DURATION, WORLDS, BULLET_SIZE_PLAYER, BULLET_SIZE_ENEMY, CYAN, RED, GREEN, ORANGE, WHITE, YELLOW, BLUE, PURPLE, LIGHT_BLUE, SAND_COLOR, BROWN, PROFILE_ICON_SIZE, PROFILE_ICON_POSITION, MESSAGE_DISPLAY_DURATION
+from constants import STATE_LOGIN, STATE_REGISTER, STATE_GAMEPLAY, STATE_PAUSE, STATE_GAME_OVER, STATE_LEVEL_WIN, STATE_LEVEL_SELECT
+from constants import ANIMATION_SIZE_PREVIEW, ANIMATION_SIZE_CHARACTER_SELECT, PLAYER_START_Y_OFFSET
+from constants import FONT_SIZE_LARGE, FONT_SIZE_MEDIUM, FONT_SIZE_SMALL, FONT_SIZE_TINY
+from constants import DEFAULT_FALLBACK_COLOR
+from level_selector import LevelSelector
+from managers.collision_manager import CollisionManager
+from managers.entity_manager import EntityManager
+from scores import ScoreManager
+from auth import AuthSystem
+from ui_components import PopUp
+from constants import *
+from utils.logger import *
+from utils.game_utils import *
+from ui_components import *
 
 
 # Fonction pour trouver dynamiquement l'exécutable du jeu C++
@@ -31,32 +91,56 @@ def find_cpp_game_exe():
         os.path.dirname(os.path.abspath(__file__)),
     ]
     for d in search_dirs:
-        exe_path = os.path.join(d, exe_name)  # Construit le chemin complet
-        if os.path.isfile(exe_path) and os.access(exe_path, os.X_OK):  # Vérifie si exécutable
-            return exe_path, d  # Retourne chemin et dossier
-    return None, None  # Non trouvé
+        exe_path = os.path.join(d, exe_name)
+        if os.path.isfile(exe_path):
+            return exe_path, d
+    return None, None
 
 
-# Récupère le chemin et le dossier de l'exécutable C++
-CPP_GAME_EXE, CPP_GAME_DIR = find_cpp_game_exe()
-
-
-# Option pour utiliser le moteur C++ pour le gameplay
-USE_CPP_ENGINE = True  # Mettre à False pour revenir au gameplay Python
-
-# Importation des utilitaires et modules du projet
-from utils import load_image, draw_text, load_enemy_images, load_boss_images, create_bullet_surface, safe_load_image
-from utils.logger import setup_logging, get_logger, info, warning, error, debug
-from auth import AuthSystem
-from scores import ScoreManager
-from profile import ProfileScreen
-from level_selector import LevelSelector
-from entities import Player, Enemy, Bullet, Explosion, Bonus, SpecialAttack
-from ui_components import Button, InputField, ProfileIcon, Panel, PopUp, ImageButton, preload_character_animations
-from managers import CollisionManager, EntityManager, GameState
-
-
+# Correction: Déplacer le code de chargement des assets dans une méthode de la classe Game
 class Game:
+    def launch_cpp_game(self):
+        info(f"Launching C++ game engine for world={self.current_world}, level={self.current_level}")
+        # Affiche un écran de chargement
+        self.screen.fill(BLACK)
+        loading_text = self.font_large.render("CHARGEMENT...", True, WHITE)
+        loading_rect = loading_text.get_rect(center=(self.screen_width // 2, self.screen_height // 2))
+        self.screen.blit(loading_text, loading_rect)
+        pygame.display.flip()
+        pygame.time.wait(500)
+
+        # Minimise la fenêtre pygame pendant le jeu C++
+        pygame.display.iconify()
+
+        # Lance le moteur C++ dans son dossier (pour que les chemins relatifs fonctionnent)
+        try:
+            # Passer le monde et le niveau en arguments si nécessaire
+            result = subprocess.run(
+                [CPP_GAME_EXE, self.current_world, str(self.current_level)],
+                cwd=CPP_GAME_DIR
+            )
+            info(f"C++ game exited with code: {result.returncode}")
+        except FileNotFoundError:
+            error(f"C++ game executable not found: {CPP_GAME_EXE}")
+            self.show_message("Erreur: Jeu C++ non trouvé!", RED)
+        except Exception as e:
+            error(f"Error launching C++ game: {e}")
+            self.show_message(f"Erreur: {e}", RED)
+
+        # Revient à l'interface Python
+        info("Returning to Python UI...")
+
+        # Restaure la fenêtre pygame
+        pygame.display.set_mode(
+            (self.screen_width, self.screen_height),
+            pygame.RESIZABLE
+        )
+
+        # Retourne au menu de sélection de niveau
+        if hasattr(self, 'level_selector'):
+            self.level_selector.open()
+        self.state = STATE_LEVEL_SELECT
+        self.show_message("Retour au menu!", GREEN)
     def __init__(self):
         # Initialisation du système de logs
         setup_logging()
@@ -120,6 +204,166 @@ class Game:
         }
         # Chargement des assets
         self.load_assets()
+        # Initialisation du message temporaire
+        self.message = ""
+        self.message_timer = 0
+        # Création de l'interface utilisateur (boutons, champs, etc.)
+        self.create_ui()
+        # Initialisation des gestionnaires de collisions et entités
+        self.collision_manager = CollisionManager(self)
+        self.entity_manager = EntityManager(self)
+        # Initialisation des écrans de profil et de sélection de niveau
+        self.profile_screen = ProfileScreen(self.screen, self.auth, self.players)
+        self.level_selector = LevelSelector(self.screen, WORLDS)
+
+    def load_assets(self):
+        # Chargement du fond du menu principal (doit être fait avant d'utiliser self.menu_bg)
+        try:
+            self.menu_bg = load_image("worlds/home_page.jpg", (self.screen_width, self.screen_height), False)
+        except Exception as e:
+            warning(f"Erreur lors du chargement du fond du menu: {e}")
+            self.menu_bg = pygame.Surface((self.screen_width, self.screen_height))
+            self.menu_bg.fill((30, 30, 60))  # Fallback color
+
+        # Chargement des backgrounds pour chaque monde
+        self.world_backgrounds = {}
+        for world_key, world_data in WORLDS.items():
+            try:
+                bg_path = f"worlds/{world_data['background']}"
+                self.world_backgrounds[world_key] = load_image(bg_path, (self.screen_width, self.screen_height), False)
+            except Exception as e:
+                warning(f"Erreur lors du chargement du fond pour {world_key}: {e}")
+                self.world_backgrounds[world_key] = self.menu_bg
+        # Fond de jeu par défaut (Space)
+        self.game_bg = self.world_backgrounds.get("Space", self.menu_bg)
+        # Chargement des polices
+        try:
+            # Utilise une police par défaut si FONT_PATH n'est pas défini
+            self.font_large = pygame.font.Font(None, 72)
+            self.font_medium = pygame.font.Font(None, 48)
+            self.font_small = pygame.font.Font(None, 28)
+            self.font_tiny = pygame.font.Font(None, 18)
+        except Exception as e:
+            warning(f"Erreur lors du chargement des polices: {e}")
+            self.font_large = pygame.font.SysFont("Arial", 72)
+            self.font_medium = pygame.font.SysFont("Arial", 48)
+            self.font_small = pygame.font.SysFont("Arial", 28)
+            self.font_tiny = pygame.font.SysFont("Arial", 18)
+        # Chargement des portraits des joueurs (pour l'écran de profil)
+        self.players = []
+        self.players_animation_folders = []
+        base_path = "assets/players"
+        for i in range(1, 9):
+            player_folder = os.path.join(base_path, f"player_{i}")
+            portrait_path = os.path.join(player_folder, "portrait.png")
+            if os.path.exists(portrait_path):
+                try:
+                    img = pygame.image.load(portrait_path).convert_alpha()
+                    self.players.append(img)
+                    self.players_animation_folders.append(player_folder)
+                except Exception as e:
+                    warning(f"Erreur lors du chargement du portrait du joueur {i}: {e}")
+                    self.players.append(pygame.Surface((64, 64)))
+                    self.players_animation_folders.append(None)
+            else:
+                self.players.append(pygame.Surface((64, 64)))
+                self.players_animation_folders.append(None)
+        # Chargement des sprites de joueurs pour le gameplay
+        self.players_gameplay = []
+        for i in range(1, 9):
+            player_folder = os.path.join(base_path, f"player_{i}")
+            gameplay_path = os.path.join(player_folder, "gameplay.png")
+            if os.path.exists(gameplay_path):
+                try:
+                    img = pygame.image.load(gameplay_path).convert_alpha()
+                    self.players_gameplay.append(img)
+                except Exception as e:
+                    warning(f"Erreur lors du chargement du sprite gameplay du joueur {i}: {e}")
+                    self.players_gameplay.append(pygame.Surface((64, 64)))
+            else:
+                self.players_gameplay.append(pygame.Surface((64, 64)))
+        # Initialisation de l'icône de profil (None au début)
+        self.profile_icon = None
+        # Initialisation des groupes d'entités
+        self.enemies = pygame.sprite.Group()
+        self.player_bullets = pygame.sprite.Group()
+        self.enemy_bullets = pygame.sprite.Group()
+        self.explosions = pygame.sprite.Group()
+        # Initialisation du timer d'attaque spéciale
+        self.last_special_attack_time = 0
+        self.special_attack_cooldown = 5000  # ms
+        # Chargement terminé
+        info("Assets chargés avec succès.")
+    def __init__(self):
+        # Initialisation du système de logs
+        setup_logging()
+        self.logger = get_logger()
+        info("Initialisation du jeu...")
+        # Initialisation de Pygame
+        pygame.init()
+        # Récupère les infos de l'écran
+        self.screen_info = pygame.display.Info()
+        # Largeur de la fenêtre
+        self.screen_width = DEFAULT_SCREEN_WIDTH
+        # Hauteur de la fenêtre
+        self.screen_height = DEFAULT_SCREEN_HEIGHT
+        # Crée la fenêtre redimensionnable
+        self.screen = pygame.display.set_mode(
+            (self.screen_width, self.screen_height),
+            pygame.RESIZABLE
+        )
+        # Titre de la fenêtre
+        pygame.display.set_caption("S I 3 L N")
+        # Horloge pour le framerate
+        self.clock = pygame.time.Clock()
+        # Booléen pour la boucle principale
+        self.running = True
+        # Gestionnaire d'état du jeu
+        self.state_manager = GameState(STATE_MAIN_MENU)
+        # État courant du jeu
+        self.state = STATE_MAIN_MENU  # Pour compatibilité
+        # État précédent
+        self.prev_state = None
+        # Système d'authentification
+        self.auth = AuthSystem()
+        # Gestionnaire de scores
+        self.score_manager = ScoreManager()
+        # Score courant
+        self.current_score = 0
+        # Niveau courant
+        self.current_level = 1
+        # Monde courant
+        self.current_world = "Space"
+        # Nombre de vies
+        self.lives = MAX_LIVES
+        # Personnage sélectionné
+        self.selected_character = 0
+        # Groupes de bonus
+        self.bonuses = pygame.sprite.Group()
+        # Dictionnaire des bonus actifs
+        self.active_bonuses = {
+            "shield": {"active": False, "timer": 0, "duration": SHIELD_DURATION},
+            "mega_shot": {"active": False, "timer": 0, "duration": MEGA_SHOT_DURATION}
+        }
+        # Groupes d'attaques spéciales
+        self.special_attacks = pygame.sprite.Group()
+        # Debuffs du joueur
+        self.player_debuffs = {
+            "frozen": False,
+            "blinded": False,
+            "rooted": False,
+            "timer": 0,
+            "duration": 0
+        }
+        # Chargement des assets
+        self.load_assets()
+
+        # Initialisation du message temporaire
+        self.message = ""
+        self.message_timer = 0
+
+        # Création de l'interface utilisateur (boutons, champs, etc.)
+        self.create_ui()
         # Initialisation des gestionnaires de collisions et entités
         self.collision_manager = CollisionManager(self)
         self.entity_manager = EntityManager(self)
@@ -583,7 +827,7 @@ class Game:
                 level = self.level_selector.get_selected_level(pos)
                 if level:
                     self.selected_level = level
-                    self.state = STATE_CHARACTER_SELECT
+                    self.state = STATE_PLAYER_SELECT
             # Bouton retour : menu principal
             elif self.btn_back.is_clicked(pos):
                 self.state = STATE_MAIN_MENU
@@ -696,7 +940,7 @@ class Game:
         # Réinitialise les malus
         self.player_debuffs = {
             "frozen": False,
-            "blinded": False, 
+            "blinded": False,
             "rooted": False,
             "timer": 0,
             "duration": 0
@@ -1303,82 +1547,69 @@ if __name__ == "__main__":
 class AnimatedPlayer:
     """Affiche un personnage animé à partir de frames avec support du lazy loading"""
     def __init__(self, x, y, width, height, player_index, animation_folder=None, game=None):
-        # Position X du coin supérieur gauche
         self.x = x
-        # Position Y du coin supérieur gauche
         self.y = y
-        # Largeur de l'animation
         self.width = width
-        # Hauteur de l'animation
         self.height = height
-        # Index du joueur (0 = player_1, 1 = player_2, ...)
         self.player_index = player_index
-        # Dossier d'animation (optionnel, lazy loading)
         self.animation_folder = animation_folder
-        # Référence au jeu principal (optionnel)
         self.game = game
-        # Liste des frames de l'animation
+
         self.frames = []
-        # Chargement des frames
         self.load_frames()
-        # Frame courante (index)
+
         self.current_frame = 0
-        # Délai entre chaque frame (en secondes)
-        self.frame_delay = 1/24  # ~41.67ms par frame pour 24fps
-        # Temps écoulé depuis la dernière frame
+        self.frame_delay = 1/24  # 24 fps
         self.elapsed_time = 0.0
-        # Animation en cours ?
         self.is_animating = True
-        # L'animation boucle-t-elle ?
-        self.loop = True  # Boucle l'animation
-        # Rectangle de collision/affichage
+        self.loop = True
         self.rect = pygame.Rect(x, y, width, height)
 
     def load_frames(self):
-        """Charge toutes les frames d'animation du joueur (support lazy loading)"""
-        # Si un dossier est fourni (lazy loading), l'utiliser directement
+        """Load all animation frames for the player (with lazy loading support)"""
+        import re  # <-- FIX: import re at the top of the function, not inside a nested function
+
         if self.animation_folder:
             player_path = self.animation_folder
         else:
             player_path = f"assets/players/player_{self.player_index + 1}"
-        # Vérifie si le dossier existe
+
         if not os.path.exists(player_path):
             warning(f"Dossier introuvable : {player_path}")
             return
-        # Charge tous les fichiers de frames (supporte les deux formats)
+
         frame_files = sorted([
             f for f in os.listdir(player_path)
             if (f.lower().startswith('frame_') or f.lower().startswith('animatediff_'))
             and f.lower().endswith('.png')
         ])
-        # Trie les frames par numéro (gère les deux conventions de nommage)
+
         def get_frame_number(filename):
-            # Format frame_XX.png
             if filename.lower().startswith('frame_'):
-                return int(filename.split('_')[1])
-            else:  # Format AnimateDiff_00001.XXX.png
-                import re
+                try:
+                    return int(filename.split('_')[1].split('.')[0])
+                except Exception:
+                    return 999999
+            else:  # AnimateDiff format
                 match = re.search(r'\.(\d+)\.png', filename)
                 if match:
                     return int(match.group(1))
-                return 999999  # Met les fichiers invalides à la fin
+                return 999999
+
         frame_files.sort(key=get_frame_number)
-        # Log du chargement
+
         info(f"Loading {len(frame_files)} animation frames for player_{self.player_index + 1}...")
         start_time = pygame.time.get_ticks()
-        # Boucle sur chaque frame
+
         for frame_file in frame_files:
             frame_path = os.path.join(player_path, frame_file)
             try:
-                # Charge l'image
                 image = pygame.image.load(frame_path)
-                # Redimensionne à la taille voulue
                 scaled = pygame.transform.scale(image, (self.width, self.height))
-                # Ajoute à la liste des frames
                 self.frames.append(scaled)
             except pygame.error as e:
                 warning(f"Impossible de charger {frame_path}: {e}")
-        # Temps de chargement
+
         elapsed = pygame.time.get_ticks() - start_time
         if self.frames:
             info(f"{len(self.frames)} frames chargées pour player_{self.player_index + 1} en {elapsed}ms")
@@ -1386,17 +1617,16 @@ class AnimatedPlayer:
             warning(f"Aucune frame chargée pour player_{self.player_index + 1}")
 
     def update(self, dt=1/60):
-        """Met à jour la frame d'animation courante"""
-        # Si aucune frame ou animation arrêtée, ne rien faire
+        """Update animation frame"""
         if not self.frames or not self.is_animating:
             return
-        # Ajoute le temps écoulé (dt = delta time en secondes)
+
         self.elapsed_time += dt
-        # Passe à la frame suivante si le délai est dépassé
+
         if self.elapsed_time >= self.frame_delay:
             self.elapsed_time -= self.frame_delay
             self.current_frame += 1
-            # Gère la boucle d'animation
+
             if self.current_frame >= len(self.frames):
                 if self.loop:
                     self.current_frame = 0
@@ -1405,18 +1635,16 @@ class AnimatedPlayer:
                     self.is_animating = False
 
     def draw(self, screen):
-        """Affiche la frame courante sur l'écran"""
-        # Si aucune frame, ne rien dessiner
+        """Draw current frame"""
         if not self.frames:
             return
-        # Récupère la frame courante
+
         current_frame_index = min(self.current_frame, len(self.frames) - 1)
         frame = self.frames[current_frame_index]
-        # Affiche la frame à la position (x, y)
         screen.blit(frame, (self.x, self.y))
 
     def reset(self):
-        """Réinitialise l'animation à la première frame"""
+        """Reset animation to first frame"""
         self.current_frame = 0
         self.elapsed_time = 0.0
         self.is_animating = True
