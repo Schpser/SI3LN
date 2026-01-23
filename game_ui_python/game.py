@@ -4,6 +4,7 @@ Integrates all screens and game logic
 """
 import pygame
 import random
+import platform
 import sys
 import os
 import subprocess
