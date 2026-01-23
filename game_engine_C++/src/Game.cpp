@@ -395,314 +395,313 @@ namespace SI3LN
 	{
 		// Logique future pour l'écran de game over
 	}
-}
 
-// Fonction de mise à jour spécifique au gameplay
-void Game::updateGameplay(float deltaTime)
-{
-	// Mettre à jour le joueur
-	if (player)
+	// Fonction de mise à jour spécifique au gameplay
+	void Game::updateGameplay(float deltaTime)
 	{
-		// Récupérer l'état du clavier
-		const uint8_t *keyState = SDL_GetKeyboardState(nullptr);
-		// Laisser le joueur traiter l'entrée clavier
-		player->handleInput(keyState);
-		// Mettre à jour la position du joueur selon son état
-		player->update(deltaTime);
-	}
-
-	// Mettre à jour les ennemis
-	for (auto &enemy : enemies)
-	{
-		// Mettre à jour la position et l'état de chaque ennemi
-		enemy->update(deltaTime);
-
-		// Tir des ennemis (si l'ennemi peut tirer)
-		if (enemy->canShoot())
+		// Mettre à jour le joueur
+		if (player)
 		{
-			auto bullet = std::make_shared<Bullet>(
-				enemy->getPosition().x,							 // Position X de l'ennemi
-				enemy->getPosition().y + enemy->getHeight() / 2, // Position Y sous l'ennemi
-				false,											 // false = projectile d'ennemi (true pour les projectiles du joueur)
-				screenHeight,									 // Hauteur de l'écran pour les limites
-				Colors::RED										 // Couleur du projectile (rouge)
-			);
-			enemyBullets.push_back(bullet);
+			// Récupérer l'état du clavier
+			const uint8_t *keyState = SDL_GetKeyboardState(nullptr);
+			// Laisser le joueur traiter l'entrée clavier
+			player->handleInput(keyState);
+			// Mettre à jour la position du joueur selon son état
+			player->update(deltaTime);
 		}
-	}
 
-	// Mettre à jour les projectiles du joueur
-	for (auto &bullet : playerBullets)
-	{
-		// Mettre à jour la position de chaque projectile
-		bullet->update(deltaTime);
-	}
-
-	// Mettre à jour les projectiles des ennemis
-	for (auto &bullet : enemyBullets)
-	{
-		// Mettre à jour la position de chaque projectile
-		bullet->update(deltaTime);
-	}
-
-	// Supprimer les projectiles du joueur qui ne sont plus actifs (sortis de l'écran)
-	playerBullets.erase(
-		std::remove_if(playerBullets.begin(), playerBullets.end(),
-					   [](const auto &b)
-					   { return !b->isAlive(); }), // Garder uniquement les projectiles vivants
-		playerBullets.end());
-
-	// Supprimer les projectiles des ennemis qui ne sont plus actifs
-	enemyBullets.erase(
-		std::remove_if(enemyBullets.begin(), enemyBullets.end(),
-					   [](const auto &b)
-					   { return !b->isAlive(); }), // Garder uniquement les projectiles vivants
-		enemyBullets.end());
-
-	// Vérifier les collisions entre les projectiles et les entités
-	checkCollisions();
-
-	// Vérifier la condition de victoire du niveau (tous les ennemis éliminés)
-	if (enemies.empty())
-	{
-		std::cout << "Level complete!" << std::endl;
-		// Passer au niveau suivant
-		currentLevel++;
-		// Spawner les ennemis pour le nouveau niveau
-		spawnEnemies();
-	}
-
-	// Vérifier la condition d'échec (le joueur n'a plus de vies)
-	if (lives <= 0)
-	{
-		// Passer à l'écran de fin de jeu
-		changeState(GameState::GAME_OVER);
-	}
-}
-
-// Fonction qui vérifie les collisions entre les projectiles et les entités
-void Game::checkCollisions()
-{
-	// Vérifier les collisions : Projectiles du joueur vs ennemis
-	for (auto bulletIt = playerBullets.begin(); bulletIt != playerBullets.end();)
-	{
-		bool bulletHit = false; // Marquer si le projectile a touché quelque chose
-
-		// Vérifier chaque projectile contre chaque ennemi
-		for (auto enemyIt = enemies.begin(); enemyIt != enemies.end();)
+		// Mettre à jour les ennemis
+		for (auto &enemy : enemies)
 		{
-			// Tester si le projectile intersecte (touche) l'ennemi
-			if ((*bulletIt)->intersects(**enemyIt))
+			// Mettre à jour la position et l'état de chaque ennemi
+			enemy->update(deltaTime);
+
+			// Tir des ennemis (si l'ennemi peut tirer)
+			if (enemy->canShoot())
 			{
-				// Ajouter au score quand un ennemi est touché
-				currentScore += 10 * currentLevel;
-				// Marquer le projectile comme mort (l'enlever après)
-				(*bulletIt)->kill();
-				// Supprimer l'ennemi qui a été touché
-				enemyIt = enemies.erase(enemyIt);
-				// Marquer que le projectile a touché quelque chose
-				bulletHit = true;
-				break; // Arrêter la boucle d'ennemis (un projectile = un ennemi)
-			}
-			else
-			{
-				++enemyIt; // Passer à l'ennemi suivant
+				auto bullet = std::make_shared<Bullet>(
+					enemy->getPosition().x,							 // Position X de l'ennemi
+					enemy->getPosition().y + enemy->getHeight() / 2, // Position Y sous l'ennemi
+					false,											 // false = projectile d'ennemi (true pour les projectiles du joueur)
+					screenHeight,									 // Hauteur de l'écran pour les limites
+					Colors::RED										 // Couleur du projectile (rouge)
+				);
+				enemyBullets.push_back(bullet);
 			}
 		}
 
-		// Supprimer le projectile s'il a touché quelque chose ou s'il est mort
-		if (bulletHit || !(*bulletIt)->isAlive())
+		// Mettre à jour les projectiles du joueur
+		for (auto &bullet : playerBullets)
 		{
-			bulletIt = playerBullets.erase(bulletIt); // Enlever le projectile et obtenir l'itérateur suivant
+			// Mettre à jour la position de chaque projectile
+			bullet->update(deltaTime);
 		}
-		else
+
+		// Mettre à jour les projectiles des ennemis
+		for (auto &bullet : enemyBullets)
 		{
-			++bulletIt; // Passer au projectile suivant
+			// Mettre à jour la position de chaque projectile
+			bullet->update(deltaTime);
+		}
+
+		// Supprimer les projectiles du joueur qui ne sont plus actifs (sortis de l'écran)
+		playerBullets.erase(
+			std::remove_if(playerBullets.begin(), playerBullets.end(),
+						   [](const auto &b)
+						   { return !b->isAlive(); }), // Garder uniquement les projectiles vivants
+			playerBullets.end());
+
+		// Supprimer les projectiles des ennemis qui ne sont plus actifs
+		enemyBullets.erase(
+			std::remove_if(enemyBullets.begin(), enemyBullets.end(),
+						   [](const auto &b)
+						   { return !b->isAlive(); }), // Garder uniquement les projectiles vivants
+			enemyBullets.end());
+
+		// Vérifier les collisions entre les projectiles et les entités
+		checkCollisions();
+
+		// Vérifier la condition de victoire du niveau (tous les ennemis éliminés)
+		if (enemies.empty())
+		{
+			std::cout << "Level complete!" << std::endl;
+			// Passer au niveau suivant
+			currentLevel++;
+			// Spawner les ennemis pour le nouveau niveau
+			spawnEnemies();
+		}
+
+		// Vérifier la condition d'échec (le joueur n'a plus de vies)
+		if (lives <= 0)
+		{
+			// Passer à l'écran de fin de jeu
+			changeState(GameState::GAME_OVER);
 		}
 	}
 
-	// Vérifier les collisions : Projectiles des ennemis vs joueur
-	if (player)
+	// Fonction qui vérifie les collisions entre les projectiles et les entités
+	void Game::checkCollisions()
 	{
-		// Vérifier chaque projectile d'ennemi contre le joueur
-		for (auto bulletIt = enemyBullets.begin(); bulletIt != enemyBullets.end();)
+		// Vérifier les collisions : Projectiles du joueur vs ennemis
+		for (auto bulletIt = playerBullets.begin(); bulletIt != playerBullets.end();)
 		{
-			// Tester si le projectile intersecte (touche) le joueur
-			if ((*bulletIt)->intersects(*player))
+			bool bulletHit = false; // Marquer si le projectile a touché quelque chose
+
+			// Vérifier chaque projectile contre chaque ennemi
+			for (auto enemyIt = enemies.begin(); enemyIt != enemies.end();)
 			{
-				// Réduire le nombre de vies du joueur
-				lives--;
-				// Supprimer le projectile qui a touché le joueur
-				bulletIt = enemyBullets.erase(bulletIt);
-				std::cout << "Player hit! Lives: " << lives << std::endl;
+				// Tester si le projectile intersecte (touche) l'ennemi
+				if ((*bulletIt)->intersects(**enemyIt))
+				{
+					// Ajouter au score quand un ennemi est touché
+					currentScore += 10 * currentLevel;
+					// Marquer le projectile comme mort (l'enlever après)
+					(*bulletIt)->kill();
+					// Supprimer l'ennemi qui a été touché
+					enemyIt = enemies.erase(enemyIt);
+					// Marquer que le projectile a touché quelque chose
+					bulletHit = true;
+					break; // Arrêter la boucle d'ennemis (un projectile = un ennemi)
+				}
+				else
+				{
+					++enemyIt; // Passer à l'ennemi suivant
+				}
+			}
+
+			// Supprimer le projectile s'il a touché quelque chose ou s'il est mort
+			if (bulletHit || !(*bulletIt)->isAlive())
+			{
+				bulletIt = playerBullets.erase(bulletIt); // Enlever le projectile et obtenir l'itérateur suivant
 			}
 			else
 			{
 				++bulletIt; // Passer au projectile suivant
 			}
 		}
-	}
-}
 
-// Fonction qui crée (spawne) les ennemis pour le niveau actuel
-void Game::spawnEnemies()
-{
-	// Vider la liste des ennemis de l'ancien niveau
-	enemies.clear();
-
-	// Calculer le nombre de lignes et colonnes d'ennemis en fonction du niveau actuel
-	// Plus le niveau augmente, plus il y a d'ennemis (avec une limite max)
-	int rows = std::min(ENEMY_SPAWN_BASE_ROWS + currentLevel / 2, ENEMY_SPAWN_MAX_ROWS);
-	int cols = std::min(ENEMY_SPAWN_BASE_COLS + currentLevel / 2, ENEMY_SPAWN_MAX_COLS);
-
-	// Calculer la largeur totale occupée par les ennemis
-	int totalWidth = cols * (ENEMY_SIZE + ENEMY_SPACING_X);
-	// Calculer la position X de départ pour centrer les ennemis
-	int startX = (screenWidth - totalWidth) / 2;
-	// Position Y pour le haut de la grille d'ennemis
-	int startY = 80;
-
-	// Créer les ennemis en grille (rows x cols)
-	for (int row = 0; row < rows; ++row)
-	{
-		for (int col = 0; col < cols; ++col)
+		// Vérifier les collisions : Projectiles des ennemis vs joueur
+		if (player)
 		{
-			// Calculer la position X de l'ennemi (centrer chaque ennemi dans sa cellule)
-			float x = startX + col * (ENEMY_SIZE + ENEMY_SPACING_X) + ENEMY_SIZE / 2;
-			// Calculer la position Y de l'ennemi (centrer chaque ennemi dans sa cellule)
-			float y = startY + row * (ENEMY_SIZE + ENEMY_SPACING_Y) + ENEMY_SIZE / 2;
-
-			// Créer un nouvel ennemi et l'ajouter à la liste
-			auto enemy = std::make_shared<Enemy>(x, y, enemyTexture, screenWidth, currentLevel);
-			enemies.push_back(enemy);
+			// Vérifier chaque projectile d'ennemi contre le joueur
+			for (auto bulletIt = enemyBullets.begin(); bulletIt != enemyBullets.end();)
+			{
+				// Tester si le projectile intersecte (touche) le joueur
+				if ((*bulletIt)->intersects(*player))
+				{
+					// Réduire le nombre de vies du joueur
+					lives--;
+					// Supprimer le projectile qui a touché le joueur
+					bulletIt = enemyBullets.erase(bulletIt);
+					std::cout << "Player hit! Lives: " << lives << std::endl;
+				}
+				else
+				{
+					++bulletIt; // Passer au projectile suivant
+				}
+			}
 		}
 	}
-}
 
-// Fonction de rendu qui affiche tous les éléments du jeu selon l'état actuel
-void Game::render()
-{
-	// Effacer l'écran avec une couleur noire (RGB: 0,0,0 avec alpha: 255)
-	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-	SDL_RenderClear(renderer);
-
-	// Afficher différentes choses selon l'état actuel du jeu
-	switch (currentState)
+	// Fonction qui crée (spawne) les ennemis pour le niveau actuel
+	void Game::spawnEnemies()
 	{
-	// Si le jeu est en cours, afficher les éléments du gameplay
-	case GameState::GAMEPLAY:
-		renderGameplay();
-		break;
+		// Vider la liste des ennemis de l'ancien niveau
+		enemies.clear();
 
-	// Si on est au menu principal
-	case GameState::MAIN_MENU:
-		// Afficher le menu principal
-		renderText("S I 3 L N", screenWidth / 2 - 100, 100, fontLarge, Colors::CYAN);
-		renderText("Press ENTER to start", screenWidth / 2 - 150, 300, font, Colors::WHITE);
-		renderText("Press ESC to quit", screenWidth / 2 - 120, 350, font, Colors::WHITE);
-		break;
+		// Calculer le nombre de lignes et colonnes d'ennemis en fonction du niveau actuel
+		// Plus le niveau augmente, plus il y a d'ennemis (avec une limite max)
+		int rows = std::min(ENEMY_SPAWN_BASE_ROWS + currentLevel / 2, ENEMY_SPAWN_MAX_ROWS);
+		int cols = std::min(ENEMY_SPAWN_BASE_COLS + currentLevel / 2, ENEMY_SPAWN_MAX_COLS);
 
-	// Si le jeu est terminé
-	case GameState::GAME_OVER:
-		renderText("GAME OVER", screenWidth / 2 - 150, 200, fontLarge, Colors::RED);
-		renderText("Score: " + std::to_string(currentScore), screenWidth / 2 - 100, 300, font, Colors::WHITE);
-		renderText("Press ESC to quit", screenWidth / 2 - 120, 400, font, Colors::WHITE);
-		break;
+		// Calculer la largeur totale occupée par les ennemis
+		int totalWidth = cols * (ENEMY_SIZE + ENEMY_SPACING_X);
+		// Calculer la position X de départ pour centrer les ennemis
+		int startX = (screenWidth - totalWidth) / 2;
+		// Position Y pour le haut de la grille d'ennemis
+		int startY = 80;
 
-	default:
-		break;
+		// Créer les ennemis en grille (rows x cols)
+		for (int row = 0; row < rows; ++row)
+		{
+			for (int col = 0; col < cols; ++col)
+			{
+				// Calculer la position X de l'ennemi (centrer chaque ennemi dans sa cellule)
+				float x = startX + col * (ENEMY_SIZE + ENEMY_SPACING_X) + ENEMY_SIZE / 2;
+				// Calculer la position Y de l'ennemi (centrer chaque ennemi dans sa cellule)
+				float y = startY + row * (ENEMY_SIZE + ENEMY_SPACING_Y) + ENEMY_SIZE / 2;
+
+				// Créer un nouvel ennemi et l'ajouter à la liste
+				auto enemy = std::make_shared<Enemy>(x, y, enemyTexture, screenWidth, currentLevel);
+				enemies.push_back(enemy);
+			}
+		}
 	}
 
-	// Mettre à jour le rendu (afficher le buffer à l'écran)
-	SDL_RenderPresent(renderer);
-}
-
-// Fonction qui affiche les éléments du gameplay (joueur, ennemis, projectiles, etc.)
-void Game::renderGameplay()
-{
-	// Dessiner l'arrière-plan si la texture existe
-	if (backgroundTexture)
+	// Fonction de rendu qui affiche tous les éléments du jeu selon l'état actuel
+	void Game::render()
 	{
-		// Créer un rectangle pour couvrir toute la fenêtre
-		SDL_Rect bgRect = {0, 0, screenWidth, screenHeight};
-		// Copier la texture de l'arrière-plan dans le rendu
-		SDL_RenderCopy(renderer, backgroundTexture, nullptr, &bgRect);
+		// Effacer l'écran avec une couleur noire (RGB: 0,0,0 avec alpha: 255)
+		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+		SDL_RenderClear(renderer);
+
+		// Afficher différentes choses selon l'état actuel du jeu
+		switch (currentState)
+		{
+		// Si le jeu est en cours, afficher les éléments du gameplay
+		case GameState::GAMEPLAY:
+			renderGameplay();
+			break;
+
+		// Si on est au menu principal
+		case GameState::MAIN_MENU:
+			// Afficher le menu principal
+			renderText("S I 3 L N", screenWidth / 2 - 100, 100, fontLarge, Colors::CYAN);
+			renderText("Press ENTER to start", screenWidth / 2 - 150, 300, font, Colors::WHITE);
+			renderText("Press ESC to quit", screenWidth / 2 - 120, 350, font, Colors::WHITE);
+			break;
+
+		// Si le jeu est terminé
+		case GameState::GAME_OVER:
+			renderText("GAME OVER", screenWidth / 2 - 150, 200, fontLarge, Colors::RED);
+			renderText("Score: " + std::to_string(currentScore), screenWidth / 2 - 100, 300, font, Colors::WHITE);
+			renderText("Press ESC to quit", screenWidth / 2 - 120, 400, font, Colors::WHITE);
+			break;
+
+		default:
+			break;
+		}
+
+		// Mettre à jour le rendu (afficher le buffer à l'écran)
+		SDL_RenderPresent(renderer);
 	}
 
-	// Afficher le joueur s'il existe
-	if (player)
+	// Fonction qui affiche les éléments du gameplay (joueur, ennemis, projectiles, etc.)
+	void Game::renderGameplay()
 	{
-		// Appeler la fonction de rendu du joueur
-		player->render(renderer);
+		// Dessiner l'arrière-plan si la texture existe
+		if (backgroundTexture)
+		{
+			// Créer un rectangle pour couvrir toute la fenêtre
+			SDL_Rect bgRect = {0, 0, screenWidth, screenHeight};
+			// Copier la texture de l'arrière-plan dans le rendu
+			SDL_RenderCopy(renderer, backgroundTexture, nullptr, &bgRect);
+		}
+
+		// Afficher le joueur s'il existe
+		if (player)
+		{
+			// Appeler la fonction de rendu du joueur
+			player->render(renderer);
+		}
+
+		// Afficher les ennemis
+		for (auto &enemy : enemies)
+		{
+			// Appeler la fonction de rendu de chaque ennemi
+			enemy->render(renderer);
+		}
+
+		// Afficher les projectiles du joueur
+		for (auto &bullet : playerBullets)
+		{
+			// Appeler la fonction de rendu de chaque projectile du joueur
+			bullet->render(renderer);
+		}
+
+		// Afficher les projectiles des ennemis
+		for (auto &bullet : enemyBullets)
+		{
+			// Appeler la fonction de rendu de chaque projectile d'ennemi
+			bullet->render(renderer);
+		}
+
+		// Afficher l'interface utilisateur (HUD)
+		renderText("Score: " + std::to_string(currentScore), 10, 10, font, Colors::WHITE);
+		renderText("Lives: " + std::to_string(lives), 10, 50, font, Colors::WHITE);
+		renderText("Level: " + std::to_string(currentLevel), 10, 90, font, Colors::WHITE);
 	}
 
-	// Afficher les ennemis
-	for (auto &enemy : enemies)
+	// Fonction qui affiche du texte à l'écran avec une police et une couleur spécifiées
+	void Game::renderText(const std::string &text, int x, int y, TTF_Font *font, const Color &color)
 	{
-		// Appeler la fonction de rendu de chaque ennemi
-		enemy->render(renderer);
+		// Vérifier que la police existe avant de l'utiliser
+		if (!font)
+			return;
+
+		// Créer une surface SDL contenant le texte rendu avec la police et la couleur
+		SDL_Surface *surface = TTF_RenderText_Solid(font, text.c_str(), color.toSDL());
+		// Vérifier que la surface a pu être créée
+		if (!surface)
+			return;
+
+		// Créer une texture à partir de la surface pour pouvoir l'afficher
+		SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
+		// Vérifier que la texture a pu être créée
+		if (!texture)
+		{
+			// Si la texture n'a pas pu être créée, libérer la surface et sortir
+			SDL_FreeSurface(surface);
+			return;
+		}
+
+		// Créer un rectangle de destination pour définir où et quelle taille afficher le texte
+		SDL_Rect destRect = {x, y, surface->w, surface->h};
+		// Copier la texture du texte dans le rendu à la position spécifiée
+		SDL_RenderCopy(renderer, texture, nullptr, &destRect);
+
+		// Libérer les ressources allouées
+		SDL_DestroyTexture(texture); // Libérer la texture
+		SDL_FreeSurface(surface);	 // Libérer la surface
 	}
 
-	// Afficher les projectiles du joueur
-	for (auto &bullet : playerBullets)
+	// Fonction qui change l'état actuel du jeu
+	void Game::changeState(GameState newState)
 	{
-		// Appeler la fonction de rendu de chaque projectile du joueur
-		bullet->render(renderer);
+		// Log du changement d'état pour le debug
+		std::cout << "Changement d'état: " << static_cast<int>(currentState) << " -> " << static_cast<int>(newState) << std::endl;
+		currentState = newState;
 	}
 
-	// Afficher les projectiles des ennemis
-	for (auto &bullet : enemyBullets)
-	{
-		// Appeler la fonction de rendu de chaque projectile d'ennemi
-		bullet->render(renderer);
-	}
-
-	// Afficher l'interface utilisateur (HUD)
-	renderText("Score: " + std::to_string(currentScore), 10, 10, font, Colors::WHITE);
-	renderText("Lives: " + std::to_string(lives), 10, 50, font, Colors::WHITE);
-	renderText("Level: " + std::to_string(currentLevel), 10, 90, font, Colors::WHITE);
-}
-
-// Fonction qui affiche du texte à l'écran avec une police et une couleur spécifiées
-void Game::renderText(const std::string &text, int x, int y, TTF_Font *font, const Color &color)
-{
-	// Vérifier que la police existe avant de l'utiliser
-	if (!font)
-		return;
-
-	// Créer une surface SDL contenant le texte rendu avec la police et la couleur
-	SDL_Surface *surface = TTF_RenderText_Solid(font, text.c_str(), color.toSDL());
-	// Vérifier que la surface a pu être créée
-	if (!surface)
-		return;
-
-	// Créer une texture à partir de la surface pour pouvoir l'afficher
-	SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
-	// Vérifier que la texture a pu être créée
-	if (!texture)
-	{
-		// Si la texture n'a pas pu être créée, libérer la surface et sortir
-		SDL_FreeSurface(surface);
-		return;
-	}
-
-	// Créer un rectangle de destination pour définir où et quelle taille afficher le texte
-	SDL_Rect destRect = {x, y, surface->w, surface->h};
-	// Copier la texture du texte dans le rendu à la position spécifiée
-	SDL_RenderCopy(renderer, texture, nullptr, &destRect);
-
-	// Libérer les ressources allouées
-	SDL_DestroyTexture(texture); // Libérer la texture
-	SDL_FreeSurface(surface);	 // Libérer la surface
-}
-
-// Fonction qui change l'état actuel du jeu
-void Game::changeState(GameState newState)
-{
-	// Log du changement d'état pour le debug
-	std::cout << "Changement d'état: " << static_cast<int>(currentState) << " -> " << static_cast<int>(newState) << std::endl;
-	currentState = newState;
-}
-
-// Fermer l'espace de noms SI3LN
+	// Fermer l'espace de noms SI3LN
 } // namespace SI3LN
