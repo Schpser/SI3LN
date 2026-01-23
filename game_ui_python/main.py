@@ -1,10 +1,11 @@
 import pygame
 import sys
 import subprocess
-import pygame
-import sys
-import subprocess
 import os
+
+pygame.init()
+pygame.font.init()
+
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("SI3LN - Menu Principal")
@@ -13,12 +14,28 @@ font = pygame.font.SysFont(None, 48)
 menu_items = ["Jouer", "Backgrounds", "Niveaux", "Personnages", "Quitter"]
 selected = 0
 
-# Liste des backgrounds disponibles
-ASSET_DIR = "/home/ramos/SI3LN/game_engine_C++/assets"
+ASSET_DIR = "/home/ramos/SI3LN/game_engine_C++/build/assets"
+HOME_BG_PATH = os.path.join(ASSET_DIR, "worlds/home_page.jpg")
+
+def load_home_background():
+    if os.path.exists(HOME_BG_PATH):
+        try:
+            img = pygame.image.load(HOME_BG_PATH)
+            return pygame.transform.scale(img, (WIDTH, HEIGHT))
+        except Exception as e:
+            print(f"Erreur chargement home_page.jpg: {e}")
+    # Background par défaut
+    surf = pygame.Surface((WIDTH, HEIGHT))
+    surf.fill((30, 30, 30))
+    return surf
+
+# Liste des backgrounds pour le sous-menu
 def get_backgrounds():
     bg_dir = os.path.join(ASSET_DIR, "worlds")
-    bg_files = [f for f in os.listdir(bg_dir) if f.startswith("background_")]
-    return bg_files
+    if os.path.exists(bg_dir):
+        bg_files = [f for f in os.listdir(bg_dir) if f.startswith("background_")]
+        return bg_files
+    return []
 
 background_files = get_backgrounds()
 background_selected = 0
@@ -37,19 +54,19 @@ def load_background(idx):
     surf.fill((30, 30, 30))
     return surf
 
-background_img = load_background(background_selected)
+background_img = load_home_background()
 
 # Chemin vers un asset exemple (image ennemi)
-ASSET_PATH = "/home/ramos/SI3LN/game_engine_C++/assets/enemies/Apocalyptic_world/enemy (1).png_Zone.Identifier"
+ENEMY_PATH = os.path.join(ASSET_DIR, "enemies/Apocalyptic_world/enemy (1).png")
 enemy_img = None
-if os.path.exists(ASSET_PATH):
+if os.path.exists(ENEMY_PATH):
     try:
-        enemy_img = pygame.image.load(ASSET_PATH)
+        enemy_img = pygame.image.load(ENEMY_PATH)
         enemy_img = pygame.transform.scale(enemy_img, (100, 100))
     except Exception as e:
-        print(f"Erreur chargement image: {e}")
+        print(f"Erreur chargement image ennemi: {e}")
 else:
-    print(f"Image non trouvée: {ASSET_PATH}")
+    print(f"Image ennemi non trouvée: {ENEMY_PATH}")
 
 def draw_menu():
     # Affiche le background
@@ -66,13 +83,18 @@ def draw_menu():
         text = font.render(item, True, color)
         rect = text.get_rect(center=(WIDTH//2, 180 + i*60))
         screen.blit(text, rect)
-    # Si le sous-menu backgrounds est sélectionné, affiche la liste
+    # Si le sous-menu backgrounds est sélectionné, affiche la liste si elle existe
     if menu_items[selected] == "Backgrounds":
         sub_font = pygame.font.SysFont(None, 32)
-        for j, bg in enumerate(background_files):
-            color = (0, 255, 255) if j == background_selected else (180, 180, 180)
-            txt = sub_font.render(bg, True, color)
-            rct = txt.get_rect(center=(WIDTH//2, 500 + j*35))
+        if background_files:
+            for j, bg in enumerate(background_files):
+                color = (0, 255, 255) if j == background_selected else (180, 180, 180)
+                txt = sub_font.render(bg, True, color)
+                rct = txt.get_rect(center=(WIDTH//2, 500 + j*35))
+                screen.blit(txt, rct)
+        else:
+            txt = sub_font.render("Aucun background disponible", True, (255, 0, 0))
+            rct = txt.get_rect(center=(WIDTH//2, 500))
             screen.blit(txt, rct)
     pygame.display.flip()
 
@@ -86,8 +108,11 @@ def launch_cpp_game():
     pygame.display.flip()
     pygame.time.wait(1000)  # 1 seconde d'attente
     pygame.quit()
-    # Lance le moteur C++
-    subprocess.run(["/home/ramos/SI3LN/game_engine_C++/build/SI3LN"])
+    
+    # IMPORTANT: Lance le moteur C++ DANS SON DOSSIER pour que les assets soient trouvés
+    game_dir = "/home/ramos/SI3LN/game_engine_C++/build"
+    game_exe = os.path.join(game_dir, "SI3LN")
+    subprocess.run([game_exe], cwd=game_dir)
     sys.exit()
 
 while True:
@@ -98,13 +123,14 @@ while True:
             sys.exit()
         elif event.type == pygame.KEYDOWN:
             if menu_items[selected] == "Backgrounds":
-                if event.key == pygame.K_UP:
-                    background_selected = (background_selected - 1) % len(background_files)
-                    background_img = load_background(background_selected)
-                elif event.key == pygame.K_DOWN:
-                    background_selected = (background_selected + 1) % len(background_files)
-                    background_img = load_background(background_selected)
-                elif event.key == pygame.K_LEFT:
+                if background_files:
+                    if event.key == pygame.K_UP:
+                        background_selected = (background_selected - 1) % len(background_files)
+                        background_img = load_background(background_selected)
+                    elif event.key == pygame.K_DOWN:
+                        background_selected = (background_selected + 1) % len(background_files)
+                        background_img = load_background(background_selected)
+                if event.key == pygame.K_LEFT:
                     selected = (selected - 1) % len(menu_items)
                 elif event.key == pygame.K_RIGHT:
                     selected = (selected + 1) % len(menu_items)

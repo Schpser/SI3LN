@@ -117,8 +117,8 @@ namespace SI3LN
 		std::cout << "Loading assets..." << std::endl;
 
 		// Charger les polices de caractères pour le texte du jeu
-		font = TTF_OpenFont("assets/fonts/arial.ttf", FONT_SIZE_MEDIUM);	 // Police de taille moyenne
-		fontLarge = TTF_OpenFont("assets/fonts/arial.ttf", FONT_SIZE_LARGE); // Police de grande taille
+		font = TTF_OpenFont("assets/fonts/edunline/SuperPixel-m2L8j.ttf", FONT_SIZE_MEDIUM);	 // Police de taille moyenne
+		fontLarge = TTF_OpenFont("assets/fonts/edunline/SuperPixel-m2L8j.ttf", FONT_SIZE_LARGE); // Police de grande taille
 
 		// Afficher un avertissement si les polices ne peuvent pas être chargées
 		if (!font || !fontLarge)
