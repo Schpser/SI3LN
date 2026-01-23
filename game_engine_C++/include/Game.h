@@ -23,6 +23,9 @@ namespace SI3LN
 
 		// Boucle principale du jeu
 		void run();
+		
+		// Définir le monde et le niveau (appelé depuis Python)
+		void setWorldAndLevel(const std::string& world, int level);
 
 	private:
 		// ==================== Initialisation et nettoyage ====================

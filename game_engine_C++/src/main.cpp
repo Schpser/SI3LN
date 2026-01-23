@@ -1,7 +1,8 @@
 #include "Game.h"	// Inclusion du fichier d'en-tête Game.h pour utiliser la classe Game
 #include <iostream> // Inclusion de la bibliothèque iostream pour les opérations d'entrée/sortie
+#include <string>   // Inclusion pour std::string
 
-int main([[maybe_unused]] int argc, [[maybe_unused]] char *argv[])
+int main(int argc, char *argv[])
 {
 	std::cout << std::endl;															  // Affichage d'une ligne vide dans le terminal
 	std::cout << "   _____ _____ _____ _____ _____ _____ _____ _____ " << std::endl;  // Affichage du logo ASCII
@@ -12,9 +13,29 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char *argv[])
 	std::cout << "  |_____| |_| |_____| |_| |_____||_| |_____| |_|  " << std::endl;	  // Affichage de la dernière ligne du logo
 	std::cout << std::endl;															  // Affichage d'une ligne vide dans le terminal
 
+	// Parse command line arguments (passed from Python UI)
+	std::string world = "Space";  // Default world
+	int level = 1;                // Default level
+	
+	if (argc >= 2)
+	{
+		world = argv[1];
+		std::cout << "World selected: " << world << std::endl;
+	}
+	if (argc >= 3)
+	{
+		try {
+			level = std::stoi(argv[2]);
+			std::cout << "Level selected: " << level << std::endl;
+		} catch (...) {
+			level = 1;
+		}
+	}
+
 	try
 	{
 		SI3LN::Game game; // Création d'une instance de la classe Game
+		game.setWorldAndLevel(world, level);  // Set world and level from Python UI
 		game.run();		  // Appel de la méthode run() pour démarrer le jeu
 	}
 	catch (const std::exception &e)

@@ -47,6 +47,14 @@ namespace SI3LN
 	{
 	}
 
+	// Définir le monde et le niveau (appelé depuis Python)
+	void Game::setWorldAndLevel(const std::string& world, int level)
+	{
+		currentWorld = world;
+		currentLevel = level;
+		std::cout << "Game configured: World=" << currentWorld << ", Level=" << currentLevel << std::endl;
+	}
+
 	// Destructeur qui appelle cleanup pour libérer les ressources
 	Game::~Game()
 	{

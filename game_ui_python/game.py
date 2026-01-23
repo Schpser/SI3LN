@@ -6,7 +6,15 @@ import pygame
 import random
 import sys
 import os
+import subprocess
 from constants import *
+
+# Chemin vers le moteur C++
+CPP_GAME_DIR = "/home/ramos/SI3LN/game_engine_C++/build"
+CPP_GAME_EXE = os.path.join(CPP_GAME_DIR, "SI3LN")
+
+# Option pour utiliser le moteur C++ pour le gameplay
+USE_CPP_ENGINE = True  # Mettre à False pour revenir au gameplay Python
 from utils import load_image, draw_text, load_enemy_images, load_boss_images, create_bullet_surface, safe_load_image
 from utils.logger import setup_logging, get_logger, info, warning, error, debug
 from auth import AuthSystem
@@ -640,9 +648,60 @@ class Game:
             if self.profile_icon and self.profile_icon.is_clicked(pos):
                 self.profile_screen.open()
     
+    def launch_cpp_game(self):
+        """Lance le moteur de jeu C++ et revient à l'interface Python après"""
+        info(f"Launching C++ game engine for world={self.current_world}, level={self.current_level}")
+        
+        # Affiche un écran de chargement
+        self.screen.fill(BLACK)
+        loading_text = self.font_large.render("CHARGEMENT...", True, WHITE)
+        loading_rect = loading_text.get_rect(center=(self.screen_width // 2, self.screen_height // 2))
+        self.screen.blit(loading_text, loading_rect)
+        pygame.display.flip()
+        pygame.time.wait(500)
+        
+        # Minimise la fenêtre pygame pendant le jeu C++
+        pygame.display.iconify()
+        
+        # Lance le moteur C++ dans son dossier (pour que les chemins relatifs fonctionnent)
+        try:
+            # Passer le monde et le niveau en arguments si nécessaire
+            result = subprocess.run(
+                [CPP_GAME_EXE, self.current_world, str(self.current_level)],
+                cwd=CPP_GAME_DIR
+            )
+            info(f"C++ game exited with code: {result.returncode}")
+        except FileNotFoundError:
+            error(f"C++ game executable not found: {CPP_GAME_EXE}")
+            self.show_message("Erreur: Jeu C++ non trouvé!", RED)
+        except Exception as e:
+            error(f"Error launching C++ game: {e}")
+            self.show_message(f"Erreur: {e}", RED)
+        
+        # Revient à l'interface Python
+        info("Returning to Python UI...")
+        
+        # Restaure la fenêtre pygame
+        pygame.display.set_mode(
+            (self.screen_width, self.screen_height),
+            pygame.RESIZABLE
+        )
+        
+        # Retourne au menu de sélection de niveau
+        self.level_selector.open()
+        self.state = STATE_LEVEL_SELECT
+        self.show_message("Retour au menu!", GREEN)
+    
     def start_level(self):
-        """Start a new level"""
+        """Start a new level - Lance le moteur C++ si activé, sinon gameplay Python"""
         debug(f"Starting level {self.current_level} in world {self.current_world}")
+        
+        # Si le moteur C++ est activé, lancer le jeu en C++
+        if USE_CPP_ENGINE:
+            self.launch_cpp_game()
+            return
+        
+        # Sinon, continuer avec le gameplay Python
         self.state = STATE_GAMEPLAY
         self.lives = MAX_LIVES
         
