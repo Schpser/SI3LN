@@ -6,75 +6,75 @@
 
 namespace SI3LN {
 
-// Screen settings
+// Paramètres d'écran
 constexpr int DEFAULT_SCREEN_WIDTH = 1280;
 constexpr int DEFAULT_SCREEN_HEIGHT = 720;
-constexpr int FPS = 60; // Le jeu tourne à 60 FPS
-constexpr int FRAME_DELAY = 1000 / FPS;
+constexpr int FPS = 60; // Le jeu tourne à 60 images par seconde (FPS)
+constexpr int FRAME_DELAY = 1000 / FPS; // Délai entre chaque image pour maintenir la vitesse du jeu constante
 
-// Colors (RGBA format)
+// Couleurs en format RGBA
 struct Color {
     uint8_t r, g, b, a;
     
     Color(uint8_t r = 0, uint8_t g = 0, uint8_t b = 0, uint8_t a = 255)
         : r(r), g(g), b(b), a(a) {}
     
-    SDL_Color toSDL() const { return {r, g, b, a}; }
+    SDL_Color toSDL() const { return {r, g, b, a}; } // Convertir la couleur en format SDL
 };
 
 namespace Colors {
-    const Color WHITE(255, 255, 255);
-    const Color BLACK(0, 0, 0);
-    const Color RED(255, 0, 0);
-    const Color GREEN(0, 255, 0);
-    const Color BLUE(0, 0, 255);
-    const Color YELLOW(255, 255, 0);
-    const Color CYAN(0, 255, 255);
-    const Color MAGENTA(255, 0, 255);
-    const Color GRAY(128, 128, 128);
-    const Color LIGHT_GRAY(200, 200, 200);
-    const Color DARK_GRAY(50, 50, 50);
-    const Color ORANGE(255, 165, 0);
-    const Color PURPLE(128, 0, 128);
+    const Color WHITE = {255, 255, 255, 255}; // Blanc
+    const Color BLACK = {0, 0, 0, 255}; // Noir
+    const Color RED = {255, 0, 0, 255}; // Rouge
+    const Color GREEN = {0, 255, 0, 255}; // Vert
+    const Color BLUE = {0, 0, 255, 255}; // Bleu
+    const Color YELLOW = {255, 255, 0, 255}; // Jaune
+    const Color CYAN = {0, 255, 255, 255}; // Cyan
+    const Color MAGENTA = {255, 0, 255, 255}; // Magenta
+    const Color GRAY = {128, 128, 128, 255}; // Gris
+    const Color LIGHT_GRAY = {200, 200, 200, 255}; // Gris clair
+    const Color DARK_GRAY = {50, 50, 50, 255}; // Gris foncé
+    const Color ORANGE = {255, 165, 0, 255}; // Orange
+    const Color PURPLE = {128, 0, 128, 255}; // Violet
 }
 
-// Game settings
-constexpr int MAX_LIVES = 5;
-constexpr int MAX_PLAYER_BULLETS = 3;
-constexpr int PLAYER_SPEED = 500; // Augmenter la vitesse de base du joueur
-constexpr int ENEMY_SPEED = 1;
-constexpr int PLAYER_BULLET_SPEED = 10;
-constexpr int ENEMY_BULLET_SPEED = 5;
+// Paramètres du jeu
+constexpr int MAX_LIVES = 5; // Nombre maximum de vies
+constexpr int MAX_PLAYER_BULLETS = 3; // Nombre maximum de balles joueur
+constexpr int PLAYER_SPEED = 500; // Vitesse du joueur (non modifiée par le commentaire)
+constexpr int ENEMY_SPEED = 1; // Vitesse initiale des ennemis
+constexpr int PLAYER_BULLET_SPEED = 10; // Vitesse des balles du joueur
+constexpr int ENEMY_BULLET_SPEED = 5; // Vitesse des balles des ennemis
 
-// Timers and durations (in milliseconds)
-constexpr int SHIELD_DURATION = 3000;
-constexpr int MEGA_SHOT_DURATION = 5000;
-constexpr int SPECIAL_ATTACK_COOLDOWN = 10000;
+// Durées et délais (en millisecondes)
+constexpr int SHIELD_DURATION = 3000; // Durée de protection du bouclier
+constexpr int MEGA_SHOT_DURATION = 5000; // Durée du tir méga
+constexpr int SPECIAL_ATTACK_COOLDOWN = 10000; // Délai entre les attaques spéciales
 
-// Font sizes
-constexpr int FONT_SIZE_LARGE = 70;
-constexpr int FONT_SIZE_MEDIUM = 40;
-constexpr int FONT_SIZE_SMALL = 28;
-constexpr int FONT_SIZE_TINY = 20;
+// Taille des polices de caractères
+constexpr int FONT_SIZE_LARGE = 70; // Grand texte
+constexpr int FONT_SIZE_MEDIUM = 40; // Texte moyen
+constexpr int FONT_SIZE_SMALL = 28; // Petit texte
+constexpr int FONT_SIZE_TINY = 20; // Très petit texte
 
-// Sprite sizes
-constexpr int PLAYER_PORTRAIT_SIZE = 60;
-constexpr int ENEMY_SIZE = 60;
-constexpr int BOSS_SIZE = 100;
+// Taille des sprites
+constexpr int PLAYER_PORTRAIT_SIZE = 60; // Taille du portrait du joueur
+constexpr int ENEMY_SIZE = 60; // Taille initiale des ennemis
+constexpr int BOSS_SIZE = 100; // Taille du boss
 
-// Enemy spawn parameters
-constexpr int ENEMY_SPAWN_BASE_ROWS = 3;
-constexpr int ENEMY_SPAWN_BASE_COLS = 5;
-constexpr int ENEMY_SPAWN_MAX_ROWS = 6;
-constexpr int ENEMY_SPAWN_MAX_COLS = 9;
-constexpr int ENEMY_SPACING_X = 20;
-constexpr int ENEMY_SPACING_Y = 20;
+// Paramètres de spawn des ennemis
+constexpr int ENEMY_SPAWN_BASE_ROWS = 3; // Nombre de rangées de base pour le spawn d'ennemis
+constexpr int ENEMY_SPAWN_BASE_COLS = 5; // Nombre de colonnes de base pour le spawn d'ennemis
+constexpr int ENEMY_SPAWN_MAX_ROWS = 6; // Nombre maximum de rangées pour le spawn d'ennemis
+constexpr int ENEMY_SPAWN_MAX_COLS = 9; // Nombre maximum de colonnes pour le spawn d'ennemis
+constexpr int ENEMY_SPACING_X = 20; // Espacement horizontal entre les ennemis
+constexpr int ENEMY_SPACING_Y = 20; // Espacement vertical entre les ennemis
 
-// Probabilities
-constexpr float BONUS_DROP_CHANCE = 0.2f;
-constexpr float ENEMY_SHOOT_CHANCE_BASE = 0.1f;
+// Probabilités
+constexpr float BONUS_DROP_CHANCE = 0.2f; // Chance de drop d'un bonus
+constexpr float ENEMY_SHOOT_CHANCE_BASE = 0.1f; // Chance de tir basique des ennemis
 
-// Game states
+// États du jeu
 enum class GameState {
     MAIN_MENU,
     LOGIN,
@@ -89,18 +89,18 @@ enum class GameState {
     HELP
 };
 
-// World configuration
+// Configuration du monde
 struct WorldConfig {
-    std::string name;
-    std::string background;
-    int levels;
-    std::string enemiesDir;
-    int enemyCount;
-    std::pair<Color, Color> playerBulletColors;
-    std::pair<Color, Color> enemyBulletColors;
+    std::string name; // Nom du monde
+    std::string background; // Fond d'écran du monde
+    int levels; // Nombre de niveaux dans le monde
+    std::string enemiesDir; // Répertoire des ennemis
+    int enemyCount; // Nombre total d'ennemis dans le monde
+    std::pair<Color, Color> playerBulletColors; // Couleurs des balles du joueur
+    std::pair<Color, Color> enemyBulletColors; // Couleurs des balles des ennemis
 };
 
-// Worlds data
+// Données des mondes
 inline std::map<std::string, WorldConfig> getWorldsConfig() {
     std::map<std::string, WorldConfig> worlds;
     
