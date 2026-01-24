@@ -88,7 +88,8 @@ namespace SI3LN
 
 		// ==================== Ressources graphiques et polices ====================
 		SDL_Texture *playerTexture;		// Texture du joueur
-		SDL_Texture *enemyTexture;		// Texture des ennemis
+		SDL_Texture *enemyTexture;		// Texture des ennemis (single, legacy)
+		std::vector<SDL_Texture*> enemyTextures; // Toutes les textures d'ennemis du monde courant
 		SDL_Texture *backgroundTexture; // Texture de l'arrière-plan
 		TTF_Font *font;					// Police de taille normale
 		TTF_Font *fontLarge;			// Police de grande taille

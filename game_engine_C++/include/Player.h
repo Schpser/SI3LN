@@ -10,6 +10,21 @@ namespace SI3LN {
 
 // Classe représentant le joueur dans le jeu
 class Player : public Entity {
+        // Indique si le coup spécial est prêt
+        bool specialReady = false;
+
+    public:
+        // Déclenche le tir spécial si prêt
+        bool useSpecial() {
+            if (specialCharge >= 5) { // Par exemple, 5 ennemis tués
+                specialCharge = 0;
+                specialReady = false;
+                return true;
+            }
+            return false;
+        }
+    // Jauge de coup spécial (augmente quand le joueur tue des ennemis)
+    int specialCharge = 0;
 public:
     // Constructeur de la classe Player
     Player(float x, float y, SDL_Texture* texture, int screenWidth, int screenHeight);
@@ -46,7 +61,7 @@ private:
     
     // Gestion des tirs
     uint32_t lastShootTime; // Dernière fois que le joueur a tiré
-    uint32_t shootCooldown; // Période de refroidissement entre les tirs
+    uint32_t shootCooldown = 0; // Pas de cooldown entre les tirs
 };
 
 } // namespace SI3LN

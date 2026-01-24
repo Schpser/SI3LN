@@ -40,7 +40,6 @@ namespace Colors {
 
 // ==================== Paramètres du jeu ====================
 constexpr int MAX_LIVES = 5; // Nombre maximum de vies du joueur
-constexpr int MAX_PLAYER_BULLETS = 3; // Nombre maximum de projectiles du joueur
 constexpr int PLAYER_SPEED = 150; // Vitesse du joueur (réduite de 500 -> 150)
 constexpr int ENEMY_SPEED = 1; // Vitesse initiale des ennemis
 constexpr int PLAYER_BULLET_SPEED = 10; // Vitesse des projectiles du joueur
