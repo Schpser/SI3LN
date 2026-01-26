@@ -20,7 +20,6 @@ events:
     names:
       - "uname"
     candidate_directories:
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -34,14 +33,12 @@ events:
       - "/home/ramos/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts/"
       - "/bin/"
     searched_directories:
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/uname"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/uname"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/uname"
       - "/usr/local/bin/uname"
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -81,7 +78,6 @@ events:
       - "make"
       - "smake"
     candidate_directories:
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -94,7 +90,6 @@ events:
       - "/usr/bin/core_perl/"
       - "/home/ramos/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/gmake"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gmake"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gmake"
       - "/usr/local/bin/gmake"
@@ -106,14 +101,12 @@ events:
       - "/usr/bin/vendor_perl/gmake"
       - "/usr/bin/core_perl/gmake"
       - "/home/ramos/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts/gmake"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/make"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/make"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/make"
       - "/usr/local/bin/make"
     found: "/usr/bin/make"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -154,7 +147,6 @@ events:
       - "icx"
       - "clang++"
     candidate_directories:
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -167,14 +159,12 @@ events:
       - "/usr/bin/core_perl/"
       - "/home/ramos/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/c++"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/c++"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/c++"
       - "/usr/local/bin/c++"
     found: "/usr/bin/c++"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -213,7 +203,6 @@ events:
     found: "/usr/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -268,7 +257,6 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -282,7 +270,6 @@ events:
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -315,7 +302,6 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -329,7 +315,6 @@ events:
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -362,7 +347,6 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -376,7 +360,6 @@ events:
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -409,7 +392,6 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -423,7 +405,6 @@ events:
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -456,7 +437,6 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -470,7 +450,6 @@ events:
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -503,7 +482,6 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -517,7 +495,6 @@ events:
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -550,7 +527,6 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -564,7 +540,6 @@ events:
     found: "/usr/bin/objcopy"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -597,7 +572,6 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -611,7 +585,6 @@ events:
     found: "/usr/bin/readelf"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -644,7 +617,6 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -657,7 +629,6 @@ events:
       - "/home/ramos/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/dlltool"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/dlltool"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/dlltool"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/dlltool"
       - "/usr/local/bin/dlltool"
@@ -671,7 +642,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -704,7 +674,6 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -718,7 +687,6 @@ events:
     found: "/usr/bin/addr2line"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -751,7 +719,6 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -764,7 +731,6 @@ events:
       - "/home/ramos/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/tapi"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/tapi"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
       - "/usr/local/bin/tapi"
@@ -778,7 +744,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -814,7 +779,6 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -827,7 +791,6 @@ events:
       - "/home/ramos/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/gcc-ar-15.2"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/gcc-ar-15.2"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2"
       - "/usr/local/bin/gcc-ar-15.2"
@@ -839,7 +802,6 @@ events:
       - "/usr/bin/core_perl/gcc-ar-15.2"
       - "/home/ramos/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar-15.2"
       - "/usr/bin/gcc-ar-15"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/gcc-ar-15"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15"
       - "/usr/local/bin/gcc-ar-15"
@@ -851,7 +813,6 @@ events:
       - "/usr/bin/core_perl/gcc-ar-15"
       - "/home/ramos/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar-15"
       - "/usr/bin/gcc-ar15"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/gcc-ar15"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15"
       - "/usr/local/bin/gcc-ar15"
@@ -865,7 +826,6 @@ events:
     found: "/usr/bin/gcc-ar"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -901,7 +861,6 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -914,7 +873,6 @@ events:
       - "/home/ramos/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/gcc-ranlib-15.2"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/gcc-ranlib-15.2"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2"
       - "/usr/local/bin/gcc-ranlib-15.2"
@@ -926,7 +884,6 @@ events:
       - "/usr/bin/core_perl/gcc-ranlib-15.2"
       - "/home/ramos/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15.2"
       - "/usr/bin/gcc-ranlib-15"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/gcc-ranlib-15"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15"
       - "/usr/local/bin/gcc-ranlib-15"
@@ -938,7 +895,6 @@ events:
       - "/usr/bin/core_perl/gcc-ranlib-15"
       - "/home/ramos/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15"
       - "/usr/bin/gcc-ranlib15"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/gcc-ranlib15"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15"
       - "/usr/local/bin/gcc-ranlib15"
@@ -952,7 +908,6 @@ events:
     found: "/usr/bin/gcc-ranlib"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -973,8 +928,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-YQdNfg"
-      binary: "/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-YQdNfg"
+      source: "/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-ZN8DDi"
+      binary: "/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-ZN8DDi"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -984,13 +939,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-YQdNfg'
+        Change Dir: '/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-ZN8DDi'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c6f6b/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_c6f6b.dir/build.make CMakeFiles/cmTC_c6f6b.dir/build
-        make[1]: Entering directory '/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-YQdNfg'
-        Building CXX object CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d95b8/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_d95b8.dir/build.make CMakeFiles/cmTC_d95b8.dir/build
+        make[1]: Entering directory '/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-ZN8DDi'
+        Building CXX object CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         Target: x86_64-pc-linux-gnu
@@ -998,8 +953,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.1 20250813 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c6f6b.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_c6f6b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccgipPMM.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d95b8.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_d95b8.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccwKTYzl.s
         GNU C++17 (GCC) version 15.2.1 20250813 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 15.2.1 20250813, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -1016,14 +971,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 452a313327dacf71986995db29f6855a
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c6f6b.dir/'
-         as -v --64 -o CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccgipPMM.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d95b8.dir/'
+         as -v --64 -o CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccwKTYzl.s
         GNU assembler version 2.45.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.45.0
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_c6f6b
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6f6b.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_d95b8
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d95b8.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper
@@ -1034,14 +989,14 @@ events:
         gcc version 15.2.1 20250813 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c6f6b' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c6f6b.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cctnyij5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_c6f6b /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d95b8' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d95b8.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccw23p92.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_d95b8 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         collect2 version 15.2.1 20250813
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cctnyij5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_c6f6b /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccw23p92.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_d95b8 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.45.0
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c6f6b' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c6f6b.'
-        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_c6f6b
-        make[1]: Leaving directory '/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-YQdNfg'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d95b8' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d95b8.'
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_d95b8
+        make[1]: Leaving directory '/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-ZN8DDi'
         
       exitCode: 0
   -
@@ -1082,13 +1037,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-YQdNfg']
+        ignore line: [Change Dir: '/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-ZN8DDi']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c6f6b/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_c6f6b.dir/build.make CMakeFiles/cmTC_c6f6b.dir/build]
-        ignore line: [make[1]: Entering directory '/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-YQdNfg']
-        ignore line: [Building CXX object CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d95b8/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_d95b8.dir/build.make CMakeFiles/cmTC_d95b8.dir/build]
+        ignore line: [make[1]: Entering directory '/home/ramos/SI3LN/game_engine_C++/build/CMakeFiles/CMakeScratch/TryCompile-ZN8DDi']
+        ignore line: [Building CXX object CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -1096,8 +1051,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.1 20250813 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c6f6b.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_c6f6b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccgipPMM.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d95b8.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_d95b8.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccwKTYzl.s]
         ignore line: [GNU C++17 (GCC) version 15.2.1 20250813 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 15.2.1 20250813  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1114,14 +1069,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 452a313327dacf71986995db29f6855a]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c6f6b.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccgipPMM.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d95b8.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccwKTYzl.s]
         ignore line: [GNU assembler version 2.45.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.45.0]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_c6f6b]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6f6b.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_d95b8]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d95b8.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper]
@@ -1132,13 +1087,13 @@ events:
         ignore line: [gcc version 15.2.1 20250813 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c6f6b' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c6f6b.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cctnyij5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_c6f6b /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d95b8' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d95b8.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccw23p92.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_d95b8 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/cctnyij5.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccw23p92.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -1153,7 +1108,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_c6f6b] ==> ignore
+          arg [cmTC_d95b8] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o]
@@ -1165,7 +1120,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1176,7 +1131,7 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         ignore line: [collect2 version 15.2.1 20250813]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cctnyij5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_c6f6b /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_c6f6b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccw23p92.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_d95b8 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_d95b8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         linker tool for 'CXX': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
@@ -1224,7 +1179,6 @@ events:
       - "pkg-config"
       - "pkgconf"
     candidate_directories:
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/usr/local/bin/"
@@ -1254,8 +1208,6 @@ events:
       - "/opt/sbin/"
       - "/opt/"
     searched_directories:
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/pkg-config"
-      - "/home/ramos/SI3LN/game_ui_python/venv/bin/pkgconf"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/pkg-config"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/pkgconf"
       - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/pkg-config"
@@ -1265,7 +1217,6 @@ events:
     found: "/usr/bin/pkg-config"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -1313,7 +1264,6 @@ events:
     found: "/usr/lib/libSDL2.so"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -1363,7 +1313,6 @@ events:
     found: "/usr/lib/libSDL2_image.so"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -1413,7 +1362,6 @@ events:
     found: "/usr/lib/libSDL2.so"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -1463,7 +1411,6 @@ events:
     found: "/usr/lib/libSDL2_ttf.so"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -1513,7 +1460,6 @@ events:
     found: "/usr/lib/libSDL2.so"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -1563,7 +1509,6 @@ events:
     found: "/usr/lib/libSDL2_mixer.so"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"
@@ -1613,7 +1558,6 @@ events:
     found: "/usr/lib/libSDL2.so"
     search_context:
       ENV{PATH}:
-        - "/home/ramos/SI3LN/game_ui_python/venv/bin"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/home/ramos/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/usr/local/bin"

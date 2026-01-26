@@ -9,7 +9,30 @@ namespace SI3LN {
 
 void Game::spawnEnemies()
 {
-	// À compléter : logique de génération des ennemis
+	// Nettoyer les ennemis existants
+	enemies.clear();
+
+	// Paramètres de la vague
+	const int nbCols = 8;
+	const int nbRows = 3;
+	const float spacingX = 80.0f;
+	const float spacingY = 60.0f;
+	const float startX = 100.0f;
+	const float startY = 60.0f;
+
+	// Utiliser la première texture d'ennemi disponible
+	SDL_Texture* tex = nullptr;
+	if (!enemyTextures.empty())
+		tex = enemyTextures[0];
+
+	for (int row = 0; row < nbRows; ++row) {
+		for (int col = 0; col < nbCols; ++col) {
+			float x = startX + col * spacingX;
+			float y = startY + row * spacingY;
+			enemies.push_back(std::make_shared<Enemy>(x, y, tex, screenWidth, screenHeight));
+		}
+	}
+	std::cout << "[DEBUG] Spawned " << enemies.size() << " enemies" << std::endl;
 }
 
 // GESTION DES ÉVÉNEMENTS CLAVIER
@@ -110,7 +133,47 @@ void Game::handleMouseClick(int x, int y)
 // MISE À JOUR GÉNÉRALE DU JEU
 void Game::update(float deltaTime)
 {
-	// À compléter : logique de mise à jour du jeu
+	if (currentState != GameState::GAMEPLAY)
+		return;
+
+	// Récupérer l'état du clavier pour le mouvement continu
+	const uint8_t* keyState = SDL_GetKeyboardState(nullptr);
+
+	// Mettre à jour le joueur (mouvement avec les touches directionnelles)
+	if (player) {
+		player->handleInput(keyState);
+		player->update(deltaTime);
+
+		// Tir automatique avec ESPACE
+		if (keyState[SDL_SCANCODE_SPACE] && player->canShoot()) {
+			auto bullet = std::make_shared<Bullet>(
+				player->getPosition().x,
+				player->getPosition().y - player->getHeight() / 2,
+				true,
+				screenHeight,
+				Colors::CYAN
+			);
+			playerBullets.push_back(bullet);
+			player->resetShootCooldown();
+		}
+	}
+
+	// Mettre à jour les ennemis
+	for (auto& enemy : enemies) {
+		enemy->update(deltaTime);
+	}
+
+	// Mettre à jour les projectiles du joueur
+	for (auto& bullet : playerBullets) {
+		bullet->update(deltaTime);
+	}
+
+	// Supprimer les projectiles hors écran
+	playerBullets.erase(
+		std::remove_if(playerBullets.begin(), playerBullets.end(),
+			[](const std::shared_ptr<Bullet>& b) { return !b->isAlive(); }),
+		playerBullets.end()
+	);
 }
 
 	// Constructeur par défaut de la classe Game qui initialise les membres
