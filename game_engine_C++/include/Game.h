@@ -30,6 +30,12 @@ namespace SI3LN
 		// Définir le personnage sélectionné (appelé depuis Python)
 		void setPlayerIndex(int index) { playerIndex = index; }
 
+		// Mode d'affichage de la fenêtre (fenêtré, fenêtré sans bord, ou plein écran)
+		enum class WindowMode { WINDOWED = 0, BORDERLESS, FULLSCREEN };
+
+		// Définir le mode d'affichage de la fenêtre (publiquement accessible)
+		void setWindowMode(WindowMode mode);
+
 	private:
 		// ==================== Initialisation et nettoyage ====================
 		bool init();	   // Initialise SDL et les ressources
@@ -63,8 +69,9 @@ namespace SI3LN
 
 		// ==================== État du jeu ====================
 		GameState currentState; // État actuel du jeu
-		bool running;			// Indique si le jeu est en cours d'exécution
-		bool fullscreen;		// Indique si le jeu est en plein écran
+		bool running;            // Indique si le jeu est en cours d'exécution
+		WindowMode windowMode;   // Mode courant de la fenêtre (stocké en privé)
+
 
 		// ==================== Dimensions de l'écran ====================
 		int screenWidth;  // Largeur de la fenêtre
@@ -97,7 +104,10 @@ namespace SI3LN
 		// ==================== Fonctions utilitaires ====================
 		SDL_Texture *loadTexture(const std::string &path);											// Charge une texture à partir d'un chemin
 		void renderText(const std::string &text, int x, int y, TTF_Font *font, const Color &color); // Affiche du texte à l'écran
-
+		// ==================== Intro de niveau ====================
+		bool showLevelIntro = false;           // Indique si le texte d'intro de niveau est affiché
+		float levelIntroTimer = 0.0f;         // Compteur pour la durée d'affichage
+		static constexpr float LEVEL_INTRO_DURATION = 3.0f; // Durée par défaut en secondes
 		// ==================== Index du personnage sélectionné ====================
 		int playerIndex = 0; // Index du personnage sélectionné
 	};

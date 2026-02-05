@@ -115,14 +115,72 @@ class Game:
         # Lance le moteur C++ dans son dossier (pour que les chemins relatifs fonctionnent)
         try:
             # Passer le monde, le niveau et le personnage sélectionné en arguments
-            result = subprocess.run(
-                [CPP_GAME_EXE, self.current_world, str(self.current_level), str(self.selected_character)],
-                cwd=CPP_GAME_DIR
-            )
-            info(f"C++ game exited with code: {result.returncode}")
-        except FileNotFoundError:
-            error(f"C++ game executable not found: {CPP_GAME_EXE}")
-            self.show_message("Erreur: Jeu C++ non trouvé!", RED)
+            # Passer le mode de fenêtre au binaire C++ (argument optionnel)
+            mode_arg = getattr(self, 'selected_window_mode', None)
+            args = [CPP_GAME_EXE, self.current_world, str(self.current_level), str(self.selected_character)]
+            if mode_arg:
+                args.append(mode_arg)
+
+            info(f"Executing C++: {args} (cwd={CPP_GAME_DIR})")
+
+            # Déterminer l'ordre des drivers à essayer selon la session
+            session = os.environ.get("XDG_SESSION_TYPE", "").lower()
+            if session == "wayland":
+                drivers = [None, "wayland", "x11"]
+            elif session == "x11":
+                drivers = [None, "x11", "wayland"]
+            else:
+                drivers = [None, "wayland", "x11"]
+
+            last_result = None
+            last_exc = None
+
+            for drv in drivers:
+                env = os.environ.copy()
+                if drv:
+                    env["SDL_VIDEODRIVER"] = drv
+                info(f"Attempting C++ launch with SDL_VIDEODRIVER={drv or '<default>'}")
+                try:
+                    # Bloque jusqu'à la fin ; capture les sorties pour debug
+                    result = subprocess.run(args, cwd=CPP_GAME_DIR, env=env, capture_output=True, text=True)
+                    last_result = result
+                    info(f"C++ exited with code {result.returncode}")
+                    if result.stdout:
+                        info("C++ stdout:\n" + result.stdout.strip())
+                    if result.stderr:
+                        error("C++ stderr:\n" + result.stderr.strip())
+
+                    # Si le binaire retourne 0, on considère que c'est un succès
+                    if result.returncode == 0:
+                        break
+                    # sinon, on essaie le driver suivant pour voir si ça règle le problème
+                except FileNotFoundError as e:
+                    error(f"C++ game executable not found: {e}")
+                    last_exc = e
+                    break
+                except Exception as e:
+                    error(f"Error launching C++ game with driver {drv}: {e}")
+                    last_exc = e
+                    # try next driver
+
+            # Si on a une erreur non nulle ou des sorties, afficher une popup avec les logs
+            if last_result and last_result.returncode != 0:
+                content = []
+                if last_result.stdout:
+                    content.append("STDOUT:")
+                    content.extend(last_result.stdout.strip().splitlines())
+                if last_result.stderr:
+                    content.append("STDERR:")
+                    # limiter le nombre de lignes pour tenir dans la popup
+                    content.extend(last_result.stderr.strip().splitlines()[:20])
+
+                popup = PopUp(700, 300, "C++ launch failed", content, self.screen_width, self.screen_height, self.font_medium)
+                popup.open()
+                self.launch_popup = popup
+                self.show_message("Erreur: le jeu C++ a échoué (voir popup)", RED)
+            elif last_exc:
+                self.show_message(f"Erreur: {last_exc}", RED)
+
         except Exception as e:
             error(f"Error launching C++ game: {e}")
             self.show_message(f"Erreur: {e}", RED)
@@ -370,6 +428,8 @@ class Game:
         # Initialisation des écrans de profil et de sélection de niveau
         self.profile_screen = ProfileScreen(self.screen, self.auth, self.players)
         self.level_selector = LevelSelector(self.screen, WORLDS)
+        # Popup de lancement / logs du binaire C++ (remplie si erreur lors du lancement)
+        self.launch_popup = None
         # Création de l'UI
         def update_gameplay(self):
             """Met à jour la logique du gameplay"""
@@ -726,17 +786,16 @@ class Game:
         
         if event.type == pygame.MOUSEBUTTONDOWN:
             pos = event.pos
-            
-            if self.btn_register.is_clicked(pos):
+            if self.btn_create.is_clicked(pos):
                 username = self.register_username.get_text().strip()
                 email = self.register_email.get_text().strip()
                 password = self.register_password.get_text()
                 confirm = self.register_confirm.get_text()
-                
+
                 if password != confirm:
                     self.show_message("Les mots de passe ne correspondent pas", RED)
                     return
-                
+
                 success, msg = self.auth.register(username, password, email)
                 if success:
                     self.show_message(msg, GREEN)
@@ -749,7 +808,7 @@ class Game:
                     self.register_confirm.clear()
                 else:
                     self.show_message(msg, RED)
-            
+
             elif self.btn_back_login.is_clicked(pos):
                 self.state = STATE_LOGIN
                 self.register_username.clear()
@@ -887,6 +946,9 @@ class Game:
         debug(f"Starting level {self.current_level} in world {self.current_world}")  # Affiche le niveau et le monde
         # Si le moteur C++ est activé, lancer le jeu en C++
         if USE_CPP_ENGINE:
+            # Récupérer le mode de fenêtre sélectionné par l'utilisateur
+            self.selected_window_mode = self.level_selector.get_selected_mode()
+            debug(f"Launching C++ with window mode: {self.selected_window_mode}")
             self.launch_cpp_game()
             return
         # Sinon, continuer avec le gameplay Python
@@ -1258,6 +1320,11 @@ class Game:
         # Draw profile screen
         if self.profile_screen.active:
             self.profile_screen.draw()
+
+        # Draw launch popup if present
+        if hasattr(self, 'launch_popup') and self.launch_popup and self.launch_popup.visible:
+            self.launch_popup.draw(self.screen)
+            self.launch_popup.update(pygame.mouse.get_pos())
         
         # Draw message
         if self.message:

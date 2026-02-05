@@ -7,8 +7,9 @@
 namespace SI3LN {
 
 // ==================== Paramètres d'écran ====================
-constexpr int DEFAULT_SCREEN_WIDTH = 1280; // Largeur par défaut de la fenêtre du jeu
-constexpr int DEFAULT_SCREEN_HEIGHT = 720; // Hauteur par défaut de la fenêtre du jeu
+
+constexpr int DEFAULT_SCREEN_WIDTH = 1920; //longeur par defaut de la fenetre de jeu
+constexpr int DEFAULT_SCREEN_HEIGHT = 1080; // Hauteur par défaut de la fenêtre du jeu
 constexpr int FPS = 60; // Nombre d'images par seconde
 constexpr int FRAME_DELAY = 1000 / FPS; // Délai entre chaque image pour maintenir le FPS
 

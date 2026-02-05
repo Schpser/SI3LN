@@ -1,5 +1,5 @@
 CMakeFiles/SI3LN.dir/src/Stubs.cpp.o: \
- /home/ramos/SI3LN/game_engine_C++/src/Stubs.cpp \
+ /home/hugex/Holbeton/SI3LN/game_engine_C++/src/Stubs.cpp \
  /usr/include/stdc-predef.h /usr/include/SDL2/SDL.h \
  /usr/include/SDL2/SDL_main.h /usr/include/SDL2/SDL_stdinc.h \
  /usr/include/SDL2/SDL_config.h /usr/include/SDL2/SDL_platform.h \

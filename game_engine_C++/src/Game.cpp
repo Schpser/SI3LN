@@ -77,14 +77,18 @@ void Game::handleKeyPress(SDL_Keycode key)
 		break;
 
 	case SDLK_F11:
-		fullscreen = !fullscreen;
-		if (fullscreen)
+		// Cycle entre WINDOWED -> BORDERLESS -> FULLSCREEN
+		if (windowMode == WindowMode::WINDOWED)
 		{
-			SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN_DESKTOP);
+			setWindowMode(WindowMode::BORDERLESS);
+		}
+		else if (windowMode == WindowMode::BORDERLESS)
+		{
+			setWindowMode(WindowMode::FULLSCREEN);
 		}
 		else
 		{
-			SDL_SetWindowFullscreen(window, 0);
+			setWindowMode(WindowMode::WINDOWED);
 		}
 		break;
 
@@ -174,43 +178,58 @@ void Game::update(float deltaTime)
 			[](const std::shared_ptr<Bullet>& b) { return !b->isAlive(); }),
 		playerBullets.end()
 	);
+
+	// Gérer l'affichage d'intro de niveau
+	if (showLevelIntro)
+	{
+		levelIntroTimer -= deltaTime;
+		if (levelIntroTimer <= 0.0f)
+		{
+			showLevelIntro = false;
+			levelIntroTimer = 0.0f;
+		}
+	}
 }
 
 	// Constructeur par défaut de la classe Game qui initialise les membres
 	Game::Game()
 		: window(nullptr) // Pointeur de la fenêtre SDL
-		  ,
-		  renderer(nullptr) // Pointeur du moteur de rendu SDL
-		  ,
-		  currentState(GameState::MAIN_MENU) // État initial du jeu (menu principal)
-		  ,
-		  running(false) // Booléen indiquant si le jeu est en cours d'exécution
-		  ,
-		  fullscreen(false) // Booléen pour le mode plein écran
-		  ,
-		  screenWidth(DEFAULT_SCREEN_WIDTH) // Largeur de l'écran
-		  ,
-		  screenHeight(DEFAULT_SCREEN_HEIGHT) // Hauteur de l'écran
-		  ,
-		  lastFrameTime(0) // Temps de la dernière image (frame)
-		  ,
-		  currentScore(0) // Score actuel du joueur
-		  ,
-		  currentLevel(1) // Niveau actuel du jeu
-		  ,
-		  currentWorld("Space") // Monde actuel du jeu
-		  ,
-		  lives(MAX_LIVES) // Nombre de vies disponibles
-		  ,
-		  playerTexture(nullptr) // Texture du joueur
-		  ,
-		  enemyTexture(nullptr) // Texture des ennemis
-		  ,
-		  backgroundTexture(nullptr) // Texture de l'arrière-plan
-		  ,
-		  font(nullptr) // Police de caractères de taille normale
-		  ,
-		  fontLarge(nullptr) // Police de caractères de grande taille
+		,
+		renderer(nullptr) // Pointeur du moteur de rendu SDL
+		,
+		currentState(GameState::MAIN_MENU) // État initial du jeu (menu principal)
+		,
+		running(false) // Booléen indiquant si le jeu est en cours d'exécution
+		,
+		windowMode(WindowMode::WINDOWED) // Mode de la fenêtre (fenêtré par défaut)
+		,
+		screenWidth(DEFAULT_SCREEN_WIDTH) // Largeur de l'écran
+		,
+		screenHeight(DEFAULT_SCREEN_HEIGHT) // Hauteur de l'écran
+		,
+		lastFrameTime(0) // Temps de la dernière image (frame)
+		,
+		currentScore(0) // Score actuel du joueur
+		,
+		currentLevel(1) // Niveau actuel du jeu
+		,
+		currentWorld("Space") // Monde actuel du jeu
+		,
+		lives(MAX_LIVES) // Nombre de vies disponibles
+		,
+		playerTexture(nullptr) // Texture du joueur
+		,
+		enemyTexture(nullptr) // Texture des ennemis
+		,
+		backgroundTexture(nullptr) // Texture de l'arrière-plan
+		,
+		font(nullptr) // Police de caractères de taille normale
+		,
+		fontLarge(nullptr) // Police de caractères de grande taille
+		,
+		showLevelIntro(false)
+		,
+		levelIntroTimer(0.0f)
 	{
 	}
 
@@ -223,6 +242,9 @@ void Game::update(float deltaTime)
 		currentWorldLower = world;
 		std::transform(currentWorldLower.begin(), currentWorldLower.end(), currentWorldLower.begin(), [](unsigned char c){ return std::tolower(c); });
 		currentLevel = level;
+		// Lancer l'affichage de l'intro de niveau
+		showLevelIntro = true;
+		levelIntroTimer = LEVEL_INTRO_DURATION;
 		std::cout << "Game configured: World=" << currentWorld << ", Level=" << currentLevel << std::endl;
 	}
 
@@ -288,10 +310,61 @@ void Game::update(float deltaTime)
 		loadAssets();
 
 		std::cout << "Game initialized successfully!" << std::endl;
+		// Appliquer le mode de fenêtre demandé (par défaut WINDOWED)
+		setWindowMode(windowMode);
+
 		return true;
 	}
 
 
+
+	// Définir le mode de la fenêtre (fenêtré, sans bord, plein écran)
+	void Game::setWindowMode(Game::WindowMode mode)
+	{
+		if (!window) { windowMode = mode; return; }
+		windowMode = mode;
+		SDL_DisplayMode dm;
+		switch (mode)
+		{
+		case Game::WindowMode::WINDOWED:
+			SDL_SetWindowFullscreen(window, 0);
+			SDL_SetWindowBordered(window, SDL_TRUE);
+			SDL_SetWindowSize(window, DEFAULT_SCREEN_WIDTH, DEFAULT_SCREEN_HEIGHT);
+			SDL_SetWindowPosition(window, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED);
+			screenWidth = DEFAULT_SCREEN_WIDTH;
+			screenHeight = DEFAULT_SCREEN_HEIGHT;
+			std::cout << "Window mode: WINDOWED" << std::endl;
+			break;
+
+		case Game::WindowMode::BORDERLESS:
+			// Mode fenêtré sans bord -> utilise SDL_WINDOW_FULLSCREEN_DESKTOP
+			SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN_DESKTOP);
+			if (SDL_GetDesktopDisplayMode(0, &dm) == 0)
+			{
+				screenWidth = dm.w;
+				screenHeight = dm.h;
+			}
+			std::cout << "Window mode: BORDERLESS (desktop)" << std::endl;
+			break;
+
+		case Game::WindowMode::FULLSCREEN:
+			// Essaye le fullscreen exclusif, sinon fallback en fullscreen desktop
+			if (SDL_GetDesktopDisplayMode(0, &dm) == 0)
+			{
+				SDL_SetWindowDisplayMode(window, &dm);
+			}
+			if (SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN) != 0)
+			{
+				SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN_DESKTOP);
+			}
+			SDL_GetWindowSize(window, &screenWidth, &screenHeight);
+			std::cout << "Window mode: FULLSCREEN" << std::endl;
+			break;
+
+		default:
+			break;
+		}
+	}
 
 	void Game::loadAssets()
 	{
@@ -470,8 +543,6 @@ void Game::update(float deltaTime)
 		}
 	}
 
-	// ...existing code...
-
 	// Fonction de rendu qui affiche tous les éléments du jeu selon l'état actuel
 	void Game::render()
 	{
@@ -500,6 +571,12 @@ void Game::update(float deltaTime)
 			renderText("S I 3 L N", screenWidth / 2 - 100, 100, fontLarge, Colors::CYAN);
 			renderText("Press ENTER to start", screenWidth / 2 - 150, 300, font, Colors::WHITE);
 			renderText("Press ESC to quit", screenWidth / 2 - 120, 350, font, Colors::WHITE);
+			renderText("Press F11 to change window mode", screenWidth / 2 - 200, 420, font, Colors::WHITE);
+			// Afficher le mode actuel
+			{
+				std::string modeStr = (windowMode == WindowMode::WINDOWED) ? "Windowed" : (windowMode == WindowMode::BORDERLESS ? "Borderless" : "Fullscreen");
+				renderText(std::string("Mode: ") + modeStr, screenWidth / 2 - 80, 460, font, Colors::CYAN);
+			}
 			break;
 
         // Affichage du menu pause
@@ -577,6 +654,21 @@ void Game::update(float deltaTime)
 		renderText("Score: " + std::to_string(currentScore), 10, 10, font, Colors::WHITE);
 		renderText("Lives: " + std::to_string(lives), 10, 50, font, Colors::WHITE);
 		renderText("Level: " + std::to_string(currentLevel), 10, 90, font, Colors::WHITE);
+
+		// Afficher un texte d'introduction au début du niveau
+		if (showLevelIntro && fontLarge)
+		{
+			std::string intro = currentWorld + " - Level " + std::to_string(currentLevel);
+			int textW = 0, textH = 0;
+			if (TTF_SizeText(fontLarge, intro.c_str(), &textW, &textH) == 0)
+			{
+				renderText(intro, screenWidth / 2 - textW / 2, screenHeight / 2 - textH / 2, fontLarge, Colors::CYAN);
+			}
+			else
+			{
+				renderText(intro, screenWidth / 2 - 100, screenHeight / 2 - 20, fontLarge, Colors::CYAN);
+			}
+		}
 	}
 
 	// Fonction qui affiche du texte à l'écran avec une police et une couleur spécifiées

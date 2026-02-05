@@ -201,6 +201,22 @@ class LevelSelector:
                                    300, 70, "COMMENCER", 
                                    self.font_medium,
                                    bg_color=None, text_color=GREEN, border_color=GREEN, border_width=4)
+
+        # Window mode buttons (windowed, borderless, fullscreen)
+        # Place them just above the start button
+        self.window_mode = "windowed"  # default
+        mode_width = 160
+        mode_height = 50
+        spacing = 20
+        total_width = 3 * mode_width + 2 * spacing
+        start_x = self.screen_width // 2 - total_width // 2 + mode_width // 2
+        mode_y = self.screen_height - 180
+
+        self.mode_buttons = {
+            "windowed": Button(start_x, mode_y, mode_width, mode_height, "Windowed", self.font_small, bg_color=None, text_color=WHITE, border_color=WHITE),
+            "borderless": Button(start_x + (mode_width + spacing), mode_y, mode_width, mode_height, "Borderless", self.font_small, bg_color=None, text_color=WHITE, border_color=WHITE),
+            "fullscreen": Button(start_x + 2 * (mode_width + spacing), mode_y, mode_width, mode_height, "Fullscreen", self.font_small, bg_color=None, text_color=WHITE, border_color=WHITE),
+        }
     
     def open(self):
         """Open level selector"""
@@ -250,9 +266,16 @@ class LevelSelector:
                 print(f"[DEBUG] Checking start button click at pos {pos}")
                 print(f"[DEBUG] Start button rect: {self.start_button.rect}")
                 print(f"[DEBUG] Start button enabled: {self.start_button.enabled}")
+
+                # Mode buttons
+                for key, btn in self.mode_buttons.items():
+                    if btn.is_clicked(pos):
+                        self.window_mode = key
+                        print(f"[DEBUG] Window mode set to {self.window_mode}")
+
                 if self.start_button.is_clicked(pos):
-                    print(f"[DEBUG] Start button clicked! World={self.selected_world}, Level={self.selected_level}")
-                    return ("START_LEVEL", self.selected_world, self.selected_level)
+                    print(f"[DEBUG] Start button clicked! World={self.selected_world}, Level={self.selected_level}, mode={self.window_mode}")
+                    return ("START_LEVEL", self.selected_world, self.selected_level, self.window_mode)
                 else:
                     print(f"[DEBUG] Start button NOT clicked")
                 
@@ -344,6 +367,20 @@ class LevelSelector:
             
             # Draw start button
             self.start_button.draw(self.screen)
+
+            # Draw window mode buttons
+            for key, btn in self.mode_buttons.items():
+                if self.window_mode == key:
+                    btn.bg_color = (40, 40, 40)
+                    btn.border_color = GREEN
+                    btn.text_color = GREEN
+                    btn.border_width = 4
+                else:
+                    btn.bg_color = None
+                    btn.border_color = WHITE
+                    btn.text_color = WHITE
+                    btn.border_width = 3
+                btn.draw(self.screen)
         
         # Draw back button
         self.back_button.draw(self.screen)
@@ -355,6 +392,10 @@ class LevelSelector:
             "level": self.selected_level,
             "world_data": self.worlds[self.selected_world]
         }
+
+    def get_selected_mode(self):
+        """Returns selected window mode as string: 'windowed'|'borderless'|'fullscreen'"""
+        return getattr(self, 'window_mode', 'windowed')
     
         # Create animated player preview (inside the selected character button)
         btn = self.character_buttons[self.selected_character]

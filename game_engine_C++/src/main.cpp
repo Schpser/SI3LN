@@ -1,6 +1,7 @@
 #include "Game.h"	// Inclusion du fichier d'en-tête Game.h pour utiliser la classe Game
 #include <iostream> // Inclusion de la bibliothèque iostream pour les opérations d'entrée/sortie
 #include <string>   // Inclusion pour std::string
+#include <algorithm> // Inclusion pour std::transform et std::tolower
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +11,7 @@ int main(int argc, char *argv[])
 	std::cout << "  | |__   | | | |_    | |   | |   | | | |__   | |  " << std::endl;  // Affichage de la ligne suivante du logo
 	std::cout << "  |  __|  | | |  _|   | |   | |   | | |  __|  | |  " << std::endl;  // Affichage de la ligne suivante du logo
 	std::cout << "  | |___  | | | |___  | |  _| |_  | | | |___  | |  " << std::endl;  // Affichage de la ligne finale du logo
-	std::cout << "  |_____| |_| |_____| |_| |_____||_| |_____| |_|  " << std::endl;	  // Affichage de la dernière ligne du logo
+	std::cout << "  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  " << std::endl;	  // Affichage de la dernière ligne du logo
 	std::cout << std::endl;															  // Affichage d'une ligne vide dans le terminal
 
 	// Parse command line arguments (passed from Python UI)
@@ -45,7 +46,20 @@ int main(int argc, char *argv[])
 	{
 		SI3LN::Game game; // Création d'une instance de la classe Game
 		game.setWorldAndLevel(world, level);  // Set world and level from Python UI
-		game.setPlayerIndex(playerIndex); // Nouvelle méthode à ajouter dans Game
+		game.setPlayerIndex(playerIndex); // Index du joueur
+
+		// Optionnel: lire un 5ème argument pour le mode de la fenêtre: windowed, borderless, fullscreen
+		if (argc >= 5) {
+			std::string modeArg = argv[4];
+			std::transform(modeArg.begin(), modeArg.end(), modeArg.begin(), [](unsigned char c){ return std::tolower(c); });
+			if (modeArg == "windowed") {
+				game.setWindowMode(SI3LN::Game::WindowMode::WINDOWED);
+			} else if (modeArg == "borderless" || modeArg == "borderless_windowed") {
+				game.setWindowMode(SI3LN::Game::WindowMode::BORDERLESS);
+			} else if (modeArg == "fullscreen") {
+				game.setWindowMode(SI3LN::Game::WindowMode::FULLSCREEN);
+			}
+		}
 		game.run();		  // Appel de la méthode run() pour démarrer le jeu
 	}
 	catch (const std::exception &e)

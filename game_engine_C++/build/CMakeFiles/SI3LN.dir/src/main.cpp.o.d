@@ -1,8 +1,8 @@
 CMakeFiles/SI3LN.dir/src/main.cpp.o: \
- /home/ramos/SI3LN/game_engine_C++/src/main.cpp \
+ /home/hugex/Holbeton/SI3LN/game_engine_C++/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/ramos/SI3LN/game_engine_C++/include/Game.h \
- /home/ramos/SI3LN/game_engine_C++/include/Constants.h \
+ /home/hugex/Holbeton/SI3LN/game_engine_C++/include/Game.h \
+ /home/hugex/Holbeton/SI3LN/game_engine_C++/include/Constants.h \
  /usr/include/c++/15.2.1/string \
  /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -283,9 +283,9 @@ CMakeFiles/SI3LN.dir/src/main.cpp.o: \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
  /usr/include/SDL2/SDL_misc.h \
- /home/ramos/SI3LN/game_engine_C++/include/Player.h \
- /home/ramos/SI3LN/game_engine_C++/include/Entity.h \
- /home/ramos/SI3LN/game_engine_C++/include/Vector2D.h \
+ /home/hugex/Holbeton/SI3LN/game_engine_C++/include/Player.h \
+ /home/hugex/Holbeton/SI3LN/game_engine_C++/include/Entity.h \
+ /home/hugex/Holbeton/SI3LN/game_engine_C++/include/Vector2D.h \
  /usr/include/c++/15.2.1/memory \
  /usr/include/c++/15.2.1/bits/stl_tempbuf.h \
  /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
@@ -325,8 +325,8 @@ CMakeFiles/SI3LN.dir/src/main.cpp.o: \
  /usr/include/c++/15.2.1/pstl/glue_memory_defs.h \
  /usr/include/c++/15.2.1/pstl/execution_defs.h \
  /usr/include/SDL2/SDL_image.h /usr/include/SDL2/SDL.h \
- /home/ramos/SI3LN/game_engine_C++/include/Enemy.h \
- /home/ramos/SI3LN/game_engine_C++/include/Bullet.h \
+ /home/hugex/Holbeton/SI3LN/game_engine_C++/include/Enemy.h \
+ /home/hugex/Holbeton/SI3LN/game_engine_C++/include/Bullet.h \
  /usr/include/SDL2/SDL_ttf.h /usr/include/c++/15.2.1/vector \
  /usr/include/c++/15.2.1/bits/stl_vector.h \
  /usr/include/c++/15.2.1/bits/stl_bvector.h \
@@ -349,4 +349,10 @@ CMakeFiles/SI3LN.dir/src/main.cpp.o: \
  /usr/include/c++/15.2.1/bits/locale_facets.tcc \
  /usr/include/c++/15.2.1/bits/basic_ios.tcc \
  /usr/include/c++/15.2.1/bits/ostream.tcc /usr/include/c++/15.2.1/istream \
- /usr/include/c++/15.2.1/bits/istream.tcc
+ /usr/include/c++/15.2.1/bits/istream.tcc \
+ /usr/include/c++/15.2.1/algorithm \
+ /usr/include/c++/15.2.1/bits/stl_algo.h \
+ /usr/include/c++/15.2.1/bits/algorithmfwd.h \
+ /usr/include/c++/15.2.1/bits/stl_heap.h \
+ /usr/include/c++/15.2.1/bits/uniform_int_dist.h \
+ /usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h

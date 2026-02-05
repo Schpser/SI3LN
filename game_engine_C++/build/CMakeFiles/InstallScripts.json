@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/ramos/SI3LN/game_engine_C++/build/cmake_install.cmake"
+		"/home/hugex/Holbeton/SI3LN/game_engine_C++/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
