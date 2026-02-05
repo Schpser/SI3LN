@@ -29,7 +29,7 @@ void Game::spawnEnemies()
 		for (int col = 0; col < nbCols; ++col) {
 			float x = startX + col * spacingX;
 			float y = startY + row * spacingY;
-			enemies.push_back(std::make_shared<Enemy>(x, y, tex, screenWidth, screenHeight));
+			enemies.push_back(std::make_shared<Enemy>(x, y, tex, screenWidth, currentLevel));
 		}
 	}
 	std::cout << "[DEBUG] Spawned " << enemies.size() << " enemies" << std::endl;
@@ -137,6 +137,15 @@ void Game::handleMouseClick(int x, int y)
 // MISE À JOUR GÉNÉRALE DU JEU
 void Game::update(float deltaTime)
 {
+	// Gérer le timer de fin de partie (GAME_OVER ou LEVEL_WIN)
+	if (currentState == GameState::GAME_OVER || currentState == GameState::LEVEL_WIN) {
+		endGameTimer -= deltaTime;
+		if (endGameTimer <= 0.0f) {
+			running = false;  // Quitter le jeu pour retourner à Python
+		}
+		return;
+	}
+
 	if (currentState != GameState::GAMEPLAY)
 		return;
 
@@ -162,9 +171,20 @@ void Game::update(float deltaTime)
 		}
 	}
 
-	// Mettre à jour les ennemis
+	// Mettre à jour les ennemis et les faire tirer
 	for (auto& enemy : enemies) {
 		enemy->update(deltaTime);
+		// Vérifier si l'ennemi peut tirer
+		if (enemy->canShoot()) {
+			auto bullet = std::make_shared<Bullet>(
+				enemy->getPosition().x,
+				enemy->getPosition().y + enemy->getHeight() / 2,
+				false,  // false = projectile ennemi (descend)
+				screenHeight,
+				Colors::RED
+			);
+			enemyBullets.push_back(bullet);
+		}
 	}
 
 	// Mettre à jour les projectiles du joueur
@@ -172,12 +192,67 @@ void Game::update(float deltaTime)
 		bullet->update(deltaTime);
 	}
 
-	// Supprimer les projectiles hors écran
+	// Supprimer les projectiles du joueur hors écran
 	playerBullets.erase(
 		std::remove_if(playerBullets.begin(), playerBullets.end(),
 			[](const std::shared_ptr<Bullet>& b) { return !b->isAlive(); }),
 		playerBullets.end()
 	);
+
+	// Mettre à jour les projectiles des ennemis
+	for (auto& bullet : enemyBullets) {
+		bullet->update(deltaTime);
+	}
+
+	// Supprimer les projectiles ennemis hors écran
+	enemyBullets.erase(
+		std::remove_if(enemyBullets.begin(), enemyBullets.end(),
+			[](const std::shared_ptr<Bullet>& b) { return !b->isAlive(); }),
+		enemyBullets.end()
+	);
+
+	// ==================== DÉTECTION DE COLLISIONS ====================
+
+	// Collision : projectiles du joueur vs ennemis
+	for (auto& bullet : playerBullets) {
+		if (!bullet->isAlive()) continue;
+		for (auto& enemy : enemies) {
+			if (!enemy->isAlive()) continue;
+			if (bullet->intersects(*enemy)) {
+				bullet->kill();
+				enemy->kill();
+				currentScore += 100; // Points pour avoir tué un ennemi
+				break;
+			}
+		}
+	}
+
+	// Collision : projectiles ennemis vs joueur
+	if (player && player->isAlive()) {
+		for (auto& bullet : enemyBullets) {
+			if (!bullet->isAlive()) continue;
+			if (bullet->intersects(*player)) {
+				bullet->kill();
+				lives--;
+				if (lives <= 0) {
+					changeState(GameState::GAME_OVER);
+				}
+				break;
+			}
+		}
+	}
+
+	// Supprimer les ennemis morts
+	enemies.erase(
+		std::remove_if(enemies.begin(), enemies.end(),
+			[](const std::shared_ptr<Enemy>& e) { return !e->isAlive(); }),
+		enemies.end()
+	);
+
+	// Vérifier victoire (tous les ennemis éliminés)
+	if (enemies.empty() && currentState == GameState::GAMEPLAY) {
+		changeState(GameState::LEVEL_WIN);
+	}
 
 	// Gérer l'affichage d'intro de niveau
 	if (showLevelIntro)
@@ -597,9 +672,30 @@ void Game::update(float deltaTime)
 
 		// Si le jeu est terminé
 		case GameState::GAME_OVER:
+			renderGameplay();  // Afficher le gameplay en fond
+			SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
+			SDL_SetRenderDrawColor(renderer, 0, 0, 0, 180);
+			{
+				SDL_Rect overlay = {0, 0, screenWidth, screenHeight};
+				SDL_RenderFillRect(renderer, &overlay);
+			}
 			renderText("GAME OVER", screenWidth / 2 - 150, 200, fontLarge, Colors::RED);
 			renderText("Score: " + std::to_string(currentScore), screenWidth / 2 - 100, 300, font, Colors::WHITE);
-			renderText("Press ESC to quit", screenWidth / 2 - 120, 400, font, Colors::WHITE);
+			renderText("Retour au menu...", screenWidth / 2 - 120, 400, font, Colors::YELLOW);
+			break;
+
+		// Si le niveau est gagné
+		case GameState::LEVEL_WIN:
+			renderGameplay();  // Afficher le gameplay en fond
+			SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
+			SDL_SetRenderDrawColor(renderer, 0, 50, 0, 180);
+			{
+				SDL_Rect overlay = {0, 0, screenWidth, screenHeight};
+				SDL_RenderFillRect(renderer, &overlay);
+			}
+			renderText("NIVEAU TERMINE!", screenWidth / 2 - 200, 200, fontLarge, Colors::GREEN);
+			renderText("Score: " + std::to_string(currentScore), screenWidth / 2 - 100, 300, font, Colors::WHITE);
+			renderText("Retour au menu...", screenWidth / 2 - 120, 400, font, Colors::YELLOW);
 			break;
 
 		default:
@@ -710,6 +806,12 @@ void Game::update(float deltaTime)
 		// Log du changement d'état pour le debug
 		std::cout << "Changement d'état: " << static_cast<int>(currentState) << " -> " << static_cast<int>(newState) << std::endl;
 		currentState = newState;
+		
+		// Démarrer le timer si on entre en GAME_OVER ou LEVEL_WIN
+		if (newState == GameState::GAME_OVER || newState == GameState::LEVEL_WIN) {
+			endGameTimer = END_GAME_DELAY;
+			std::cout << "Retour au menu Python dans " << END_GAME_DELAY << " secondes..." << std::endl;
+		}
 	}
 
 	// Fermer l'espace de noms SI3LN

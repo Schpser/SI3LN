@@ -42,7 +42,7 @@ namespace Colors {
 // ==================== Paramètres du jeu ====================
 constexpr int MAX_LIVES = 5; // Nombre maximum de vies du joueur
 constexpr int PLAYER_SPEED = 150; // Vitesse du joueur (réduite de 500 -> 150)
-constexpr int ENEMY_SPEED = 1; // Vitesse initiale des ennemis
+constexpr int ENEMY_SPEED = 2; // Vitesse initiale des ennemis
 constexpr int PLAYER_BULLET_SPEED = 10; // Vitesse des projectiles du joueur
 constexpr int ENEMY_BULLET_SPEED = 5; // Vitesse des projectiles des ennemis
 
@@ -139,7 +139,7 @@ inline std::map<std::string, WorldConfig> getWorldsConfig() {
     // Configuration du monde "Marine"
     worlds["Marine"] = {
         "Marine World",
-        "background_marine.jpg",
+        "background_marine.png",
         5,
         "Marine_world",
         12,

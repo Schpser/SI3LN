@@ -61,7 +61,7 @@ private:
     
     // Gestion des tirs
     uint32_t lastShootTime; // Dernière fois que le joueur a tiré
-    uint32_t shootCooldown = 0; // Pas de cooldown entre les tirs
+    uint32_t shootCooldown = 150; // Délai en ms entre deux tirs (150ms par défaut)
 };
 
 } // namespace SI3LN

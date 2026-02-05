@@ -8,7 +8,7 @@ namespace SI3LN
 
 	// Constructeur du joueur, initialise la position, la texture et les limites de déplacement
 	Player::Player(float x, float y, SDL_Texture *texture, int screenWidth, int screenHeight)
-		: Entity(x, y, PLAYER_PORTRAIT_SIZE, PLAYER_PORTRAIT_SIZE), texture(texture), screenWidth(screenWidth), screenHeight(screenHeight), speed(PLAYER_SPEED), lastShootTime(0), shootCooldown(0) // Pas de cooldown
+		: Entity(x, y, PLAYER_PORTRAIT_SIZE, PLAYER_PORTRAIT_SIZE), texture(texture), screenWidth(screenWidth), screenHeight(screenHeight), speed(PLAYER_SPEED), lastShootTime(0), shootCooldown(150) // 150ms cooldown entre les tirs
 	{
 		// Définir les limites de déplacement du joueur
 		minX = 0;
@@ -90,14 +90,14 @@ namespace SI3LN
 	// Vérifie si le joueur peut tirer (cooldown respecté)
 	bool Player::canShoot() const
 	{
-		// Pas de cooldown : le joueur peut toujours tirer
-		return true;
-	}
+	uint32_t now = SDL_GetTicks();
+	return (now - lastShootTime) >= shootCooldown;
+}
 
-	// Réinitialise le cooldown de tir après un tir
-	void Player::resetShootCooldown()
-	{
-		// Pas de cooldown : ne rien faire
-	}
+// Réinitialise le cooldown de tir après un tir
+void Player::resetShootCooldown()
+{
+	lastShootTime = SDL_GetTicks();
+}
 
 } // namespace SI3LN

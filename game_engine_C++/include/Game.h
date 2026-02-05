@@ -108,6 +108,9 @@ namespace SI3LN
 		bool showLevelIntro = false;           // Indique si le texte d'intro de niveau est affiché
 		float levelIntroTimer = 0.0f;         // Compteur pour la durée d'affichage
 		static constexpr float LEVEL_INTRO_DURATION = 3.0f; // Durée par défaut en secondes
+		// ==================== Fin de partie ====================
+		float endGameTimer = 0.0f;            // Timer pour quitter automatiquement après victoire/défaite
+		static constexpr float END_GAME_DELAY = 3.0f; // Délai avant de quitter (3 secondes)
 		// ==================== Index du personnage sélectionné ====================
 		int playerIndex = 0; // Index du personnage sélectionné
 	};
