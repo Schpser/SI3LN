@@ -33,12 +33,13 @@ def find_cpp_game_exe():
     """
     exe_name = "SI3LN.exe" if platform.system() == "Windows" else "SI3LN"  # Nom selon l'OS
     search_dirs = [
+        os.path.join(os.path.dirname(__file__), "..", "game_engine_C++", "build"),  # Dossier parent (SI3LN/game_engine_C++/build)
+        os.path.join(os.getcwd(), "..", "game_engine_C++", "build"),  # Depuis game_ui_python, remonter d'un niveau
         os.path.join(os.getcwd(), "game_engine_C++", "build"),  # Dossier build local
-        os.path.join(os.path.dirname(__file__), "game_engine_C++", "build"),  # Dossier build relatif au script
+        os.path.expanduser("~/Holbeton/SI3LN/game_engine_C++/build"),  # Chemin absolu Holbeton
         os.path.expanduser("~/SI3LN/game_engine_C++/build"),  # Dossier home
         os.path.expanduser("~/game_engine_C++/build"),
         os.path.join(os.getcwd(), "build"),
-        os.path.dirname(os.path.abspath(__file__)),
     ]
     for d in search_dirs:
         exe_path = os.path.join(d, exe_name)
@@ -99,106 +100,120 @@ def find_cpp_game_exe():
 
 # Correction: Déplacer le code de chargement des assets dans une méthode de la classe Game
 class Game:
+    # Flag at class-level to ensure attribute always exists on instances
+    launching_cpp = False
     def launch_cpp_game(self):
-        info(f"Launching C++ game engine for world={self.current_world}, level={self.current_level}")
-        # Affiche un écran de chargement
-        self.screen.fill(BLACK)
-        loading_text = self.font_large.render("CHARGEMENT...", True, WHITE)
-        loading_rect = loading_text.get_rect(center=(self.screen_width // 2, self.screen_height // 2))
-        self.screen.blit(loading_text, loading_rect)
-        pygame.display.flip()
-        pygame.time.wait(500)
-
-        # Minimise la fenêtre pygame pendant le jeu C++
-        pygame.display.iconify()
-
-        # Lance le moteur C++ dans son dossier (pour que les chemins relatifs fonctionnent)
+        # Prevent reentrant launches
+        if getattr(self, 'launching_cpp', False):
+            debug("C++ launch already in progress")
+            return
+        self.launching_cpp = True
         try:
-            # Passer le monde, le niveau et le personnage sélectionné en arguments
-            # Passer le mode de fenêtre au binaire C++ (argument optionnel)
-            mode_arg = getattr(self, 'selected_window_mode', None)
-            args = [CPP_GAME_EXE, self.current_world, str(self.current_level), str(self.selected_character)]
-            if mode_arg:
-                args.append(mode_arg)
+            info(f"Launching C++ game engine for world={self.current_world}, level={self.current_level}")
+            # Affiche un écran de chargement
+            self.screen.fill(BLACK)
+            loading_text = self.font_large.render("CHARGEMENT...", True, WHITE)
+            loading_rect = loading_text.get_rect(center=(self.screen_width // 2, self.screen_height // 2))
+            self.screen.blit(loading_text, loading_rect)
+            pygame.display.flip()
+            pygame.time.wait(500)
 
-            info(f"Executing C++: {args} (cwd={CPP_GAME_DIR})")
+            # Minimise la fenêtre pygame pendant le jeu C++
+            pygame.display.iconify()
 
-            # Déterminer l'ordre des drivers à essayer selon la session
-            session = os.environ.get("XDG_SESSION_TYPE", "").lower()
-            if session == "wayland":
-                drivers = [None, "wayland", "x11"]
-            elif session == "x11":
-                drivers = [None, "x11", "wayland"]
-            else:
-                drivers = [None, "wayland", "x11"]
+            # Lance le moteur C++ dans son dossier (pour que les chemins relatifs fonctionnent)
+            try:
+                # Passer le monde, le niveau et le personnage sélectionné en arguments
+                # Passer le mode de fenêtre au binaire C++ (argument optionnel)
+                mode_arg = getattr(self, 'selected_window_mode', None)
+                args = [CPP_GAME_EXE, self.current_world, str(self.current_level), str(self.selected_character)]
+                if mode_arg:
+                    args.append(mode_arg)
 
-            last_result = None
-            last_exc = None
+                info(f"Executing C++: {args} (cwd={CPP_GAME_DIR})")
 
-            for drv in drivers:
-                env = os.environ.copy()
-                if drv:
-                    env["SDL_VIDEODRIVER"] = drv
-                info(f"Attempting C++ launch with SDL_VIDEODRIVER={drv or '<default>'}")
-                try:
-                    # Bloque jusqu'à la fin ; capture les sorties pour debug
-                    result = subprocess.run(args, cwd=CPP_GAME_DIR, env=env, capture_output=True, text=True)
-                    last_result = result
-                    info(f"C++ exited with code {result.returncode}")
-                    if result.stdout:
-                        info("C++ stdout:\n" + result.stdout.strip())
-                    if result.stderr:
-                        error("C++ stderr:\n" + result.stderr.strip())
+                # Déterminer l'ordre des drivers à essayer selon la session
+                session = os.environ.get("XDG_SESSION_TYPE", "").lower()
+                if session == "wayland":
+                    drivers = [None, "wayland", "x11"]
+                elif session == "x11":
+                    drivers = [None, "x11", "wayland"]
+                else:
+                    drivers = [None, "wayland", "x11"]
 
-                    # Si le binaire retourne 0, on considère que c'est un succès
-                    if result.returncode == 0:
+                last_result = None
+                last_exc = None
+
+                for drv in drivers:
+                    env = os.environ.copy()
+                    if drv:
+                        env["SDL_VIDEODRIVER"] = drv
+                    info(f"Attempting C++ launch with SDL_VIDEODRIVER={drv or '<default>'}")
+                    try:
+                        # Bloque jusqu'à la fin ; capture les sorties pour debug
+                        result = subprocess.run(args, cwd=CPP_GAME_DIR, env=env, capture_output=True, text=True)
+                        last_result = result
+                        info(f"C++ exited with code {result.returncode}")
+                        if result.stdout:
+                            info("C++ stdout:\n" + result.stdout.strip())
+                        if result.stderr:
+                            error("C++ stderr:\n" + result.stderr.strip())
+
+                        # Si le binaire retourne 0, on considère que c'est un succès
+                        if result.returncode == 0:
+                            break
+                        # sinon, on essaie le driver suivant pour voir si ça règle le problème
+                    except FileNotFoundError as e:
+                        error(f"C++ game executable not found: {e}")
+                        last_exc = e
                         break
-                    # sinon, on essaie le driver suivant pour voir si ça règle le problème
-                except FileNotFoundError as e:
-                    error(f"C++ game executable not found: {e}")
-                    last_exc = e
-                    break
-                except Exception as e:
-                    error(f"Error launching C++ game with driver {drv}: {e}")
-                    last_exc = e
-                    # try next driver
+                    except Exception as e:
+                        error(f"Error launching C++ game with driver {drv}: {e}")
+                        last_exc = e
+                        # try next driver
 
-            # Si on a une erreur non nulle ou des sorties, afficher une popup avec les logs
-            if last_result and last_result.returncode != 0:
-                content = []
-                if last_result.stdout:
-                    content.append("STDOUT:")
-                    content.extend(last_result.stdout.strip().splitlines())
-                if last_result.stderr:
-                    content.append("STDERR:")
-                    # limiter le nombre de lignes pour tenir dans la popup
-                    content.extend(last_result.stderr.strip().splitlines()[:20])
+                # Si on a une erreur non nulle ou des sorties, afficher une popup avec les logs
+                if last_result and last_result.returncode != 0:
+                    content = []
+                    if last_result.stdout:
+                        content.append("STDOUT:")
+                        content.extend(last_result.stdout.strip().splitlines())
+                    if last_result.stderr:
+                        content.append("STDERR:")
+                        # limiter le nombre de lignes pour tenir dans la popup
+                        content.extend(last_result.stderr.strip().splitlines()[:20])
 
-                popup = PopUp(700, 300, "C++ launch failed", content, self.screen_width, self.screen_height, self.font_medium)
-                popup.open()
-                self.launch_popup = popup
-                self.show_message("Erreur: le jeu C++ a échoué (voir popup)", RED)
-            elif last_exc:
-                self.show_message(f"Erreur: {last_exc}", RED)
+                    popup = PopUp(700, 300, "C++ launch failed", content, self.screen_width, self.screen_height, self.font_medium)
+                    popup.open()
+                    self.launch_popup = popup
+                    self.show_message("Erreur: le jeu C++ a échoué (voir popup)", RED)
+                elif last_exc:
+                    self.show_message(f"Erreur: {last_exc}", RED)
+            except Exception as e:
+                error(f"C++ inner try block exception: {e}")
+                self.show_message(f"Erreur: {e}", RED)
 
         except Exception as e:
             error(f"Error launching C++ game: {e}")
             self.show_message(f"Erreur: {e}", RED)
 
-        # Revient à l'interface Python
-        info("Returning to Python UI...")
+        finally:
+            # Revient à l'interface Python
+            info("Returning to Python UI...")
 
-        # Restaure la fenêtre pygame
-        pygame.display.set_mode(
-            (self.screen_width, self.screen_height),
-            pygame.RESIZABLE
-        )
+            # Restaure la fenêtre pygame
+            pygame.display.set_mode(
+                (self.screen_width, self.screen_height),
+                pygame.RESIZABLE
+            )
 
-        # Retourne au menu de sélection de niveau
-        if hasattr(self, 'level_selector'):
-            self.level_selector.open()
-        self.state = STATE_LEVEL_SELECT
-        self.show_message("Retour au menu!", GREEN)
+            # Retourne au menu de sélection de niveau
+            if hasattr(self, 'level_selector'):
+                self.level_selector.open()
+            self.state = STATE_LEVEL_SELECT
+            self.show_message("Retour au menu!", GREEN)
+            # Clear launching flag regardless of result
+            self.launching_cpp = False
     def __init__(self):
         # Initialisation du système de logs
         setup_logging()
@@ -223,6 +238,10 @@ class Game:
         self.clock = pygame.time.Clock()
         # Booléen pour la boucle principale
         self.running = True
+        # Indique si on est en plein écran (par défaut non)
+        self.is_fullscreen = False
+        # Dernier toggle plein écran (ms) pour debounce
+        self.last_fullscreen_toggle_time = 0
         # Gestionnaire d'état du jeu
         self.state_manager = GameState(STATE_MAIN_MENU)
         # État courant du jeu
@@ -376,6 +395,10 @@ class Game:
         self.clock = pygame.time.Clock()
         # Booléen pour la boucle principale
         self.running = True
+        # Indique si on est en plein écran (par défaut non)
+        self.is_fullscreen = False
+        # Dernier toggle plein écran (ms) pour debounce
+        self.last_fullscreen_toggle_time = 0
         # Gestionnaire d'état du jeu
         self.state_manager = GameState(STATE_MAIN_MENU)
         # État courant du jeu
@@ -899,53 +922,17 @@ class Game:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 self.state = STATE_MAIN_MENU
-        info(f"Launching C++ game engine for world={self.current_world}, level={self.current_level}")
-        
-        # Affiche un écran de chargement
-        self.screen.fill(BLACK)
-        loading_text = self.font_large.render("CHARGEMENT...", True, WHITE)
-        loading_rect = loading_text.get_rect(center=(self.screen_width // 2, self.screen_height // 2))
-        self.screen.blit(loading_text, loading_rect)
-        pygame.display.flip()
-        pygame.time.wait(500)
-        
-        # Minimise la fenêtre pygame pendant le jeu C++
-        pygame.display.iconify()
-        
-        # Lance le moteur C++ dans son dossier (pour que les chemins relatifs fonctionnent)
-        try:
-            # Passer le monde et le niveau en arguments si nécessaire
-            result = subprocess.run(
-                [CPP_GAME_EXE, self.current_world, str(self.current_level)],
-                cwd=CPP_GAME_DIR
-            )
-            info(f"C++ game exited with code: {result.returncode}")
-        except FileNotFoundError:
-            error(f"C++ game executable not found: {CPP_GAME_EXE}")
-            self.show_message("Erreur: Jeu C++ non trouvé!", RED)
-        except Exception as e:
-            error(f"Error launching C++ game: {e}")
-            self.show_message(f"Erreur: {e}", RED)
-        
-        # Revient à l'interface Python
-        info("Returning to Python UI...")
-        
-        # Restaure la fenêtre pygame
-        pygame.display.set_mode(
-            (self.screen_width, self.screen_height),
-            pygame.RESIZABLE
-        )
-        
-        # Retourne au menu de sélection de niveau
-        self.level_selector.open()
-        self.state = STATE_LEVEL_SELECT
-        self.show_message("Retour au menu!", GREEN)
+        # Launch handled in start_level() using the unified `launch_cpp_game` implementation.
     
     def start_level(self):
         """Démarre un nouveau niveau - Lance le moteur C++ si activé, sinon gameplay Python"""
         debug(f"Starting level {self.current_level} in world {self.current_world}")  # Affiche le niveau et le monde
         # Si le moteur C++ est activé, lancer le jeu en C++
         if USE_CPP_ENGINE:
+            # Ignore si un lancement est déjà en cours
+            if getattr(self, 'launching_cpp', False):
+                debug("Launch already in progress; skipping start_level request")
+                return
             # Récupérer le mode de fenêtre sélectionné par l'utilisateur
             self.selected_window_mode = self.level_selector.get_selected_mode()
             debug(f"Launching C++ with window mode: {self.selected_window_mode}")
@@ -1538,7 +1525,14 @@ class Game:
     def toggle_fullscreen(self):
         """Active/désactive le mode plein écran avec gestion d'erreur"""
         try:
-            self.is_fullscreen = not self.is_fullscreen  # Inverse l'état
+            # Débounce pour éviter les toggles rapides successifs (ex: key repeat)
+            now = pygame.time.get_ticks()
+            if now - getattr(self, 'last_fullscreen_toggle_time', 0) < 300:
+                debug("Ignored rapid fullscreen toggle")
+                return
+            self.last_fullscreen_toggle_time = now
+
+            self.is_fullscreen = not getattr(self, 'is_fullscreen', False)  # Inverse l'état
             if self.is_fullscreen:
                 self.screen = pygame.display.set_mode(
                     (0, 0), pygame.FULLSCREEN | pygame.RESIZABLE
@@ -1563,6 +1557,9 @@ class Game:
     
     def handle_resize(self, width, height):
         """Gère le redimensionnement de la fenêtre et recrée l'UI"""
+        # Ignore les évènements redondants si la taille n'a pas changé
+        if width == getattr(self, 'screen_width', None) and height == getattr(self, 'screen_height', None):
+            return
         # Vérifie la taille minimale
         if width < 800 or height < 600:
             warning(f"Window too small ({width}x{height}), minimum is 800x600")

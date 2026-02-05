@@ -1,4 +1,4 @@
-#!/home/ramos/SI3LN/game_ui_python/venv/bin/python3
+#!/home/hugex/Holbeton/SI3LN/game_ui_python/venv/bin/python
 import sys
 from pip._internal.cli.main import main
 if __name__ == '__main__':
