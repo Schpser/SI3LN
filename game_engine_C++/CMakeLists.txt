@@ -20,6 +20,12 @@ pkg_check_modules(SDL2_IMAGE REQUIRED SDL2_image)
 pkg_check_modules(SDL2_TTF REQUIRED SDL2_ttf)
 pkg_check_modules(SDL2_MIXER REQUIRED SDL2_mixer)
 
+# Find CURL for HTTP requests
+find_package(CURL REQUIRED)
+
+# Find nlohmann_json for JSON parsing
+find_package(nlohmann_json 3.2.0 REQUIRED)
+
 # Include directories
 include_directories(
     ${CMAKE_SOURCE_DIR}/include
@@ -40,6 +46,7 @@ set(SOURCES
     src/GameState.cpp
     src/Stubs.cpp
     src/UI/UIStubs.cpp
+    src/APIClient.cpp
 )
 
 # Executable
@@ -51,6 +58,8 @@ target_link_libraries(${PROJECT_NAME}
     ${SDL2_IMAGE_LIBRARIES}
     ${SDL2_TTF_LIBRARIES}
     ${SDL2_MIXER_LIBRARIES}
+    CURL::libcurl
+    nlohmann_json::nlohmann_json
 )
 
 # Copy assets to build directory

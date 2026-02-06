@@ -4,6 +4,7 @@
 #include "Player.h"			// Inclusion de la classe Player
 #include "Enemy.h"			// Inclusion de la classe Enemy
 #include "Bullet.h"			// Inclusion de la classe Bullet
+#include "APIClient.h"		// Inclusion du client API pour Django Ninja
 #include <SDL2/SDL.h>		// Inclusion pour la gestion de la fenêtre et du rendu
 #include <SDL2/SDL_image.h> // Inclusion pour la gestion des images
 #include <SDL2/SDL_ttf.h>	// Inclusion pour la gestion des polices
@@ -113,6 +114,14 @@ namespace SI3LN
 		static constexpr float END_GAME_DELAY = 3.0f; // Délai avant de quitter (3 secondes)
 		// ==================== Index du personnage sélectionné ====================
 		int playerIndex = 0; // Index du personnage sélectionné
+		
+		// ==================== Intégration API Django Ninja ====================
+		APIClient apiClient; // Client pour communiquer avec l'API Django Ninja
+		int playerId = -1; // ID du joueur dans la base de données
+		int sessionId = -1; // ID de la session de jeu en cours
+		uint32_t lastApiUpdate = 0; // Timestamp de la dernière mise à jour de l'API
+		static constexpr uint32_t API_UPDATE_INTERVAL = 5000; // Mettre à jour l'API toutes les 5 secondes (en ms)
+		int totalEnemiesKilled = 0; // Nombre total d'ennemis tués dans la session
 	};
 
 } // namespace SI3LN // Fin de l'espace de noms SI3LN

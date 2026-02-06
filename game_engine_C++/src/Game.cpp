@@ -66,8 +66,33 @@ void Game::handleKeyPress(SDL_Keycode key)
 			       playerTexture,
 			       screenWidth,
 			       screenHeight
-		       );
+		       );		       
+		       // Créer le joueur dans l'API si pas encore fait
+		       if (playerId == -1) {
+			       std::string playerName = "Player_" + std::to_string(SDL_GetTicks());
+		       std::string playerEmail = playerName + "@si3ln.game";
+		       std::string playerPassword = "game_pass_" + std::to_string(SDL_GetTicks());
+		       
+		       // Register and login with JWT authentication
+		       if (apiClient.registerUser(playerName, playerPassword, playerEmail)) {
+			       std::cout << "[API] User registered and authenticated" << std::endl;
+			       // After registration, playerId is set from the token response
+		       } else {
+			       std::cerr << "[API] Failed to register user" << std::endl;
+		       }
 	       }
+	       
+	       // Démarrer une nouvelle session de jeu (requires authentication)
+	       if (apiClient.isAuthenticated()) {
+		       // Use playerId from registration/login
+		       sessionId = apiClient.startGameSession(1);  // Will use authenticated user
+		       totalEnemiesKilled = 0;
+		       lastApiUpdate = SDL_GetTicks();
+		       std::cout << "[API] Session démarrée avec ID: " << sessionId << std::endl;
+		       std::cout << "[API] Token valid for 24 hours" << std::endl;
+	       } else {
+		       std::cerr << "[API] Cannot start session - not authenticated" << std::endl;
+		       }	       }
 	       break;
 	case SDLK_q:
 		if (currentState == GameState::PAUSE)
@@ -222,6 +247,7 @@ void Game::update(float deltaTime)
 				bullet->kill();
 				enemy->kill();
 				currentScore += 100; // Points pour avoir tué un ennemi
+				totalEnemiesKilled++; // Incrémenter le compteur d'ennemis tués
 				break;
 			}
 		}
@@ -236,6 +262,13 @@ void Game::update(float deltaTime)
 				lives--;
 				if (lives <= 0) {
 					changeState(GameState::GAME_OVER);
+					
+					// Envoyer les données finales à l'API (défaite)
+					if (sessionId > 0) {
+						uint32_t duration = (SDL_GetTicks() - lastFrameTime) / 1000;
+						apiClient.endGameSession(sessionId, currentScore, currentLevel, false);
+						std::cout << "[API] Session terminée (game over)" << std::endl;
+					}
 				}
 				break;
 			}
@@ -252,6 +285,24 @@ void Game::update(float deltaTime)
 	// Vérifier victoire (tous les ennemis éliminés)
 	if (enemies.empty() && currentState == GameState::GAMEPLAY) {
 		changeState(GameState::LEVEL_WIN);
+		
+		// Envoyer les données finales à l'API
+		if (sessionId > 0) {
+			uint32_t duration = (SDL_GetTicks() - lastFrameTime) / 1000;
+			apiClient.endGameSession(sessionId, currentScore, currentLevel, true);
+			std::cout << "[API] Session terminée avec succès" << std::endl;
+		}
+	}
+	
+	// Mise à jour périodique de l'API (toutes les 5 secondes)
+	if (sessionId > 0 && currentState == GameState::GAMEPLAY) {
+		uint32_t currentTime = SDL_GetTicks();
+		if (currentTime - lastApiUpdate >= API_UPDATE_INTERVAL) {
+			uint32_t duration = (currentTime - lastFrameTime) / 1000;
+			apiClient.updateGameSession(sessionId, currentScore, currentLevel, totalEnemiesKilled, duration);
+			lastApiUpdate = currentTime;
+			std::cout << "[API] Score mis à jour: " << currentScore << std::endl;
+		}
 	}
 
 	// Gérer l'affichage d'intro de niveau
@@ -305,6 +356,16 @@ void Game::update(float deltaTime)
 		showLevelIntro(false)
 		,
 		levelIntroTimer(0.0f)
+		,
+		apiClient() // Initialiser le client API
+		,
+		playerId(-1) // ID du joueur (sera créé au démarrage)
+		,
+		sessionId(-1) // ID de la session (sera créé au démarrage du jeu)
+		,
+		lastApiUpdate(0) // Timestamp de la dernière mise à jour API
+		,
+		totalEnemiesKilled(0) // Compteur d'ennemis tués
 	{
 	}
 
