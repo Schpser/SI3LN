@@ -28,20 +28,32 @@ class WorldCard:
     
     def draw(self, screen):
         """Draw the world card"""
-        # Draw background image
+        # Draw background image with rounded corners
         if self.bg_image:
-            screen.blit(self.bg_image, self.rect)
+            # Create a surface with rounded rectangle mask
+            rounded_surface = pygame.Surface((self.rect.width, self.rect.height), pygame.SRCALPHA)
+            # Draw rounded rectangle as mask
+            pygame.draw.rect(rounded_surface, (255, 255, 255, 255), (0, 0, self.rect.width, self.rect.height), border_radius=10)
+            # Create temp surface for the image
+            temp_surface = pygame.Surface((self.rect.width, self.rect.height), pygame.SRCALPHA)
+            temp_surface.blit(self.bg_image, (0, 0))
+            # Apply the mask by using per-pixel alpha
+            temp_surface.blit(rounded_surface, (0, 0), special_flags=pygame.BLEND_RGBA_MIN)
+            # Draw the masked image
+            screen.blit(temp_surface, self.rect)
         else:
-            pygame.draw.rect(screen, (30, 30, 60), self.rect)
+            pygame.draw.rect(screen, (30, 30, 60), self.rect, border_radius=10)
         
         # Draw overlay for visibility
         overlay = pygame.Surface((self.rect.width, self.rect.height), pygame.SRCALPHA)
+        # Create rounded overlay
+        pygame.draw.rect(overlay, (0, 0, 0, 0), (0, 0, self.rect.width, self.rect.height), border_radius=10)
         if self.selected:
-            overlay.fill((0, 200, 255, 80))  # Cyan semi-transparent
+            pygame.draw.rect(overlay, (0, 200, 255, 80), (0, 0, self.rect.width, self.rect.height), border_radius=10)
         elif self.hovered:
-            overlay.fill((255, 255, 255, 40))  # White semi-transparent
+            pygame.draw.rect(overlay, (255, 255, 255, 40), (0, 0, self.rect.width, self.rect.height), border_radius=10)
         else:
-            overlay.fill((0, 0, 0, 60))  # Dark but still show image
+            pygame.draw.rect(overlay, (0, 0, 0, 60), (0, 0, self.rect.width, self.rect.height), border_radius=10)
         screen.blit(overlay, self.rect)
         
         # Draw border
@@ -195,6 +207,19 @@ class LevelSelector:
                         bg_color=None, text_color=WHITE, border_color=WHITE)
             self.level_buttons.append(btn)
         
+        # Calculate position for window mode buttons based on last level button
+        # Place them between last level button and start button
+        last_level_y = start_y + (num_levels - 1) * (button_height + spacing) + button_height
+        mode_spacing = 20
+        
+        # Window mode buttons (windowed, borderless, fullscreen)
+        self.window_mode = "windowed"  # default
+        mode_width = 160
+        mode_height = 30
+        total_width = 3 * mode_width + 2 * mode_spacing
+        start_x = self.screen_width // 2 - total_width // 2 + mode_width // 2
+        mode_y = last_level_y + 25  # 25 pixels below last level button
+        
         # Start button - always at bottom of screen
         self.start_button = Button(self.screen_width // 2, 
                                    self.screen_height - 100,
@@ -202,20 +227,10 @@ class LevelSelector:
                                    self.font_medium,
                                    bg_color=None, text_color=GREEN, border_color=GREEN, border_width=4)
 
-        # Window mode buttons (windowed, borderless, fullscreen)
-        # Place them just above the start button
-        self.window_mode = "windowed"  # default
-        mode_width = 160
-        mode_height = 50
-        spacing = 20
-        total_width = 3 * mode_width + 2 * spacing
-        start_x = self.screen_width // 2 - total_width // 2 + mode_width // 2
-        mode_y = self.screen_height - 180
-
         self.mode_buttons = {
             "windowed": Button(start_x, mode_y, mode_width, mode_height, "Windowed", self.font_small, bg_color=None, text_color=WHITE, border_color=WHITE),
-            "borderless": Button(start_x + (mode_width + spacing), mode_y, mode_width, mode_height, "Borderless", self.font_small, bg_color=None, text_color=WHITE, border_color=WHITE),
-            "fullscreen": Button(start_x + 2 * (mode_width + spacing), mode_y, mode_width, mode_height, "Fullscreen", self.font_small, bg_color=None, text_color=WHITE, border_color=WHITE),
+            "borderless": Button(start_x + (mode_width + mode_spacing), mode_y, mode_width, mode_height, "Borderless", self.font_small, bg_color=None, text_color=WHITE, border_color=WHITE),
+            "fullscreen": Button(start_x + 2 * (mode_width + mode_spacing), mode_y, mode_width, mode_height, "Fullscreen", self.font_small, bg_color=None, text_color=WHITE, border_color=WHITE),
         }
     
     def open(self):
@@ -333,9 +348,12 @@ class LevelSelector:
             for card in self.world_cards:
                 card.draw(self.screen)
             
-            # Draw instruction
+            # Draw instruction with border
             instruction = pygame.font.Font(None, 24).render("Cliquez sur un monde pour continuer", True, WHITE)
-            inst_rect = instruction.get_rect(center=(self.screen_width // 2, self.screen_height - 120))
+            inst_rect = instruction.get_rect(center=(self.screen_width // 2, self.screen_height - 70))
+            border_rect = inst_rect.inflate(20, 10)
+            pygame.draw.rect(self.screen, WHITE, border_rect, 2, border_radius=5)
+            
             self.screen.blit(instruction, inst_rect)
         
         elif self.view == "LEVELS":
@@ -396,9 +414,3 @@ class LevelSelector:
     def get_selected_mode(self):
         """Returns selected window mode as string: 'windowed'|'borderless'|'fullscreen'"""
         return getattr(self, 'window_mode', 'windowed')
-    
-        # Create animated player preview (inside the selected character button)
-        btn = self.character_buttons[self.selected_character]
-        preview_x = btn.rect.centerx - 40
-        preview_y = btn.rect.centery - 40
-        self.animated_player = AnimatedPlayer(preview_x, preview_y, 80, 80, self.selected_character)
