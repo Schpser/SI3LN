@@ -93,10 +93,24 @@ void Game::handleKeyPress(SDL_Keycode key)
 		break;
 
 	case SDLK_SPACE:
+		// Fermer la boîte d'intro si elle est affichée
+		if (currentState == GameState::GAMEPLAY && showLevelIntro)
+		{
+			showLevelIntro = false;
+			levelIntroTimer = 0.0f;
+			break;
+		}
 		// Le tir continu est géré dans updateGameplay
 		break;
 
 	       case SDLK_LSHIFT:
+		       // Fermer la boîte d'intro si elle est affichée
+		       if (currentState == GameState::GAMEPLAY && showLevelIntro)
+		       {
+			       showLevelIntro = false;
+			       levelIntroTimer = 0.0f;
+			       break;
+		       }
 		       if (currentState == GameState::GAMEPLAY && player && player->useSpecial())
 		       {
 			       auto bullet = std::make_shared<Bullet>(
@@ -124,7 +138,12 @@ void Game::handleKeyPress(SDL_Keycode key)
 
 
 	default:
-		 break;
+		// Fermer la boîte d'intro avec n'importe quelle touche
+		if (currentState == GameState::GAMEPLAY && showLevelIntro)
+		{
+			showLevelIntro = false;
+		}
+		break;
 	}
 }
 
@@ -147,6 +166,10 @@ void Game::update(float deltaTime)
 	}
 
 	if (currentState != GameState::GAMEPLAY)
+		return;
+
+	// Bloquer le gameplay pendant l'affichage de l'intro de niveau
+	if (showLevelIntro)
 		return;
 
 	// Récupérer l'état du clavier pour le mouvement continu
@@ -252,17 +275,6 @@ void Game::update(float deltaTime)
 	// Vérifier victoire (tous les ennemis éliminés)
 	if (enemies.empty() && currentState == GameState::GAMEPLAY) {
 		changeState(GameState::LEVEL_WIN);
-	}
-
-	// Gérer l'affichage d'intro de niveau
-	if (showLevelIntro)
-	{
-		levelIntroTimer -= deltaTime;
-		if (levelIntroTimer <= 0.0f)
-		{
-			showLevelIntro = false;
-			levelIntroTimer = 0.0f;
-		}
 	}
 }
 
@@ -751,20 +763,128 @@ void Game::update(float deltaTime)
 		renderText("Lives: " + std::to_string(lives), 10, 50, font, Colors::WHITE);
 		renderText("Level: " + std::to_string(currentLevel), 10, 90, font, Colors::WHITE);
 
-		// Afficher un texte d'introduction au début du niveau
-		if (showLevelIntro && fontLarge)
+		// Afficher la boîte d'introduction au début du niveau
+		if (showLevelIntro)
 		{
-			std::string intro = currentWorld + " - Level " + std::to_string(currentLevel);
-			int textW = 0, textH = 0;
-			if (TTF_SizeText(fontLarge, intro.c_str(), &textW, &textH) == 0)
+			renderLevelIntroBox();
+		}
+	}
+
+	// Fonction pour dessiner une boîte de dialogue avec un fond semi-transparent
+	void Game::renderDialogBox(const std::string &title, const std::string &text, int x, int y, int width, int height)
+	{
+		// Dessiner le fond semi-transparent de la boîte
+		SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
+		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 220); // Noir avec transparence
+		SDL_Rect boxRect = {x, y, width, height};
+		SDL_RenderFillRect(renderer, &boxRect);
+		
+		// Dessiner la bordure de la boîte
+		SDL_SetRenderDrawColor(renderer, 0, 255, 255, 255); // Cyan
+		SDL_RenderDrawRect(renderer, &boxRect);
+		
+		// Dessiner une deuxième bordure intérieure pour un effet de cadre
+		SDL_Rect innerRect = {x + 3, y + 3, width - 6, height - 6};
+		SDL_SetRenderDrawColor(renderer, 100, 200, 255, 255); // Bleu clair
+		SDL_RenderDrawRect(renderer, &innerRect);
+		
+		// Obtenir les hauteurs réelles des polices
+		int fontHeight = font ? TTF_FontHeight(font) : 30;
+		int largeFontHeight = fontLarge ? TTF_FontHeight(fontLarge) : 50;
+		int lineSpacing = 12;
+		
+		// Afficher le titre centré en haut de la boîte
+		int titleY = y + 25;
+		if (fontLarge)
+		{
+			int titleW = 0, titleH = 0;
+			TTF_SizeText(fontLarge, title.c_str(), &titleW, &titleH);
+			renderText(title, x + (width - titleW) / 2, titleY, fontLarge, Colors::CYAN);
+		}
+		
+		// Position de départ pour le texte (après le titre)
+		int textStartY = titleY + largeFontHeight + 30;
+		
+		// Afficher le texte multiligne dans la boîte
+		if (font)
+		{
+			int lineY = textStartY;
+			
+			// Découper le texte en lignes
+			std::string remaining = text;
+			size_t pos = 0;
+			while ((pos = remaining.find('\n')) != std::string::npos || !remaining.empty())
 			{
-				renderText(intro, screenWidth / 2 - textW / 2, screenHeight / 2 - textH / 2, fontLarge, Colors::CYAN);
-			}
-			else
-			{
-				renderText(intro, screenWidth / 2 - 100, screenHeight / 2 - 20, fontLarge, Colors::CYAN);
+				std::string line;
+				if (pos != std::string::npos)
+				{
+					line = remaining.substr(0, pos);
+					remaining = remaining.substr(pos + 1);
+				}
+				else
+				{
+					line = remaining;
+					remaining.clear();
+				}
+				
+				// Centrer chaque ligne
+				int lineW = 0, lineH = 0;
+				TTF_SizeText(font, line.c_str(), &lineW, &lineH);
+				renderText(line, x + (width - lineW) / 2, lineY, font, Colors::WHITE);
+				lineY += fontHeight + lineSpacing;
+				
+				if (remaining.empty()) break;
 			}
 		}
+		
+		// Afficher l'instruction pour continuer (fixé en bas de la boîte)
+		if (font)
+		{
+			std::string continueText = "Appuyez sur une touche pour continuer...";
+			int contW = 0, contH = 0;
+			TTF_SizeText(font, continueText.c_str(), &contW, &contH);
+			renderText(continueText, x + (width - contW) / 2, y + height - fontHeight - 20, font, Colors::YELLOW);
+		}
+	}
+
+	// Fonction pour afficher la boîte d'introduction du niveau
+	void Game::renderLevelIntroBox()
+	{
+		// Récupérer la description du niveau
+		std::string description = getLevelDescription(currentWorld, currentLevel);
+		
+		// Compter le nombre de lignes dans la description
+		int lineCount = 1;
+		for (char c : description) {
+			if (c == '\n') lineCount++;
+		}
+		
+		// Obtenir la hauteur réelle de la police
+		int fontHeight = font ? TTF_FontHeight(font) : 30;
+		int largeFontHeight = fontLarge ? TTF_FontHeight(fontLarge) : 50;
+		
+		// Calculer les dimensions dynamiquement
+		int lineSpacing = 12; // Espace entre les lignes
+		int titleTopMargin = 25; // Marge au-dessus du titre
+		int titleBottomMargin = 30; // Espace entre le titre et le texte
+		int textBottomMargin = 25; // Espace entre le texte et "Appuyez..."
+		int continueBottomMargin = 20; // Marge en bas de la boîte
+		
+		// Hauteur totale calculée
+		int titleSection = titleTopMargin + largeFontHeight + titleBottomMargin;
+		int textSection = lineCount * (fontHeight + lineSpacing);
+		int continueSection = textBottomMargin + fontHeight + continueBottomMargin;
+		
+		int boxWidth = 750;
+		int boxHeight = titleSection + textSection + continueSection;
+		int boxX = (screenWidth - boxWidth) / 2;
+		int boxY = (screenHeight - boxHeight) / 2;
+		
+		// Titre avec le monde et le niveau
+		std::string title = currentWorld + " - Niveau " + std::to_string(currentLevel);
+		
+		// Dessiner la boîte de dialogue
+		renderDialogBox(title, description, boxX, boxY, boxWidth, boxHeight);
 	}
 
 	// Fonction qui affiche du texte à l'écran avec une police et une couleur spécifiées

@@ -104,10 +104,13 @@ namespace SI3LN
 		// ==================== Fonctions utilitaires ====================
 		SDL_Texture *loadTexture(const std::string &path);											// Charge une texture à partir d'un chemin
 		void renderText(const std::string &text, int x, int y, TTF_Font *font, const Color &color); // Affiche du texte à l'écran
+		void renderDialogBox(const std::string &title, const std::string &text, int x, int y, int width, int height); // Affiche une boîte de dialogue
+		void renderLevelIntroBox(); // Affiche la boîte d'introduction du niveau
+		
 		// ==================== Intro de niveau ====================
 		bool showLevelIntro = false;           // Indique si le texte d'intro de niveau est affiché
 		float levelIntroTimer = 0.0f;         // Compteur pour la durée d'affichage
-		static constexpr float LEVEL_INTRO_DURATION = 3.0f; // Durée par défaut en secondes
+		static constexpr float LEVEL_INTRO_DURATION = 8.0f; // Durée par défaut en secondes (augmentée pour lire le texte)
 		// ==================== Fin de partie ====================
 		float endGameTimer = 0.0f;            // Timer pour quitter automatiquement après victoire/défaite
 		static constexpr float END_GAME_DELAY = 3.0f; // Délai avant de quitter (3 secondes)

@@ -159,4 +159,53 @@ inline std::map<std::string, WorldConfig> getWorldsConfig() {
     return worlds;
 }
 
+// ==================== Descriptions des niveaux ====================
+// Fonction qui retourne la description d'un niveau pour un monde donné
+inline std::string getLevelDescription(const std::string& world, int level) {
+    // Descriptions pour chaque monde et niveau
+    std::map<std::string, std::map<int, std::string>> descriptions;
+    
+    // Space World
+    descriptions["Space"][1] = "Bienvenue dans l'espace infini!\nVos premiers ennemis aliens approchent.\nUtilisez les fleches pour vous deplacer\net ESPACE pour tirer.";
+    descriptions["Space"][2] = "Les aliens deviennent plus agressifs!\nIls tirent plus frequemment.\nRestez vigilant et esquivez leurs tirs.";
+    descriptions["Space"][3] = "La flotte spatiale se renforce!\nPlus d'ennemis arrivent en formation.\nTenez bon, pilote!";
+    descriptions["Space"][4] = "Alerte rouge! Invasion massive!\nLes aliens ont double leurs forces.\nVotre habilete sera mise a l'epreuve.";
+    descriptions["Space"][5] = "Mission finale: Vaisseau-mere en vue!\nC'est le moment de prouver votre valeur.\nBonne chance, commandant!";
+    
+    // Desert World
+    descriptions["Desert"][1] = "Bienvenue dans le desert brulant!\nLes creatures du sable emergent.\nLa chaleur est intense, restez concentre!";
+    descriptions["Desert"][2] = "Tempete de sable en approche!\nLa visibilite diminue, mais\nles ennemis restent dangereux.";
+    descriptions["Desert"][3] = "Les scorpions geants attaquent!\nIls sont rapides et mortels.\nNe les laissez pas s'approcher!";
+    descriptions["Desert"][4] = "L'oasis cache des dangers!\nLes predateurs du desert sont feroces.\nProtegez votre vaisseau!";
+    descriptions["Desert"][5] = "Le Sphinx se reveille!\nAffrontez le gardien du desert.\nSeuls les plus braves survivront!";
+    
+    // Forest World
+    descriptions["Forest"][1] = "Entrez dans la foret enchantee!\nLes creatures magiques rodent.\nMefiez-vous des ombres...";
+    descriptions["Forest"][2] = "Les feux follets vous guettent!\nIls sont rapides et imprevisibles.\nGardez vos reflexes affutes!";
+    descriptions["Forest"][3] = "Les ents antiques s'eveillent!\nCes gardiens protegent la foret.\nIls ne vous laisseront pas passer.";
+    descriptions["Forest"][4] = "Le coeur de la foret est menace!\nLes creatures sombres envahissent.\nDefendez ce lieu sacre!";
+    descriptions["Forest"][5] = "L'Esprit de la Foret apparait!\nCette entite millénaire teste\nvotre courage. Soyez pret!";
+    
+    // Marine World
+    descriptions["Marine"][1] = "Plongez dans les abysses!\nLes creatures marines emergent.\nL'ocean cache bien des secrets...";
+    descriptions["Marine"][2] = "Les meduses phosphorescentes!\nLeurs tentacules sont mortels.\nEvitez tout contact!";
+    descriptions["Marine"][3] = "Les requins mecaniques approchent!\nIls sont programmes pour detruire.\nNe leur tournez pas le dos!";
+    descriptions["Marine"][4] = "La cite engloutie se defend!\nLes gardiens sous-marins attaquent.\nLa pression augmente!";
+    descriptions["Marine"][5] = "Le Kraken emerge des profondeurs!\nCe leviathan est une legende.\nAffrontez votre destin!";
+    
+    // Apocalyptic World
+    descriptions["Apocalyptic"][1] = "Bienvenue dans le monde ravage!\nLes mutants survivants attaquent.\nChaque ressource compte ici.";
+    descriptions["Apocalyptic"][2] = "Les radiations augmentent!\nLes creatures sont plus fortes.\nAdaptez-vous ou perissez!";
+    descriptions["Apocalyptic"][3] = "Les machines de guerre s'activent!\nL'ancienne technologie est mortelle.\nDetruisez-les avant qu'il soit trop tard!";
+    descriptions["Apocalyptic"][4] = "Le bunker est en vue!\nMais il est bien defendu.\nForcez le passage!";
+    descriptions["Apocalyptic"][5] = "L'IA supreme vous attend!\nElle a cause l'apocalypse.\nC'est l'heure de la vengeance!";
+    
+    // Retourner la description ou un texte par defaut
+    if (descriptions.find(world) != descriptions.end() &&
+        descriptions[world].find(level) != descriptions[world].end()) {
+        return descriptions[world][level];
+    }
+    return "Niveau " + std::to_string(level) + "\nPreparez-vous au combat!\nBonne chance!";
+}
+
 } // namespace SI3LN // Fin de l'espace de noms SI3LN
