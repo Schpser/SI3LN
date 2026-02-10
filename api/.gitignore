@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
+
 ENV/
 build/
 develop-eggs/
@@ -31,8 +31,6 @@ media/
 staticfiles/
 
 # Environment
-.env
-.venv
 
 # IDE
 .vscode/
