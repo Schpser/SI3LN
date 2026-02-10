@@ -1,4 +1,5 @@
 from ninja import Router, Schema
+from ninja.responses import Response
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from .jwt_auth import JWTAuth
@@ -30,7 +31,7 @@ def register(request, payload: RegisterSchema):
     
     # Check if user exists
     if User.objects.filter(username=payload.username).exists():
-        return {"error": "Username already exists"}, 400
+        return Response({"error": "Username already exists"}, status=400)
     
     # Create user
     user = User.objects.create_user(
@@ -63,7 +64,7 @@ def login(request, payload: LoginSchema):
     user = authenticate(username=payload.username, password=payload.password)
     
     if user is None:
-        return {"error": "Invalid credentials"}, 401
+        return Response({"error": "Invalid credentials"}, status=401)
     
     # Get or create player profile
     player, _ = Player.objects.get_or_create(
@@ -96,18 +97,18 @@ def refresh_token(request):
     
     auth_header = request.headers.get('Authorization', '')
     if not auth_header.startswith('Bearer '):
-        return {"error": "No token provided"}, 401
+        return Response({"error": "No token provided"}, status=401)
     
     token = auth_header[7:]
     new_token = JWTAuth.refresh_token(token)
     
     if not new_token:
-        return {"error": "Invalid or expired token"}, 401
+        return Response({"error": "Invalid or expired token"}, status=401)
     
     # Get user info
     user = JWTAuth.get_user_from_token(new_token)
     if not user:
-        return {"error": "Invalid token"}, 401
+        return Response({"error": "Invalid token"}, status=401)
     
     player = Player.objects.get(user=user)
     
@@ -123,13 +124,13 @@ def get_current_user(request):
     """Get current authenticated user info"""
     auth_header = request.headers.get('Authorization', '')
     if not auth_header.startswith('Bearer '):
-        return {"error": "Not authenticated"}, 401
+        return Response({"error": "Not authenticated"}, status=401)
     
     token = auth_header[7:]
     user = JWTAuth.get_user_from_token(token)
     
     if not user:
-        return {"error": "Invalid or expired token. Please login again."}, 401
+        return Response({"error": "Invalid or expired token. Please login again."}, status=401)
     
     from .models import Player
     player = Player.objects.get(user=user)
