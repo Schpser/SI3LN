@@ -34,7 +34,7 @@ def main():
     if 'runserver' in sys.argv:
         t = threading.Thread(
             target=_open_browser_when_ready,
-            args=('http://127.0.0.1:8000/api/docs',),
+            args=('http://127.0.0.1:8000/api/',),
             daemon=True,
         )
         t.start()
