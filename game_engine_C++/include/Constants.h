@@ -8,7 +8,7 @@ namespace SI3LN {
 
 // ==================== Paramètres d'écran ====================
 
-constexpr int DEFAULT_SCREEN_WIDTH = 1920; //longeur par defaut de la fenetre de jeu
+constexpr int DEFAULT_SCREEN_WIDTH = 1920; //largeur par defaut de la fenetre de jeu
 constexpr int DEFAULT_SCREEN_HEIGHT = 1080; // Hauteur par défaut de la fenêtre du jeu
 constexpr int FPS = 60; // Nombre d'images par seconde
 constexpr int FRAME_DELAY = 1000 / FPS; // Délai entre chaque image pour maintenir le FPS
@@ -24,19 +24,19 @@ struct Color {
 
 // ==================== Couleurs prédéfinies ====================
 namespace Colors {
-    const Color WHITE = {255, 255, 255, 255}; // Blanc
-    const Color BLACK = {0, 0, 0, 255}; // Noir
-    const Color RED = {255, 0, 0, 255}; // Rouge
-    const Color GREEN = {0, 255, 0, 255}; // Vert
-    const Color BLUE = {0, 0, 255, 255}; // Bleu
-    const Color YELLOW = {255, 255, 0, 255}; // Jaune
-    const Color CYAN = {0, 255, 255, 255}; // Cyan
-    const Color MAGENTA = {255, 0, 255, 255}; // Magenta
-    const Color GRAY = {128, 128, 128, 255}; // Gris
-    const Color LIGHT_GRAY = {200, 200, 200, 255}; // Gris clair
-    const Color DARK_GRAY = {50, 50, 50, 255}; // Gris foncé
-    const Color ORANGE = {255, 165, 0, 255}; // Orange
-    const Color PURPLE = {128, 0, 128, 255}; // Violet
+    inline const Color WHITE = {255, 255, 255, 255}; // Blanc
+    inline const Color BLACK = {0, 0, 0, 255}; // Noir
+    inline const Color RED = {255, 0, 0, 255}; // Rouge
+    inline const Color GREEN = {0, 255, 0, 255}; // Vert
+    inline const Color BLUE = {0, 0, 255, 255}; // Bleu
+    inline const Color YELLOW = {255, 255, 0, 255}; // Jaune
+    inline const Color CYAN = {0, 255, 255, 255}; // Cyan
+    inline const Color MAGENTA = {255, 0, 255, 255}; // Magenta
+    inline const Color GRAY = {128, 128, 128, 255}; // Gris
+    inline const Color LIGHT_GRAY = {200, 200, 200, 255}; // Gris clair
+    inline const Color DARK_GRAY = {50, 50, 50, 255}; // Gris foncé
+    inline const Color ORANGE = {255, 165, 0, 255}; // Orange
+    inline const Color PURPLE = {128, 0, 128, 255}; // Violet
 }
 
 // ==================== Paramètres du jeu ====================
@@ -164,6 +164,11 @@ inline std::map<std::string, WorldConfig> getWorldsConfig() {
 inline std::string getLevelDescription(const std::string& world, int level) {
     // Descriptions pour chaque monde et niveau
     std::map<std::string, std::map<int, std::string>> descriptions;
+
+    // =============== Texte de début de niveaux =================
+
+    // intro
+    descriptions["Intro"][1] = " ";
     
     // Space World
     descriptions["Space"][1] = "Bienvenue dans l'espace infini!\nVos premiers ennemis aliens approchent.\nUtilisez les fleches pour vous deplacer\net ESPACE pour tirer.";
