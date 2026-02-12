@@ -3,6 +3,7 @@ from ninja.responses import Response
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from .jwt_auth import JWTAuth
+from .auth_decorators import jwt_auth
 
 router = Router()
 
@@ -90,26 +91,25 @@ def logout(request):
     return {"message": "Logged out successfully. Please discard your token."}
 
 
-@router.post("/refresh", response=TokenSchema, tags=["Auth"])
+@router.post("/refresh", response=TokenSchema, tags=["Auth"], auth=jwt_auth)
 def refresh_token(request):
     """Refresh JWT token (extends expiration by 24 hours)"""
     from .models import Player
     
+    # Get the token from the authenticated request
     auth_header = request.headers.get('Authorization', '')
-    if not auth_header.startswith('Bearer '):
+    token = auth_header[7:] if auth_header.startswith('Bearer ') else None
+    
+    if not token:
         return Response({"error": "No token provided"}, status=401)
     
-    token = auth_header[7:]
     new_token = JWTAuth.refresh_token(token)
     
     if not new_token:
         return Response({"error": "Invalid or expired token"}, status=401)
     
     # Get user info
-    user = JWTAuth.get_user_from_token(new_token)
-    if not user:
-        return Response({"error": "Invalid token"}, status=401)
-    
+    user = request.auth
     player = Player.objects.get(user=user)
     
     return {
@@ -119,15 +119,10 @@ def refresh_token(request):
     }
 
 
-@router.get("/me", tags=["Auth"])
+@router.get("/me", tags=["Auth"], auth=jwt_auth)
 def get_current_user(request):
-    """Get current authenticated user info"""
-    auth_header = request.headers.get('Authorization', '')
-    if not auth_header.startswith('Bearer '):
-        return Response({"error": "Not authenticated"}, status=401)
-    
-    token = auth_header[7:]
-    user = JWTAuth.get_user_from_token(token)
+    """Get current authenticated user info (requires Bearer token)"""
+    user = request.auth  # User is already set by jwt_auth
     
     if not user:
         return Response({"error": "Invalid or expired token. Please login again."}, status=401)
