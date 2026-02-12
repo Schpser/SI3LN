@@ -371,4 +371,4 @@ CMakeFiles/SI3LN.dir/src/Game.cpp.o: \
  /usr/include/c++/15.2.1/bits/quoted_string.h \
  /usr/include/c++/15.2.1/sstream /usr/include/c++/15.2.1/bits/sstream.tcc \
  /usr/include/c++/15.2.1/codecvt /usr/include/c++/15.2.1/bits/fs_dir.h \
- /usr/include/c++/15.2.1/bits/fs_ops.h
+ /usr/include/c++/15.2.1/bits/fs_ops.h /usr/include/SDL2/SDL_ttf.h
