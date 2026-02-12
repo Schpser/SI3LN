@@ -2,10 +2,13 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-import threading
-import time
-import webbrowser
-import socket
+import signal
+
+
+def signal_handler(sig, frame):
+    """Handle Ctrl+C gracefully"""
+    print("\n\n🛑 Shutting down server gracefully...")
+    sys.exit(0)
 
 
 def main():
@@ -20,24 +23,14 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
 
-    # If running the development server, open the API docs in the browser
-    def _open_browser_when_ready(url, host='127.0.0.1', port=8000, timeout=10, interval=0.5):
-        deadline = time.time() + timeout
-        while time.time() < deadline:
-            try:
-                with socket.create_connection((host, port), timeout=1):
-                    webbrowser.open(url)
-                    return
-            except OSError:
-                time.sleep(interval)
-
     if 'runserver' in sys.argv:
-        t = threading.Thread(
-            target=_open_browser_when_ready,
-            args=('http://127.0.0.1:8000/api/',),
-            daemon=True,
-        )
-        t.start()
+        # Register signal handler for graceful shutdown
+        signal.signal(signal.SIGINT, signal_handler)
+        signal.signal(signal.SIGTERM, signal_handler)
+        
+        # Print info message instead of trying to open browser (WSL doesn't support GUI browsers)
+        print("📚 API Docs: http://127.0.0.1:8000/api/docs")
+        print("🔧 Admin Panel: http://127.0.0.1:8000/admin")
 
     execute_from_command_line(sys.argv)
 

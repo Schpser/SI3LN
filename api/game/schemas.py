@@ -6,7 +6,7 @@ from typing import Optional
 class PlayerSchema(Schema):
     id: int
     username: str
-    email: str
+    email: Optional[str] = ""
     total_score: int
     games_played: int
     created_at: datetime
