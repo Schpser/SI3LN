@@ -4,7 +4,9 @@ __pycache__/
 *$py.class
 *.so
 .Python
-
+venv/
+ENV/
+env/
 
 # Node/JS
 node_modules/
