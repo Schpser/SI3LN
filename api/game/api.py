@@ -11,7 +11,7 @@ from .schemas import (
     LeaderboardEntrySchema,
     MessageSchema,
 )
-from .auth_decorators import jwt_auth
+from .auth.auth_decorators import jwt_auth
 
 router = Router()
 

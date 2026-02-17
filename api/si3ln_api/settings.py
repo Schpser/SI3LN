@@ -79,10 +79,14 @@ if DATABASE_URL:
         'default': dj_database_url.parse(DATABASE_URL)
     }
 else:
+    # store SQLite DB inside `Base_de_donnée/` directory
+    DB_DIR = BASE_DIR / "Base_de_donnée_SQL"
+    DB_DIR.mkdir(parents=True, exist_ok=True)
+
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'NAME': DB_DIR / 'db.sqlite3',
         }
     }
 

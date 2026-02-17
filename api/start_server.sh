@@ -12,4 +12,4 @@ fi
 echo "🚀 Starting fresh Django server..."
 cd "$(dirname "$0")" || exit 1
 
-python manage.py runserver 0.0.0.0:8000
+python manage.py runserver 127.0.0.1:8000
