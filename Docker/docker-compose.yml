@@ -1,15 +1,38 @@
 version: '3.8'
 
 services:
+  # Django API Service
   api:
-    build: .
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
     container_name: si3ln-api
     ports:
       - "8000:8000"
     volumes:
-      - ./Base_de_donnée/db.sqlite3:/app/db.sqlite3
-      - ./:/app
+      # Mount database directory
+      - ../api/Base_de_donnée_SQL:/app/Base_de_donnée_SQL
+      # Mount media files
+      - ../api/media:/app/media
+      # Mount static files
+      - ../api/staticfiles:/app/staticfiles
     environment:
-      - DJANGO_DEBUG=True
-      - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
-    
+      - DJANGO_SETTINGS_MODULE=si3ln_api.settings
+      - PYTHONUNBUFFERED=1
+      # Optional: Uncomment for production settings
+      # - DJANGO_DEBUG=False
+      # - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,yourdomain.com
+      # - SECRET_KEY=your-secret-key-here
+      # - DATABASE_URL=postgresql://user:password@db:5432/si3ln_db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/game/stats"]      
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+# Volumes for persistent data
+volumes:
+  postgres_data:
+  redis_data:

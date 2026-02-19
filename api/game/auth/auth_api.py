@@ -28,7 +28,7 @@ class TokenSchema(Schema):
 @router.post("/register", response=TokenSchema, tags=["Auth"])
 def register(request, payload: RegisterSchema):
     """Register a new user"""
-    from .models import Player
+    from game.models import Player
     
     # Check if user exists
     if User.objects.filter(username=payload.username).exists():
@@ -60,7 +60,7 @@ def register(request, payload: RegisterSchema):
 @router.post("/login", response=TokenSchema, tags=["Auth"])
 def login(request, payload: LoginSchema):
     """Login user and get JWT token (valid for 24 hours)"""
-    from .models import Player
+    from game.models import Player
     
     user = authenticate(username=payload.username, password=payload.password)
     
@@ -94,7 +94,7 @@ def logout(request):
 @router.post("/refresh", response=TokenSchema, tags=["Auth"], auth=jwt_auth)
 def refresh_token(request):
     """Refresh JWT token (extends expiration by 24 hours)"""
-    from .models import Player
+    from game.models import Player
     
     # Get the token from the authenticated request
     auth_header = request.headers.get('Authorization', '')
@@ -127,7 +127,7 @@ def get_current_user(request):
     if not user:
         return Response({"error": "Invalid or expired token. Please login again."}, status=401)
     
-    from .models import Player
+    from game.models import Player
     player = Player.objects.get(user=user)
     
     return {
@@ -136,4 +136,64 @@ def get_current_user(request):
         "player_id": player.id,
         "total_score": player.total_score,
         "games_played": player.games_played
+    }
+
+
+@router.post("/change-password", tags=["Auth"], auth=jwt_auth)
+def change_password(request, payload):
+    """Change password for authenticated user"""
+    from game.schemas import ChangePasswordSchema, MessageSchema
+    
+    user = request.auth
+    
+    # Parse the payload
+    old_password = payload.get('old_password')
+    new_password = payload.get('new_password')
+    
+    if not old_password or not new_password:
+        return Response({"error": "Both old_password and new_password are required"}, status=400)
+    
+    # Verify old password
+    if not user.check_password(old_password):
+        return Response({"error": "Current password is incorrect"}, status=400)
+    
+    # Set new password
+    user.set_password(new_password)
+    user.save()
+    
+    return {"message": "Password changed successfully"}
+
+
+@router.patch("/update-account", tags=["Auth"], auth=jwt_auth)
+def update_account(request, payload):
+    """Update account email and name for authenticated user"""
+    from game.models import Player
+    
+    user = request.auth
+    
+    # Update user fields if provided
+    if 'email' in payload:
+        user.email = payload['email']
+        # Also update player email
+        try:
+            player = Player.objects.get(user=user)
+            player.email = payload['email']
+            player.save()
+        except Player.DoesNotExist:
+            pass
+    
+    if 'first_name' in payload:
+        user.first_name = payload['first_name']
+    
+    if 'last_name' in payload:
+        user.last_name = payload['last_name']
+    
+    user.save()
+    
+    return {
+        "message": "Account updated successfully",
+        "username": user.username,
+        "email": user.email,
+        "first_name": user.first_name,
+        "last_name": user.last_name,
     }

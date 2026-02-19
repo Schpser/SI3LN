@@ -10,6 +10,11 @@ from .schemas import (
     GameSessionUpdateSchema,
     LeaderboardEntrySchema,
     MessageSchema,
+    WorldSchema,
+    AchievementSchema,
+    PlayerAchievementSchema,
+    EnhancedProfileSchema,
+    ProfileUpdateSchema,
 )
 from .auth.auth_decorators import jwt_auth
 
@@ -152,3 +157,128 @@ def get_stats(request):
         "average_score": round(avg_score, 2),
         "highest_score": highest_score,
     }
+
+
+# World endpoints (public - viewing available game worlds)
+@router.get("/worlds", response=List[WorldSchema], tags=["Worlds"])
+def list_worlds(request):
+    """Get all available game worlds/themes (public access)"""
+    from .models import World
+    from .schemas import WorldSchema
+    return World.objects.all()
+
+
+@router.get("/worlds/{world_id}", response=WorldSchema, tags=["Worlds"])
+def get_world(request, world_id: int):
+    """Get a specific world by ID (public access)"""
+    from .models import World
+    return get_object_or_404(World, id=world_id)
+
+
+# Achievement endpoints (public viewing, protected for player achievements)
+@router.get("/achievements", response=List[AchievementSchema], tags=["Achievements"])
+def list_achievements(request):
+    """Get all available achievements (public access)"""
+    from .models import Achievement
+    from .schemas import AchievementSchema
+    return Achievement.objects.all()
+
+
+@router.get("/achievements/{achievement_id}", response=AchievementSchema, tags=["Achievements"])
+def get_achievement(request, achievement_id: int):
+    """Get a specific achievement by ID (public access)"""
+    from .models import Achievement
+    return get_object_or_404(Achievement, id=achievement_id)
+
+
+@router.get("/players/{player_id}/achievements", response=List[PlayerAchievementSchema], tags=["Achievements"], auth=jwt_auth)
+def get_player_achievements(request, player_id: int):
+    """Get all achievements for a specific player (requires authentication)"""
+    from .models import PlayerAchievement
+    from .schemas import PlayerAchievementSchema
+    player = get_object_or_404(Player, id=player_id)
+    achievements = PlayerAchievement.objects.filter(player=player).select_related('achievement')
+    
+    # Convert to schema format
+    result = []
+    for pa in achievements:
+        result.append({
+            "id": pa.id,
+            "achievement": {
+                "id": pa.achievement.id,
+                "name": pa.achievement.name,
+                "description": pa.achievement.description,
+                "icon": pa.achievement.icon,
+                "points": pa.achievement.points,
+                "rarity": pa.achievement.rarity,
+                "requirement_type": pa.achievement.requirement_type,
+                "requirement_value": pa.achievement.requirement_value,
+            },
+            "earned_at": pa.earned_at,
+            "unlocked_at": pa.unlocked_at,
+        })
+    return result
+
+
+# Enhanced Profile endpoints
+@router.get("/profile/me", response=EnhancedProfileSchema, tags=["Profile"], auth=jwt_auth)
+def get_my_profile(request):
+    """Get enhanced profile for current authenticated user"""
+    from .models import Player, PlayerAchievement
+    from .schemas import EnhancedProfileSchema
+    
+    user = request.auth
+    player = get_object_or_404(Player, user=user)
+    
+    # Get recent achievements (last 5)
+    recent_achievements = PlayerAchievement.objects.filter(
+        player=player
+    ).select_related('achievement').order_by('-unlocked_at')[:5]
+    
+    recent_list = [
+        {
+            "id": pa.achievement.id,
+            "name": pa.achievement.name,
+            "icon": pa.achievement.icon,
+            "points": pa.achievement.points,
+            "rarity": pa.achievement.rarity,
+            "unlocked_at": pa.unlocked_at.isoformat() if pa.unlocked_at else None,
+        }
+        for pa in recent_achievements
+    ]
+    
+    return {
+        "id": player.id,
+        "username": player.username,
+        "email": player.email or "",
+        "total_score": player.total_score,
+        "games_played": player.games_played,
+        "highest_level": player.highest_level,
+        "created_at": player.created_at,
+        "updated_at": player.updated_at,
+        "achievements_count": PlayerAchievement.objects.filter(player=player).count(),
+        "recent_achievements": recent_list,
+    }
+
+
+@router.patch("/profile/me", response=PlayerSchema, tags=["Profile"], auth=jwt_auth)
+def update_my_profile(request, payload: ProfileUpdateSchema):
+    """Update current user's profile (requires authentication)"""
+    from .schemas import ProfileUpdateSchema, PlayerSchema
+    
+    user = request.auth
+    player = get_object_or_404(Player, user=user)
+    
+    # Update only provided fields
+    if payload.username is not None:
+        player.username = payload.username
+        user.username = payload.username
+        user.save()
+    
+    if payload.email is not None:
+        player.email = payload.email
+        user.email = payload.email
+        user.save()
+    
+    player.save()
+    return player

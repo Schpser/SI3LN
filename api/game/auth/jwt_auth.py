@@ -43,7 +43,7 @@ class JWTAuth:
     @staticmethod
     def create_token(user: User) -> str:
         """Create JWT token for user with 24-hour expiration"""
-        from .models import Player
+        from game.models import Player
         
         # Get or create player profile
         player, _ = Player.objects.get_or_create(
