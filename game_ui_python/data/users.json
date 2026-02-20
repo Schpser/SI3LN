@@ -1,0 +1,30 @@
+{
+    "test_user": {
+        "password": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
+        "email": "test@example.com",
+        "selected_character": 0,
+        "high_score": 0,
+        "levels_completed": {}
+    },
+    "SCHPS": {
+        "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "email": "schps.games@gmail.co",
+        "selected_character": 2,
+        "high_score": 1610,
+        "levels_completed": {}
+    },
+    "lololololololololo": {
+        "password": "6d35fdcf71dbd8372e439c0c26ad991f5241934975e37815580aae76bb6d23da",
+        "email": "",
+        "selected_character": 0,
+        "high_score": 6290,
+        "levels_completed": {}
+    },
+    "schps": {
+        "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "email": "",
+        "selected_character": 2,
+        "high_score": 3910,
+        "levels_completed": {}
+    }
+}
