@@ -1,0 +1,40 @@
+FROM emscripten/emsdk:3.1.51
+
+# System deps: nlohmann/json header (no libcurl needed for Wasm)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    nlohmann-json3-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /build
+
+# Copy game source
+COPY . .
+
+# Strip 208MB player animation frames down to first-frame only
+RUN mkdir -p assets_web/players && \
+    for d in assets/players/player_*/; do \
+        name=$(basename "$d"); \
+        mkdir -p "assets_web/players/$name"; \
+        cp "$d/AnimateDiff_00001.001.png" "assets_web/players/$name/" 2>/dev/null || true; \
+    done && \
+    cp -r assets/enemies assets_web/ && \
+    cp -r assets/fonts   assets_web/ && \
+    cp -r assets/sprites assets_web/ && \
+    cp -r assets/worlds  assets_web/ && \
+    echo "Assets prepared:" && du -sh assets_web/
+
+# Use standalone Wasm CMakeLists (avoids the native CMakeLists.txt which needs libcurl/pkg-config)
+# GAME_SRC points back to /build so all source paths resolve correctly.
+RUN mkdir -p /wasm_build && cp CMakeLists.wasm.cmake /wasm_build/CMakeLists.txt
+
+RUN cd /wasm_build &&     emcmake cmake .         -DCMAKE_BUILD_TYPE=Release         -G "Unix Makefiles"         -Wno-dev         -DGAME_SRC=/build
+
+# Build — use bash pipefail so a make failure is not hidden by tee
+RUN cd /wasm_build &&     bash -c "set -o pipefail; emmake make -j$(nproc) 2>&1 | tee /build/build.log" ||     (echo "=== BUILD FAILED. Last 60 lines of log: ===" && tail -60 /build/build.log && exit 1)
+
+# Show what was produced, then copy to shared volume
+RUN echo "=== Wasm build outputs ===" &&     find /wasm_build -maxdepth 2 \( -name "*.js" -o -name "*.wasm" -o -name "*.data" \) | sort
+
+RUN mkdir -p /output &&     cp /wasm_build/SI3LN.js   /output/game.js   &&     cp /wasm_build/SI3LN.wasm /output/game.wasm &&     cp /wasm_build/SI3LN.data /output/game.data &&     echo "Build complete:" && ls -lh /output/
+
+CMD ["echo", "Game Wasm build complete."]

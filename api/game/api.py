@@ -87,18 +87,25 @@ def get_session(request, session_id: int):
 @router.patch("/sessions/{session_id}", response=GameSessionSchema, tags=["Game Sessions"], auth=jwt_auth)
 def update_session(request, session_id: int, payload: GameSessionUpdateSchema):
     """Update a game session (requires authentication)"""
+    from django.utils import timezone
     session = get_object_or_404(GameSession, id=session_id)
     
     for attr, value in payload.dict(exclude_unset=True).items():
         setattr(session, attr, value)
     
+    # Auto-set ended_at when session is marked completed
+    if payload.completed and not session.ended_at:
+        session.ended_at = timezone.now()
+    
     session.save()
     
-    # Update player stats
-    if payload.score is not None:
+    # Update player stats only when the session ends (completed=True)
+    if payload.completed and payload.score is not None:
         player = session.player
         player.total_score += payload.score
         player.games_played += 1
+        if payload.level_reached is not None and payload.level_reached > player.highest_level:
+            player.highest_level = payload.level_reached
         player.save()
     
     return session

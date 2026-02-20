@@ -24,6 +24,12 @@ namespace SI3LN
 
 		// Boucle principale du jeu
 		void run();
+
+#ifdef __EMSCRIPTEN__
+		// Called by the Emscripten static main-loop callback each frame
+		void stepFrame();
+		bool isRunning() const { return running; }
+#endif
 		
 		// Définir le monde et le niveau (appelé depuis Python)
 		void setWorldAndLevel(const std::string& world, int level);

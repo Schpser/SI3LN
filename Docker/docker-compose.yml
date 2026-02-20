@@ -82,6 +82,9 @@ services:
       - api
     ports:
       - "80:80"
+    volumes:
+      # Mount the compiled Wasm game files so nginx can serve /game/game.*
+      - game_wasm:/usr/share/nginx/html/game/wasm:ro
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost"]
@@ -90,6 +93,20 @@ services:
       retries: 3
     networks:
       - si3ln-network
+
+  # ─── C++ Game → WebAssembly builder (run once with: docker-compose --profile game up game-builder) ───
+  # After building, files are stored in the 'game_wasm' volume and served by nginx.
+  # Re-run only when you change the C++ source.
+  game-builder:
+    build:
+      context: ../game_engine_C++
+      dockerfile: Dockerfile.wasm
+    container_name: si3ln-game-builder
+    profiles:
+      - game
+    volumes:
+      - game_wasm:/output
+    restart: "no"
 
 # Networks
 networks:
@@ -100,3 +117,4 @@ networks:
 volumes:
   postgres_data:
   redis_data:
+  game_wasm:    # Stores compiled Wasm files, shared between game-builder and frontend

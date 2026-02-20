@@ -4,6 +4,19 @@
 #include <algorithm>
 #include <filesystem>
 #include <vector>
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#include <emscripten/fetch.h>
+// Static pointer for the Emscripten main loop callback
+static SI3LN::Game* g_game_instance = nullptr;
+static void emscripten_main_loop_step() {
+    if (!g_game_instance) return;
+    g_game_instance->stepFrame();
+    if (!g_game_instance->isRunning()) {
+        emscripten_cancel_main_loop();
+    }
+}
+#endif
 
 namespace SI3LN {
 
@@ -608,39 +621,48 @@ void Game::update(float deltaTime)
 	// Fonction principale qui lance la boucle de jeu
 	void Game::run()
 	{
-		// Initialiser le jeu et vérifier que tout s'est bien passé
 		if (!init())
 		{
 			std::cerr << "Failed to initialize game!" << std::endl;
 			return;
 		}
 
-		// Marquer le jeu comme en cours d'exécution
 		running = true;
-		// Enregistrer le temps du premier frame
 		lastFrameTime = SDL_GetTicks();
 
-		// Boucle principale du jeu qui s'exécute tant que running est vrai
+#ifdef __EMSCRIPTEN__
+		// Emscripten: hand control over to the browser's animation loop.
+		// The browser calls emscripten_main_loop_step() every frame (~60 fps).
+		// We must NOT block here, so no while-loop.
+		g_game_instance = this;
+		emscripten_set_main_loop(emscripten_main_loop_step, 0, 1);
+#else
 		while (running)
 		{
-			// Obtenir le temps actuel en millisecondes
 			uint32_t currentTime = SDL_GetTicks();
-			// Calculer le temps écoulé depuis la dernière frame en secondes
 			float deltaTime = (currentTime - lastFrameTime) / 1000.0f;
-			// Mettre à jour le temps de la dernière frame
 			lastFrameTime = currentTime;
 
-			// Traiter les événements (clics, touches clavier, etc.)
 			handleEvents();
-			// Mettre à jour la logique du jeu avec le temps écoulé
 			update(deltaTime);
-			// Afficher (rendu) le jeu
 			render();
 
-			// Limiter la fréquence d'images (FPS) pour ne pas utiliser 100% du CPU
 			SDL_Delay(FRAME_DELAY);
 		}
+#endif
 	}
+
+#ifdef __EMSCRIPTEN__
+	void Game::stepFrame()
+	{
+		uint32_t currentTime = SDL_GetTicks();
+		float deltaTime = (currentTime - lastFrameTime) / 1000.0f;
+		lastFrameTime = currentTime;
+		handleEvents();
+		update(deltaTime);
+		render();
+	}
+#endif
 
 	// Fonction qui traite tous les événements SDL (clics, touches, etc.)
 	void Game::handleEvents()

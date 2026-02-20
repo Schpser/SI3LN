@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI3LN - Play</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #000; overflow: hidden; font-family: monospace; color: #fff; }
+        #canvas { display: block; position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; cursor: none; }
+        #loading-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, #000428 0%, #004e92 100%);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            z-index: 10; transition: opacity 0.5s ease;
+        }
+        #loading-overlay.hidden { opacity: 0; pointer-events: none; }
+        .logo { font-size: 3rem; letter-spacing: 0.6rem; background: linear-gradient(90deg, #00d2ff, #3a47d5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 2rem; }
+        #status-text { font-size: 1rem; color: #aac; margin-bottom: 1.5rem; min-height: 1.4em; }
+        #progress-bar-wrap { width: 340px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
+        #progress-bar { height: 100%; width: 0%; background: linear-gradient(90deg, #00d2ff, #3a47d5); border-radius: 4px; transition: width 0.2s ease; }
+        #error-box { display: none; margin-top: 2rem; padding: 1.2rem 2rem; background: rgba(255,60,60,0.15); border: 1px solid rgba(255,60,60,0.4); border-radius: 8px; text-align: center; max-width: 500px; line-height: 1.7; color: #faa; }
+        #hud { position: absolute; top: 12px; right: 14px; display: flex; gap: 8px; z-index: 5; }
+        .hud-btn { background: rgba(0,0,0,0.55); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 5px 11px; border-radius: 5px; cursor: pointer; font-size: 0.75rem; transition: background 0.2s; }
+        .hud-btn:hover { background: rgba(0,0,0,0.8); }
+    </style>
+</head>
+<body>
+<canvas id="canvas" oncontextmenu="return false;"></canvas>
+<div id="loading-overlay">
+    <div class="logo">ARCAD3X</div>
+    <div id="status-text">Preparing game...</div>
+    <div id="progress-bar-wrap"><div id="progress-bar"></div></div>
+    <div id="error-box"></div>
+</div>
+<div id="hud">
+    <button class="hud-btn" id="fullscreenBtn">Fullscreen (F11)</button>
+    <button class="hud-btn" id="exitBtn">Exit</button>
+</div>
+<script>
+var params = new URLSearchParams(window.location.search);
+var world  = params.get("world")  || "Space";
+var level  = params.get("level")  || "1";
+var player = params.get("player") || "0";
+
+try {
+    var token = (window.parent && window.parent.localStorage)
+        ? window.parent.localStorage.getItem("access_token")
+        : localStorage.getItem("access_token");
+    if (token) window.SI3LN_JWT_TOKEN = token;
+} catch(e) {}
+
+var Module = {
+    canvas: document.getElementById("canvas"),
+    arguments: [world, level, player, "windowed"],
+    setStatus: function(text) {
+        var el = document.getElementById("status-text");
+        if (el) el.textContent = text || "Running...";
+    },
+    postRun: [function() {
+        var overlay = document.getElementById("loading-overlay");
+        if (overlay) overlay.classList.add("hidden");
+    }],
+    print:    function(t) { console.log("[SI3LN]", t); },
+    printErr: function(t) { console.error("[SI3LN]", t); }
+};
+
+(function() {
+    var origOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function(method, url) {
+        if (url && url.endsWith(".data")) {
+            this.addEventListener("progress", function(e) {
+                if (e.lengthComputable) {
+                    document.getElementById("progress-bar").style.width = Math.round(e.loaded / e.total * 100) + "%";
+                    document.getElementById("status-text").textContent = "Loading assets... " + Math.round(e.loaded / 1048576) + " / " + Math.round(e.total / 1048576) + " MB";
+                }
+            });
+        }
+        return origOpen.apply(this, arguments);
+    };
+})();
+
+function showError(msg) {
+    var box = document.getElementById("error-box");
+    if (box) { box.style.display = "block"; box.innerHTML = msg; }
+    document.getElementById("status-text").textContent = "Error - see below";
+}
+
+var script = document.createElement("script");
+script.src = "wasm/game.js";
+script.onerror = function() {
+    showError("<b>Game not yet compiled to WebAssembly.</b><br>Build it once with:<br><br><code>cd /home/schpser/SI3LN/Docker</code><br><code>docker-compose --profile game up game-builder</code><br><br>First build takes ~10 minutes (Emscripten compiles SDL2).");
+};
+document.body.appendChild(script);
+
+document.getElementById("fullscreenBtn").addEventListener("click", function() {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+    else document.exitFullscreen();
+});
+document.getElementById("exitBtn").addEventListener("click", function() {
+    try { if (window.parent && window.parent.app) window.parent.app.navigateTo("games"); else window.history.back(); }
+    catch(e) { window.history.back(); }
+});
+document.addEventListener("keydown", function(e) {
+    if (e.key === "F11") { e.preventDefault(); document.getElementById("fullscreenBtn").click(); }
+});
+</script>
+</body>
+</html>

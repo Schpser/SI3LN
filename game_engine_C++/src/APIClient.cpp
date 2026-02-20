@@ -161,7 +161,7 @@ bool APIClient::updateGameSession(int sessionId, int score, int level, int enemi
     data["enemies_killed"] = enemiesKilled;
     data["duration_seconds"] = duration;
     
-    std::string endpoint = "/sessions/" + std::to_string(sessionId);
+    std::string endpoint = "/game/sessions/" + std::to_string(sessionId);
     std::string response = performRequest(endpoint, "PATCH", data.dump());
     
     return !response.empty();
@@ -172,9 +172,9 @@ bool APIClient::endGameSession(int sessionId, int finalScore, int level, bool co
     data["score"] = finalScore;
     data["level_reached"] = level;
     data["completed"] = completed;
-    data["ended_at"] = ""; // Server will use current time if empty
+    // ended_at is set automatically by the server when completed=true
     
-    std::string endpoint = "/sessions/" + std::to_string(sessionId);
+    std::string endpoint = "/game/sessions/" + std::to_string(sessionId);
     std::string response = performRequest(endpoint, "PATCH", data.dump());
     
     return !response.empty();

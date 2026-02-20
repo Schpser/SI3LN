@@ -2,7 +2,9 @@
 #define API_CLIENT_H
 
 #include <string>
+#ifndef __EMSCRIPTEN__
 #include <curl/curl.h>
+#endif
 #include <nlohmann/json.hpp>
 
 namespace SI3LN {
@@ -34,8 +36,10 @@ private:
     std::string baseUrl_;
     std::string jwtToken_; // JWT token for authentication
     int playerId_; // Current player ID
+#ifndef __EMSCRIPTEN__
     CURL* curl_;
-    
+#endif
+
     // Helper
     static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp);
     std::string performRequest(const std::string& endpoint, const std::string& method, 

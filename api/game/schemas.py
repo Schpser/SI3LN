@@ -9,6 +9,7 @@ class PlayerSchema(Schema):
     email: Optional[str] = ""
     total_score: int
     games_played: int
+    highest_level: int
     created_at: datetime
 
 
@@ -38,7 +39,9 @@ class GameSessionCreateSchema(Schema):
 class GameSessionUpdateSchema(Schema):
     score: Optional[int] = None
     level_reached: Optional[int] = None
+    enemies_killed: Optional[int] = None
     duration_seconds: Optional[int] = None
+    completed: Optional[bool] = None
     ended_at: Optional[datetime] = None
 
 
