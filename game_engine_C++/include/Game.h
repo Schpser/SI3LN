@@ -4,7 +4,6 @@
 #include "Player.h"			// Inclusion de la classe Player
 #include "Enemy.h"			// Inclusion de la classe Enemy
 #include "Bullet.h"			// Inclusion de la classe Bullet
-#include "APIClient.h"		// Inclusion du client API pour Django Ninja
 #include <SDL2/SDL.h>		// Inclusion pour la gestion de la fenêtre et du rendu
 #include <SDL2/SDL_image.h> // Inclusion pour la gestion des images
 #include <SDL2/SDL_ttf.h>	// Inclusion pour la gestion des polices
@@ -24,12 +23,6 @@ namespace SI3LN
 
 		// Boucle principale du jeu
 		void run();
-
-#ifdef __EMSCRIPTEN__
-		// Called by the Emscripten static main-loop callback each frame
-		void stepFrame();
-		bool isRunning() const { return running; }
-#endif
 		
 		// Définir le monde et le niveau (appelé depuis Python)
 		void setWorldAndLevel(const std::string& world, int level);
@@ -111,23 +104,18 @@ namespace SI3LN
 		// ==================== Fonctions utilitaires ====================
 		SDL_Texture *loadTexture(const std::string &path);											// Charge une texture à partir d'un chemin
 		void renderText(const std::string &text, int x, int y, TTF_Font *font, const Color &color); // Affiche du texte à l'écran
+		void renderDialogBox(const std::string &title, const std::string &text, int x, int y, int width, int height); // Affiche une boîte de dialogue
+		void renderLevelIntroBox(); // Affiche la boîte d'introduction du niveau
+		
 		// ==================== Intro de niveau ====================
 		bool showLevelIntro = false;           // Indique si le texte d'intro de niveau est affiché
 		float levelIntroTimer = 0.0f;         // Compteur pour la durée d'affichage
-		static constexpr float LEVEL_INTRO_DURATION = 3.0f; // Durée par défaut en secondes
+		static constexpr float LEVEL_INTRO_DURATION = 8.0f; // Durée par défaut en secondes (augmentée pour lire le texte)
 		// ==================== Fin de partie ====================
 		float endGameTimer = 0.0f;            // Timer pour quitter automatiquement après victoire/défaite
 		static constexpr float END_GAME_DELAY = 3.0f; // Délai avant de quitter (3 secondes)
 		// ==================== Index du personnage sélectionné ====================
 		int playerIndex = 0; // Index du personnage sélectionné
-		
-		// ==================== Intégration API Django Ninja ====================
-		APIClient apiClient; // Client pour communiquer avec l'API Django Ninja
-		int playerId = -1; // ID du joueur dans la base de données
-		int sessionId = -1; // ID de la session de jeu en cours
-		uint32_t lastApiUpdate = 0; // Timestamp de la dernière mise à jour de l'API
-		static constexpr uint32_t API_UPDATE_INTERVAL = 5000; // Mettre à jour l'API toutes les 5 secondes (en ms)
-		int totalEnemiesKilled = 0; // Nombre total d'ennemis tués dans la session
 	};
 
 } // namespace SI3LN // Fin de l'espace de noms SI3LN

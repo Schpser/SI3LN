@@ -1,0 +1,3663 @@
+2025-12-13 11:11:10 - SI3LN - INFO - Initializing game...
+2025-12-13 11:11:11 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2025-12-13 11:11:11 - SI3LN - INFO - Players loaded in 432ms (lazy loading enabled)
+2025-12-13 11:11:11 - SI3LN - INFO - Preloading character animations...
+2025-12-13 11:11:42 - SI3LN - INFO - Animations preloaded in 30055ms - Ready for smooth selection!
+2025-12-13 11:11:43 - SI3LN - INFO - Game initialized successfully
+2025-12-13 11:14:23 - SI3LN - INFO - Initializing game...
+2025-12-13 11:14:24 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2025-12-13 11:14:24 - SI3LN - INFO - Players loaded in 216ms (lazy loading enabled)
+2025-12-13 11:14:24 - SI3LN - INFO - Preloading character animations...
+2025-12-13 11:14:47 - SI3LN - INFO - Animations preloaded in 22765ms - Ready for smooth selection!
+2025-12-13 11:14:48 - SI3LN - INFO - Game initialized successfully
+2025-12-13 11:41:12 - SI3LN - INFO - Initializing game...
+2025-12-13 11:41:12 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2025-12-13 11:41:13 - SI3LN - INFO - Players loaded in 244ms (lazy loading enabled)
+2025-12-13 11:41:13 - SI3LN - INFO - Preloading character animations...
+2025-12-13 11:41:34 - SI3LN - INFO - Animations preloaded in 21189ms - Ready for smooth selection!
+2025-12-13 11:41:35 - SI3LN - INFO - Game initialized successfully
+2025-12-13 11:45:18 - SI3LN - INFO - Initializing game...
+2025-12-13 11:45:19 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2025-12-13 11:45:19 - SI3LN - INFO - Players loaded in 203ms (lazy loading enabled)
+2025-12-13 11:45:19 - SI3LN - INFO - Preloading character animations...
+2025-12-13 11:45:40 - SI3LN - INFO - Animations preloaded in 21158ms - Ready for smooth selection!
+2025-12-13 11:45:41 - SI3LN - INFO - Game initialized successfully
+2025-12-13 11:46:26 - SI3LN - INFO - Initializing game...
+2025-12-13 11:46:27 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2025-12-13 11:46:27 - SI3LN - INFO - Players loaded in 199ms (lazy loading enabled)
+2025-12-13 11:46:27 - SI3LN - INFO - Preloading character animations...
+2025-12-13 11:46:50 - SI3LN - INFO - Animations preloaded in 23073ms - Ready for smooth selection!
+2025-12-13 11:46:51 - SI3LN - INFO - Game initialized successfully
+2025-12-13 11:48:55 - SI3LN - INFO - Initializing game...
+2025-12-13 11:48:57 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2025-12-13 11:48:57 - SI3LN - INFO - Players loaded in 194ms (lazy loading enabled)
+2025-12-13 11:48:57 - SI3LN - INFO - Preloading character animations...
+2025-12-13 11:49:19 - SI3LN - INFO - Animations preloaded in 22154ms - Ready for smooth selection!
+2025-12-13 11:49:20 - SI3LN - INFO - Game initialized successfully
+2025-12-13 11:53:08 - SI3LN - INFO - Initializing game...
+2025-12-13 11:53:08 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2025-12-13 11:53:08 - SI3LN - INFO - Players loaded in 216ms (lazy loading enabled)
+2025-12-13 11:53:08 - SI3LN - INFO - Preloading character animations...
+2025-12-13 11:53:33 - SI3LN - INFO - Animations preloaded in 24517ms - Ready for smooth selection!
+2025-12-13 11:53:34 - SI3LN - INFO - Game initialized successfully
+2025-12-13 11:54:08 - SI3LN - INFO - Initializing game...
+2025-12-13 11:54:09 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2025-12-13 11:54:09 - SI3LN - INFO - Players loaded in 210ms (lazy loading enabled)
+2025-12-13 11:54:09 - SI3LN - INFO - Preloading character animations...
+2025-12-13 11:54:09 - SI3LN - INFO - Animations preloaded in 138ms - Ready for smooth selection!
+2025-12-13 11:54:10 - SI3LN - INFO - Game initialized successfully
+2026-01-23 20:19:17 - SI3LN - INFO - Initializing game...
+2026-01-23 20:19:17 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 20:19:18 - SI3LN - INFO - Players loaded in 185ms (lazy loading enabled)
+2026-01-23 20:19:18 - SI3LN - INFO - Preloading character animations...
+2026-01-23 20:19:39 - SI3LN - INFO - Animations preloaded in 21479ms - Ready for smooth selection!
+2026-01-23 20:19:40 - SI3LN - INFO - Game initialized successfully
+2026-01-23 20:19:58 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-23 20:20:21 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-23 20:20:21 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 21:24:42 - SI3LN - INFO - Initializing game...
+2026-01-23 21:24:43 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 21:24:43 - SI3LN - INFO - Players loaded in 198ms (lazy loading enabled)
+2026-01-23 21:24:43 - SI3LN - INFO - Preloading character animations...
+2026-01-23 21:24:43 - SI3LN - INFO - Animations preloaded in 135ms - Ready for smooth selection!
+2026-01-23 21:24:44 - SI3LN - INFO - Game initialized successfully
+2026-01-23 21:24:49 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-23 21:24:49 - SI3LN - ERROR - C++ game executable not found: /SI3LN/game_engine_C++/build/SI3LN
+2026-01-23 21:24:49 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 21:28:45 - SI3LN - INFO - Initializing game...
+2026-01-23 21:28:45 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 21:28:45 - SI3LN - INFO - Players loaded in 180ms (lazy loading enabled)
+2026-01-23 21:28:45 - SI3LN - INFO - Preloading character animations...
+2026-01-23 21:28:45 - SI3LN - INFO - Animations preloaded in 121ms - Ready for smooth selection!
+2026-01-23 21:28:46 - SI3LN - INFO - Game initialized successfully
+2026-01-23 21:28:51 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-23 21:29:00 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-23 21:29:00 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 21:53:02 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:15:24 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:17:27 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:17:27 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:17:27 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:17:28 - SI3LN - INFO - Players loaded in 193ms (lazy loading enabled)
+2026-01-23 22:17:28 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:17:28 - SI3LN - INFO - Animations preloaded in 112ms - Ready for smooth selection!
+2026-01-23 22:17:41 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:17:42 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:17:42 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:17:42 - SI3LN - INFO - Players loaded in 201ms (lazy loading enabled)
+2026-01-23 22:17:42 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:17:42 - SI3LN - INFO - Animations preloaded in 117ms - Ready for smooth selection!
+2026-01-23 22:18:00 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:18:01 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:18:01 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:18:01 - SI3LN - INFO - Players loaded in 202ms (lazy loading enabled)
+2026-01-23 22:18:01 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:18:01 - SI3LN - INFO - Animations preloaded in 120ms - Ready for smooth selection!
+2026-01-23 22:35:57 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:38:07 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:38:32 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:38:32 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:38:33 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:38:33 - SI3LN - INFO - Players loaded in 195ms (lazy loading enabled)
+2026-01-23 22:38:33 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:38:33 - SI3LN - INFO - Animations preloaded in 122ms - Ready for smooth selection!
+2026-01-23 22:39:42 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:39:43 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:39:43 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:39:43 - SI3LN - INFO - Players loaded in 278ms (lazy loading enabled)
+2026-01-23 22:39:43 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:39:43 - SI3LN - INFO - Animations preloaded in 143ms - Ready for smooth selection!
+2026-01-23 22:40:08 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:40:09 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:40:09 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:40:09 - SI3LN - INFO - Players loaded in 184ms (lazy loading enabled)
+2026-01-23 22:40:09 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:40:09 - SI3LN - INFO - Animations preloaded in 102ms - Ready for smooth selection!
+2026-01-23 22:40:29 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:40:30 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:40:30 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:40:30 - SI3LN - INFO - Players loaded in 276ms (lazy loading enabled)
+2026-01-23 22:40:30 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:40:30 - SI3LN - INFO - Animations preloaded in 130ms - Ready for smooth selection!
+2026-01-23 22:43:05 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:43:06 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:43:06 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:43:06 - SI3LN - INFO - Players loaded in 183ms (lazy loading enabled)
+2026-01-23 22:43:06 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:43:06 - SI3LN - INFO - Animations preloaded in 111ms - Ready for smooth selection!
+2026-01-23 22:43:12 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-23 22:43:12 - SI3LN - ERROR - C++ game executable not found: SI3LN
+2026-01-23 22:43:12 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 22:43:23 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-01-23 22:43:24 - SI3LN - ERROR - C++ game executable not found: SI3LN
+2026-01-23 22:43:24 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 22:43:42 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:43:43 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:43:43 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:43:43 - SI3LN - INFO - Players loaded in 186ms (lazy loading enabled)
+2026-01-23 22:43:43 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:43:43 - SI3LN - INFO - Animations preloaded in 115ms - Ready for smooth selection!
+2026-01-23 22:43:46 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-23 22:43:46 - SI3LN - ERROR - C++ game executable not found: SI3LN
+2026-01-23 22:43:46 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 22:46:02 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:46:03 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:46:03 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:46:03 - SI3LN - INFO - Players loaded in 174ms (lazy loading enabled)
+2026-01-23 22:46:03 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:46:03 - SI3LN - INFO - Animations preloaded in 108ms - Ready for smooth selection!
+2026-01-23 22:46:07 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-23 22:46:07 - SI3LN - ERROR - C++ game executable not found: SI3LN
+2026-01-23 22:46:07 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 22:47:13 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:47:13 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:47:13 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:47:14 - SI3LN - INFO - Players loaded in 189ms (lazy loading enabled)
+2026-01-23 22:47:14 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:47:14 - SI3LN - INFO - Animations preloaded in 120ms - Ready for smooth selection!
+2026-01-23 22:47:17 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-23 22:47:40 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-23 22:47:40 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 22:48:43 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:48:44 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:48:44 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:48:44 - SI3LN - INFO - Players loaded in 181ms (lazy loading enabled)
+2026-01-23 22:48:44 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:48:44 - SI3LN - INFO - Animations preloaded in 116ms - Ready for smooth selection!
+2026-01-23 22:48:57 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-23 22:49:10 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-23 22:49:10 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 22:55:29 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:55:30 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:55:30 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:55:30 - SI3LN - INFO - Players loaded in 179ms (lazy loading enabled)
+2026-01-23 22:55:30 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:55:30 - SI3LN - INFO - Animations preloaded in 106ms - Ready for smooth selection!
+2026-01-23 22:55:43 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-23 22:55:56 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-23 22:55:56 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 22:59:13 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 22:59:14 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 22:59:14 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 22:59:14 - SI3LN - INFO - Players loaded in 178ms (lazy loading enabled)
+2026-01-23 22:59:14 - SI3LN - INFO - Preloading character animations...
+2026-01-23 22:59:14 - SI3LN - INFO - Animations preloaded in 106ms - Ready for smooth selection!
+2026-01-23 22:59:27 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-23 22:59:55 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-23 22:59:55 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 23:01:37 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 23:01:38 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 23:01:38 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 23:01:38 - SI3LN - INFO - Players loaded in 175ms (lazy loading enabled)
+2026-01-23 23:01:38 - SI3LN - INFO - Preloading character animations...
+2026-01-23 23:01:38 - SI3LN - INFO - Animations preloaded in 103ms - Ready for smooth selection!
+2026-01-23 23:01:50 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-01-23 23:02:07 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-23 23:02:07 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 23:10:43 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 23:10:43 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 23:10:44 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 23:10:44 - SI3LN - INFO - Players loaded in 177ms (lazy loading enabled)
+2026-01-23 23:10:44 - SI3LN - INFO - Preloading character animations...
+2026-01-23 23:10:44 - SI3LN - INFO - Animations preloaded in 101ms - Ready for smooth selection!
+2026-01-23 23:10:55 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-01-23 23:11:18 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-23 23:11:18 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 23:13:10 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 23:13:10 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 23:13:11 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 23:13:11 - SI3LN - INFO - Players loaded in 170ms (lazy loading enabled)
+2026-01-23 23:13:11 - SI3LN - INFO - Preloading character animations...
+2026-01-23 23:13:11 - SI3LN - INFO - Animations preloaded in 104ms - Ready for smooth selection!
+2026-01-23 23:13:16 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-23 23:13:20 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-23 23:13:20 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 23:21:34 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 23:21:34 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 23:21:34 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 23:21:35 - SI3LN - INFO - Players loaded in 173ms (lazy loading enabled)
+2026-01-23 23:21:35 - SI3LN - INFO - Preloading character animations...
+2026-01-23 23:21:35 - SI3LN - INFO - Animations preloaded in 106ms - Ready for smooth selection!
+2026-01-23 23:21:38 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-01-23 23:21:42 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-23 23:21:42 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 23:24:27 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 23:24:27 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 23:24:28 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 23:24:28 - SI3LN - INFO - Players loaded in 191ms (lazy loading enabled)
+2026-01-23 23:24:28 - SI3LN - INFO - Preloading character animations...
+2026-01-23 23:24:28 - SI3LN - INFO - Animations preloaded in 103ms - Ready for smooth selection!
+2026-01-23 23:24:32 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-01-23 23:24:40 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-23 23:24:40 - SI3LN - INFO - Returning to Python UI...
+2026-01-23 23:27:53 - SI3LN - INFO - Initialisation du jeu...
+2026-01-23 23:27:55 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-23 23:27:55 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-23 23:27:56 - SI3LN - INFO - Players loaded in 180ms (lazy loading enabled)
+2026-01-23 23:27:56 - SI3LN - INFO - Preloading character animations...
+2026-01-23 23:27:56 - SI3LN - INFO - Animations preloaded in 111ms - Ready for smooth selection!
+2026-01-23 23:27:59 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-23 23:28:05 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-23 23:28:05 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 10:17:23 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 10:17:24 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 10:17:24 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 10:17:24 - SI3LN - INFO - Players loaded in 194ms (lazy loading enabled)
+2026-01-24 10:17:24 - SI3LN - INFO - Preloading character animations...
+2026-01-24 10:17:25 - SI3LN - INFO - Animations preloaded in 154ms - Ready for smooth selection!
+2026-01-24 10:28:17 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 10:28:18 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 10:28:18 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 10:28:18 - SI3LN - INFO - Players loaded in 211ms (lazy loading enabled)
+2026-01-24 10:28:18 - SI3LN - INFO - Preloading character animations...
+2026-01-24 10:28:19 - SI3LN - INFO - Animations preloaded in 166ms - Ready for smooth selection!
+2026-01-24 10:28:24 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-24 10:28:50 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 10:28:50 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 10:32:09 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 10:32:10 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 10:32:10 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 10:32:10 - SI3LN - INFO - Players loaded in 221ms (lazy loading enabled)
+2026-01-24 10:32:10 - SI3LN - INFO - Preloading character animations...
+2026-01-24 10:32:11 - SI3LN - INFO - Animations preloaded in 179ms - Ready for smooth selection!
+2026-01-24 10:32:17 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-24 10:32:51 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 10:32:51 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 10:35:35 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 10:35:36 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 10:35:36 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 10:35:36 - SI3LN - INFO - Players loaded in 200ms (lazy loading enabled)
+2026-01-24 10:35:36 - SI3LN - INFO - Preloading character animations...
+2026-01-24 10:35:36 - SI3LN - INFO - Animations preloaded in 163ms - Ready for smooth selection!
+2026-01-24 10:35:39 - SI3LN - INFO - Launching C++ game engine for world=Desert, level=1
+2026-01-24 10:36:03 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 10:36:03 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 10:44:50 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 10:44:51 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 10:44:51 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 10:44:51 - SI3LN - INFO - Players loaded in 210ms (lazy loading enabled)
+2026-01-24 10:44:51 - SI3LN - INFO - Preloading character animations...
+2026-01-24 10:44:51 - SI3LN - INFO - Animations preloaded in 170ms - Ready for smooth selection!
+2026-01-24 10:44:56 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-24 10:45:09 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 10:45:09 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 10:45:12 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-01-24 10:45:20 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 10:45:20 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 10:45:38 - SI3LN - INFO - Launching C++ game engine for world=Apocalyptic, level=1
+2026-01-24 10:45:45 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 10:45:45 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 10:53:27 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 10:53:28 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 10:53:29 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 10:53:29 - SI3LN - INFO - Players loaded in 212ms (lazy loading enabled)
+2026-01-24 10:53:29 - SI3LN - INFO - Preloading character animations...
+2026-01-24 10:53:29 - SI3LN - INFO - Animations preloaded in 167ms - Ready for smooth selection!
+2026-01-24 10:53:33 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-01-24 10:53:59 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 10:53:59 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 11:00:25 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 11:00:26 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 11:00:26 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 11:00:26 - SI3LN - INFO - Players loaded in 183ms (lazy loading enabled)
+2026-01-24 11:00:26 - SI3LN - INFO - Preloading character animations...
+2026-01-24 11:00:27 - SI3LN - INFO - Animations preloaded in 122ms - Ready for smooth selection!
+2026-01-24 11:00:30 - SI3LN - INFO - Launching C++ game engine for world=Desert, level=1
+2026-01-24 11:00:57 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 11:00:57 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 11:01:52 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 11:01:53 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 11:01:53 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 11:01:53 - SI3LN - INFO - Players loaded in 209ms (lazy loading enabled)
+2026-01-24 11:01:53 - SI3LN - INFO - Preloading character animations...
+2026-01-24 11:01:53 - SI3LN - INFO - Animations preloaded in 129ms - Ready for smooth selection!
+2026-01-24 11:01:56 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-24 11:02:11 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 11:02:11 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 11:03:29 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 11:03:29 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 11:03:30 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 11:03:30 - SI3LN - INFO - Players loaded in 192ms (lazy loading enabled)
+2026-01-24 11:03:30 - SI3LN - INFO - Preloading character animations...
+2026-01-24 11:03:30 - SI3LN - INFO - Animations preloaded in 124ms - Ready for smooth selection!
+2026-01-24 11:03:33 - SI3LN - INFO - Launching C++ game engine for world=Desert, level=1
+2026-01-24 11:03:52 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 11:03:52 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 11:08:16 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 11:08:17 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 11:08:17 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 11:08:17 - SI3LN - INFO - Players loaded in 192ms (lazy loading enabled)
+2026-01-24 11:08:17 - SI3LN - INFO - Preloading character animations...
+2026-01-24 11:08:18 - SI3LN - INFO - Animations preloaded in 1033ms - Ready for smooth selection!
+2026-01-24 11:08:23 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-01-24 11:08:38 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 11:08:38 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 11:19:23 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 11:19:24 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 11:19:24 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 11:19:24 - SI3LN - INFO - Players loaded in 235ms (lazy loading enabled)
+2026-01-24 11:19:24 - SI3LN - INFO - Preloading character animations...
+2026-01-24 11:19:24 - SI3LN - INFO - Animations preloaded in 134ms - Ready for smooth selection!
+2026-01-24 11:19:30 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-24 11:19:48 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 11:19:48 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 11:28:55 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 11:28:56 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 11:28:56 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 11:28:56 - SI3LN - INFO - Players loaded in 228ms (lazy loading enabled)
+2026-01-24 11:28:56 - SI3LN - INFO - Preloading character animations...
+2026-01-24 11:28:56 - SI3LN - INFO - Animations preloaded in 135ms - Ready for smooth selection!
+2026-01-24 11:29:01 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-01-24 11:29:10 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 11:29:10 - SI3LN - INFO - Returning to Python UI...
+2026-01-24 11:36:02 - SI3LN - INFO - Initialisation du jeu...
+2026-01-24 11:36:02 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-24 11:36:03 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-24 11:36:03 - SI3LN - INFO - Players loaded in 250ms (lazy loading enabled)
+2026-01-24 11:36:03 - SI3LN - INFO - Preloading character animations...
+2026-01-24 11:36:03 - SI3LN - INFO - Animations preloaded in 144ms - Ready for smooth selection!
+2026-01-24 11:36:07 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-24 11:36:15 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-24 11:36:15 - SI3LN - INFO - Returning to Python UI...
+2026-01-26 12:02:18 - SI3LN - INFO - Initialisation du jeu...
+2026-01-26 12:02:20 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-26 12:02:20 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-26 12:02:21 - SI3LN - INFO - Players loaded in 267ms (lazy loading enabled)
+2026-01-26 12:02:21 - SI3LN - INFO - Preloading character animations...
+2026-01-26 12:02:45 - SI3LN - INFO - Animations preloaded in 24181ms - Ready for smooth selection!
+2026-01-26 12:03:19 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-26 12:03:30 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-26 12:03:30 - SI3LN - INFO - Returning to Python UI...
+2026-01-26 12:11:51 - SI3LN - INFO - Initialisation du jeu...
+2026-01-26 12:11:53 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-26 12:11:53 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-26 12:11:54 - SI3LN - INFO - Players loaded in 380ms (lazy loading enabled)
+2026-01-26 12:11:54 - SI3LN - INFO - Preloading character animations...
+2026-01-26 12:12:26 - SI3LN - INFO - Animations preloaded in 32021ms - Ready for smooth selection!
+2026-01-26 12:12:38 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-26 12:12:50 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-26 12:12:50 - SI3LN - INFO - Returning to Python UI...
+2026-01-26 12:16:49 - SI3LN - INFO - Initialisation du jeu...
+2026-01-26 12:16:53 - SI3LN - INFO - Assets chargés avec succès.
+2026-01-26 12:16:53 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-01-26 12:16:53 - SI3LN - INFO - Players loaded in 347ms (lazy loading enabled)
+2026-01-26 12:16:53 - SI3LN - INFO - Preloading character animations...
+2026-01-26 12:16:54 - SI3LN - INFO - Animations preloaded in 98ms - Ready for smooth selection!
+2026-01-26 12:17:01 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-01-26 12:17:14 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-26 12:17:14 - SI3LN - INFO - Returning to Python UI...
+2026-01-26 12:17:52 - SI3LN - INFO - Launching C++ game engine for world=Apocalyptic, level=1
+2026-01-26 12:20:20 - SI3LN - INFO - C++ game exited with code: 0
+2026-01-26 12:20:20 - SI3LN - INFO - Returning to Python UI...
+2026-02-05 10:28:18 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 10:28:19 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 10:28:19 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 10:28:19 - SI3LN - INFO - Players loaded in 298ms (lazy loading enabled)
+2026-02-05 10:28:19 - SI3LN - INFO - Preloading character animations...
+2026-02-05 10:28:51 - SI3LN - INFO - Animations preloaded in 31439ms - Ready for smooth selection!
+2026-02-05 10:28:53 - SI3LN - INFO - Window resized to 1302x974
+2026-02-05 10:28:54 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:28:54 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:28:55 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:28:56 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:28:57 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:28:57 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:28:58 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:28:59 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:00 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:00 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:01 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:02 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:29:03 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:04 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:04 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:05 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:06 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:07 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:07 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:29:13 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:14 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:14 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:15 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:16 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:17 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:17 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:18 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:19 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:20 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:21 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:21 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:22 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:23 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:24 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:24 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:25 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:26 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:27 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:28 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:28 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:29 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:30 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:31 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 10:29:32 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:29:41 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-02-05 10:29:42 - SI3LN - ERROR - C++ game executable not found: SI3LN
+2026-02-05 10:29:42 - SI3LN - INFO - Returning to Python UI...
+2026-02-05 10:29:43 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:29:43 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:29:44 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:29:45 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:29:46 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:29:46 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:29:47 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:29:48 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:29:49 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:29:49 - SI3LN - WARNING - Window too small (417x474), minimum is 800x600
+2026-02-05 10:36:20 - SI3LN - WARNING - Window too small (418x473), minimum is 800x600
+2026-02-05 10:36:20 - SI3LN - WARNING - Window too small (419x472), minimum is 800x600
+2026-02-05 10:36:20 - SI3LN - WARNING - Window too small (419x471), minimum is 800x600
+2026-02-05 10:36:20 - SI3LN - WARNING - Window too small (428x456), minimum is 800x600
+2026-02-05 10:36:20 - SI3LN - WARNING - Window too small (443x432), minimum is 800x600
+2026-02-05 10:36:20 - SI3LN - WARNING - Window too small (454x413), minimum is 800x600
+2026-02-05 10:36:20 - SI3LN - WARNING - Window too small (470x380), minimum is 800x600
+2026-02-05 10:36:20 - SI3LN - WARNING - Window too small (477x364), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (486x340), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (488x336), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (492x328), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (494x323), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (496x319), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (496x318), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (497x316), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (498x308), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (506x304), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (544x263), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (561x235), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (580x199), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (594x172), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (614x127), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (623x104), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (630x88), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (639x65), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (643x52), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (647x33), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (649x33), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (652x33), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (663x33), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (675x33), minimum is 800x600
+2026-02-05 10:36:21 - SI3LN - WARNING - Window too small (677x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (683x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (684x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (687x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (692x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (696x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (702x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (710x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (718x35), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (720x35), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (722x36), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (722x37), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (724x37), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (725x37), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (729x37), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (733x37), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (735x35), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (740x34), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (742x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (744x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (745x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (746x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (749x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (751x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (754x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (756x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (757x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (758x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (759x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (760x33), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (761x35), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (762x37), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (761x39), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (761x41), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (762x42), minimum is 800x600
+2026-02-05 10:36:22 - SI3LN - WARNING - Window too small (762x44), minimum is 800x600
+2026-02-05 10:36:23 - SI3LN - WARNING - Window too small (760x46), minimum is 800x600
+2026-02-05 10:36:23 - SI3LN - WARNING - Window too small (760x47), minimum is 800x600
+2026-02-05 10:36:23 - SI3LN - WARNING - Window too small (759x49), minimum is 800x600
+2026-02-05 10:36:23 - SI3LN - WARNING - Window too small (759x50), minimum is 800x600
+2026-02-05 10:36:23 - SI3LN - WARNING - Window too small (757x51), minimum is 800x600
+2026-02-05 10:36:23 - SI3LN - WARNING - Window too small (757x52), minimum is 800x600
+2026-02-05 10:36:23 - SI3LN - WARNING - Window too small (756x53), minimum is 800x600
+2026-02-05 10:36:23 - SI3LN - WARNING - Window too small (756x52), minimum is 800x600
+2026-02-05 10:36:23 - SI3LN - WARNING - Window too small (757x50), minimum is 800x600
+2026-02-05 10:36:23 - SI3LN - WARNING - Window too small (758x48), minimum is 800x600
+2026-02-05 10:36:23 - SI3LN - WARNING - Window too small (759x47), minimum is 800x600
+2026-02-05 10:36:23 - SI3LN - WARNING - Window too small (759x46), minimum is 800x600
+2026-02-05 10:41:13 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 10:41:14 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 10:41:14 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 10:41:14 - SI3LN - INFO - Players loaded in 281ms (lazy loading enabled)
+2026-02-05 10:41:14 - SI3LN - INFO - Preloading character animations...
+2026-02-05 10:41:14 - SI3LN - INFO - Animations preloaded in 197ms - Ready for smooth selection!
+2026-02-05 10:41:15 - SI3LN - WARNING - Window too small (759x902), minimum is 800x600
+2026-02-05 10:41:20 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:21 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:22 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:23 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:23 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:24 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:25 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:25 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:26 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:27 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:28 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:28 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:29 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:30 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:31 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:31 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:32 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:33 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:34 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:34 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:35 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:36 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 10:41:36 - SI3LN - WARNING - Window too small (759x902), minimum is 800x600
+2026-02-05 10:41:38 - SI3LN - WARNING - Window too small (761x901), minimum is 800x600
+2026-02-05 10:41:39 - SI3LN - WARNING - Window too small (768x899), minimum is 800x600
+2026-02-05 10:41:39 - SI3LN - WARNING - Window too small (778x895), minimum is 800x600
+2026-02-05 10:41:39 - SI3LN - WARNING - Window too small (797x887), minimum is 800x600
+2026-02-05 10:41:39 - SI3LN - INFO - Window resized to 819x879
+2026-02-05 10:41:39 - SI3LN - WARNING - Window too small (769x879), minimum is 800x600
+2026-02-05 10:41:40 - SI3LN - WARNING - Window too small (770x879), minimum is 800x600
+2026-02-05 10:41:40 - SI3LN - WARNING - Window too small (772x879), minimum is 800x600
+2026-02-05 10:41:40 - SI3LN - WARNING - Window too small (776x879), minimum is 800x600
+2026-02-05 10:41:40 - SI3LN - WARNING - Window too small (780x879), minimum is 800x600
+2026-02-05 10:41:40 - SI3LN - WARNING - Window too small (783x879), minimum is 800x600
+2026-02-05 10:41:40 - SI3LN - WARNING - Window too small (785x879), minimum is 800x600
+2026-02-05 10:41:40 - SI3LN - WARNING - Window too small (787x879), minimum is 800x600
+2026-02-05 10:41:40 - SI3LN - WARNING - Window too small (790x879), minimum is 800x600
+2026-02-05 10:41:40 - SI3LN - WARNING - Window too small (791x880), minimum is 800x600
+2026-02-05 10:41:41 - SI3LN - INFO - Window resized to 801x880
+2026-02-05 10:41:41 - SI3LN - WARNING - Window too small (769x880), minimum is 800x600
+2026-02-05 10:41:54 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-02-05 10:41:54 - SI3LN - ERROR - C++ game executable not found: SI3LN
+2026-02-05 10:41:54 - SI3LN - INFO - Returning to Python UI...
+2026-02-05 10:41:54 - SI3LN - WARNING - Window too small (769x880), minimum is 800x600
+2026-02-05 10:41:57 - SI3LN - WARNING - Window too small (768x880), minimum is 800x600
+2026-02-05 10:41:57 - SI3LN - WARNING - Window too small (760x880), minimum is 800x600
+2026-02-05 10:41:57 - SI3LN - WARNING - Window too small (756x880), minimum is 800x600
+2026-02-05 10:41:57 - SI3LN - WARNING - Window too small (751x880), minimum is 800x600
+2026-02-05 10:41:57 - SI3LN - WARNING - Window too small (738x880), minimum is 800x600
+2026-02-05 10:41:57 - SI3LN - WARNING - Window too small (731x880), minimum is 800x600
+2026-02-05 10:41:57 - SI3LN - WARNING - Window too small (720x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (695x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (687x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (681x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (672x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (668x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (662x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (658x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (655x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (641x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (634x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (614x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (606x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (601x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (594x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (584x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (579x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (572x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (566x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (560x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (550x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (544x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (536x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (527x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (518x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (501x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (494x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (485x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (476x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (464x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (452x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (443x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (419x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (407x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (395x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (387x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (376x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (370x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (365x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (360x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (357x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (355x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (351x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (343x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (338x880), minimum is 800x600
+2026-02-05 10:41:58 - SI3LN - WARNING - Window too small (333x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (328x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (324x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (322x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (318x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (314x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (309x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (304x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (293x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (289x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (285x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (283x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (281x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (278x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (276x880), minimum is 800x600
+2026-02-05 10:41:59 - SI3LN - WARNING - Window too small (275x880), minimum is 800x600
+2026-02-05 16:51:53 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 16:51:54 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 16:51:54 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 16:51:54 - SI3LN - INFO - Players loaded in 135ms (lazy loading enabled)
+2026-02-05 16:51:54 - SI3LN - INFO - Preloading character animations...
+2026-02-05 16:51:54 - SI3LN - INFO - Animations preloaded in 102ms - Ready for smooth selection!
+2026-02-05 17:03:32 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 17:03:32 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:03:32 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 17:03:32 - SI3LN - INFO - Players loaded in 123ms (lazy loading enabled)
+2026-02-05 17:03:32 - SI3LN - INFO - Preloading character animations...
+2026-02-05 17:03:32 - SI3LN - INFO - Animations preloaded in 102ms - Ready for smooth selection!
+2026-02-05 17:11:17 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 17:11:18 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:11:18 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 17:11:18 - SI3LN - INFO - Players loaded in 116ms (lazy loading enabled)
+2026-02-05 17:11:18 - SI3LN - INFO - Preloading character animations...
+2026-02-05 17:11:18 - SI3LN - INFO - Animations preloaded in 162ms - Ready for smooth selection!
+2026-02-05 17:11:19 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:19 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:19 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:20 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:20 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:20 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:21 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:21 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:21 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:22 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:22 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:22 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:23 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:23 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:23 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:24 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:24 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:24 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:25 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:25 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:25 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:26 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:26 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:26 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:27 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:11:27 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:27 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:28 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:28 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:28 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:29 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:29 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:29 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:29 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:30 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:30 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:30 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:31 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:31 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:31 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:32 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:32 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:32 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:11:32 - SI3LN - ERROR - Error toggling fullscreen: 'Game' object has no attribute 'is_fullscreen'
+2026-02-05 17:14:54 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 17:14:54 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:14:54 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 17:14:54 - SI3LN - INFO - Players loaded in 136ms (lazy loading enabled)
+2026-02-05 17:14:54 - SI3LN - INFO - Preloading character animations...
+2026-02-05 17:14:54 - SI3LN - INFO - Animations preloaded in 92ms - Ready for smooth selection!
+2026-02-05 17:14:55 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:55 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:55 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:56 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:56 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:56 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:57 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:57 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:58 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:58 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:58 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:59 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:59 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:14:59 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:15:00 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:15:00 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:15:00 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:15:01 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:15:01 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:15:01 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:15:02 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:02 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:02 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:03 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:03 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:03 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:04 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:04 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:04 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:04 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:05 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:05 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:05 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:06 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:06 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:06 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:07 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:07 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:07 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:08 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:08 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:15:08 - SI3LN - INFO - Fullscreen toggled: True
+2026-02-05 17:15:08 - SI3LN - INFO - Window resized to 1920x1080
+2026-02-05 17:15:09 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:09 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:15:09 - SI3LN - INFO - Fullscreen toggled: False
+2026-02-05 17:15:09 - SI3LN - INFO - Window resized to 1920x1080
+2026-02-05 17:15:09 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:15:10 - SI3LN - INFO - Fullscreen toggled: True
+2026-02-05 17:15:10 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:10 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:10 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:11 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:11 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:11 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:12 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:12 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:12 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:13 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:13 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:13 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:14 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:14 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:14 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:15 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:15 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:15 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:16 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:16 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:16 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:16 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:17 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:17 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:17 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:18 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:18 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:18 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:19 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:19 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:19 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:20 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:15:20 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:15:20 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:15:21 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:21 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:21 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:22 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:22 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:22 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:23 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:15:23 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:21:27 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 17:21:27 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:21:27 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 17:21:27 - SI3LN - INFO - Players loaded in 114ms (lazy loading enabled)
+2026-02-05 17:21:27 - SI3LN - INFO - Preloading character animations...
+2026-02-05 17:21:28 - SI3LN - INFO - Animations preloaded in 91ms - Ready for smooth selection!
+2026-02-05 17:21:28 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:29 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:29 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:29 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:30 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:30 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:30 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:31 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:31 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:31 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:32 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:32 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:32 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:33 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:33 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:33 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:33 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:34 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:34 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:34 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:35 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:35 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:35 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:36 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:36 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:36 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:37 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:37 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:37 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:38 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:38 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:38 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:39 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:39 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:39 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:40 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:40 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:40 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:41 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:41 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:41 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:42 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:42 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:42 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:43 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:21:43 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:25:28 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 17:25:28 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:25:29 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 17:25:29 - SI3LN - INFO - Players loaded in 164ms (lazy loading enabled)
+2026-02-05 17:25:29 - SI3LN - INFO - Preloading character animations...
+2026-02-05 17:25:29 - SI3LN - INFO - Animations preloaded in 99ms - Ready for smooth selection!
+2026-02-05 17:25:30 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:25:34 - SI3LN - INFO - Window resized to 870x974
+2026-02-05 17:25:35 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:25:39 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:25:41 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:25:41 - SI3LN - INFO - Fullscreen toggled: True
+2026-02-05 17:25:42 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:25:43 - SI3LN - INFO - Fullscreen toggled: False
+2026-02-05 17:25:43 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:40:19 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 17:40:19 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:40:19 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 17:40:19 - SI3LN - INFO - Players loaded in 142ms (lazy loading enabled)
+2026-02-05 17:40:19 - SI3LN - INFO - Preloading character animations...
+2026-02-05 17:40:19 - SI3LN - INFO - Animations preloaded in 101ms - Ready for smooth selection!
+2026-02-05 17:40:20 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:40:25 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-02-05 17:40:25 - SI3LN - INFO - Executing C++: ['SI3LN', 'Space', '1', '0', 'windowed'] (cwd=game_engine_C++/build)
+2026-02-05 17:40:25 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-05 17:40:25 - SI3LN - ERROR - C++ game executable not found: [Errno 2] No such file or directory: 'game_engine_C++/build'
+2026-02-05 17:40:25 - SI3LN - INFO - Returning to Python UI...
+2026-02-05 17:40:29 - SI3LN - INFO - Window resized to 868x974
+2026-02-05 17:40:30 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:40:30 - SI3LN - INFO - Window resized to 845x974
+2026-02-05 17:40:30 - SI3LN - INFO - Window resized to 868x974
+2026-02-05 17:40:31 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:43:21 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 17:43:21 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:43:21 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 17:43:21 - SI3LN - INFO - Players loaded in 114ms (lazy loading enabled)
+2026-02-05 17:43:21 - SI3LN - INFO - Preloading character animations...
+2026-02-05 17:43:21 - SI3LN - INFO - Animations preloaded in 86ms - Ready for smooth selection!
+2026-02-05 17:43:22 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:43:25 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-02-05 17:43:26 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Marine', '1', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-05 17:43:26 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-05 17:44:04 - SI3LN - INFO - C++ exited with code 0
+2026-02-05 17:44:04 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Marine
+Level selected: 1
+Player selected: 0
+Game configured: World=Marine, Level=1
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: F11 (1073741892)
+Window mode: BORDERLESS (desktop)
+[DEBUG] Touche pressée: F11 (1073741892)
+Window mode: FULLSCREEN
+[DEBUG] Touche pressée: F11 (1073741892)
+Window mode: WINDOWED
+[DEBUG] Touche pressée: F11 (1073741892)
+Window mode: BORDERLESS (desktop)
+[DEBUG] Touche pressée: F11 (1073741892)
+Window mode: FULLSCREEN
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Escape (27)
+Changement d'état: 5 -> 6
+[DEBUG] Touche pressée: Escape (27)
+Changement d'état: 6 -> 5
+[DEBUG] Touche pressée: Escape (27)
+Changement d'état: 5 -> 6
+[DEBUG] Touche pressée: Escape (27)
+Changement d'état: 6 -> 5
+[DEBUG] Touche pressée: Escape (27)
+Changement d'état: 5 -> 6
+[DEBUG] Touche pressée: Q (113)
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-05 17:44:04 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_marine.jpg - Couldn't open assets/worlds/background_marine.jpg: No such file or directory
+2026-02-05 17:44:04 - SI3LN - INFO - Returning to Python UI...
+2026-02-05 17:44:05 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:46:56 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 17:46:56 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:46:56 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 17:46:56 - SI3LN - INFO - Players loaded in 118ms (lazy loading enabled)
+2026-02-05 17:46:56 - SI3LN - INFO - Preloading character animations...
+2026-02-05 17:46:57 - SI3LN - INFO - Animations preloaded in 87ms - Ready for smooth selection!
+2026-02-05 17:46:57 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:47:02 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:47:09 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-02-05 17:47:09 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Space', '1', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-05 17:47:09 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-05 17:47:48 - SI3LN - INFO - C++ exited with code 0
+2026-02-05 17:47:48 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Space
+Level selected: 1
+Player selected: 0
+Game configured: World=Space, Level=1
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: F11 (1073741892)
+Window mode: BORDERLESS (desktop)
+[DEBUG] Touche pressée: Keypad Enter (1073741912)
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Escape (27)
+Changement d'état: 5 -> 6
+[DEBUG] Touche pressée: Q (113)
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-05 17:47:48 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_space.jpg - Couldn't open assets/worlds/background_space.jpg: No such file or directory
+2026-02-05 17:47:48 - SI3LN - INFO - Returning to Python UI...
+2026-02-05 17:50:34 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 17:50:35 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:50:35 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 17:50:35 - SI3LN - INFO - Players loaded in 128ms (lazy loading enabled)
+2026-02-05 17:50:35 - SI3LN - INFO - Preloading character animations...
+2026-02-05 17:50:35 - SI3LN - INFO - Animations preloaded in 92ms - Ready for smooth selection!
+2026-02-05 17:50:36 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:50:39 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:50:41 - SI3LN - INFO - Launching C++ game engine for world=Desert, level=1
+2026-02-05 17:50:42 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Desert', '1', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-05 17:50:42 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-05 17:51:11 - SI3LN - INFO - C++ exited with code 0
+2026-02-05 17:51:11 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Desert
+Level selected: 1
+Player selected: 0
+Game configured: World=Desert, Level=1
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+Changement d'état: 5 -> 7
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Escape (27)
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-05 17:51:11 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_desert.jpg - Couldn't open assets/worlds/background_desert.jpg: No such file or directory
+2026-02-05 17:51:11 - SI3LN - INFO - Returning to Python UI...
+2026-02-05 17:54:22 - SI3LN - INFO - Initialisation du jeu...
+2026-02-05 17:54:22 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-05 17:54:22 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-05 17:54:22 - SI3LN - INFO - Players loaded in 160ms (lazy loading enabled)
+2026-02-05 17:54:22 - SI3LN - INFO - Preloading character animations...
+2026-02-05 17:54:22 - SI3LN - INFO - Animations preloaded in 85ms - Ready for smooth selection!
+2026-02-05 17:54:23 - SI3LN - INFO - Window resized to 869x974
+2026-02-05 17:54:26 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-05 17:54:28 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-02-05 17:54:29 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Space', '1', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-05 17:54:29 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-05 17:54:57 - SI3LN - INFO - C++ exited with code 0
+2026-02-05 17:54:57 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Space
+Level selected: 1
+Player selected: 0
+Game configured: World=Space, Level=1
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: F11 (1073741892)
+Window mode: BORDERLESS (desktop)
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+Changement d'état: 5 -> 7
+Retour au menu Python dans 3 secondes...
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-05 17:54:57 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_space.jpg - Couldn't open assets/worlds/background_space.jpg: No such file or directory
+2026-02-05 17:54:57 - SI3LN - INFO - Returning to Python UI...
+2026-02-07 09:56:11 - SI3LN - INFO - Initialisation du jeu...
+2026-02-07 09:56:12 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-07 09:56:12 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-07 09:56:12 - SI3LN - INFO - Players loaded in 291ms (lazy loading enabled)
+2026-02-07 09:56:12 - SI3LN - INFO - Preloading character animations...
+2026-02-07 09:56:43 - SI3LN - INFO - Animations preloaded in 30749ms - Ready for smooth selection!
+2026-02-07 09:56:45 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-07 09:56:51 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-02-07 09:56:51 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Space', '1', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-07 09:56:51 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-07 09:57:22 - SI3LN - INFO - C++ exited with code 0
+2026-02-07 09:57:22 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Space
+Level selected: 1
+Player selected: 0
+Game configured: World=Space, Level=1
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: S (115)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: S (115)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+Changement d'état: 5 -> 7
+Retour au menu Python dans 3 secondes...
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-07 09:57:22 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_space.jpg - Couldn't open assets/worlds/background_space.jpg: No such file or directory
+2026-02-07 09:57:22 - SI3LN - INFO - Returning to Python UI...
+2026-02-07 09:59:58 - SI3LN - INFO - Initialisation du jeu...
+2026-02-07 09:59:58 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-07 09:59:58 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-07 09:59:59 - SI3LN - INFO - Players loaded in 118ms (lazy loading enabled)
+2026-02-07 09:59:59 - SI3LN - INFO - Preloading character animations...
+2026-02-07 09:59:59 - SI3LN - INFO - Animations preloaded in 101ms - Ready for smooth selection!
+2026-02-07 09:59:59 - SI3LN - INFO - Window resized to 814x915
+2026-02-07 10:00:02 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-07 10:00:04 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-02-07 10:00:05 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Space', '1', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-07 10:00:05 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-07 10:00:41 - SI3LN - INFO - C++ exited with code 0
+2026-02-07 10:00:41 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Space
+Level selected: 1
+Player selected: 0
+Game configured: World=Space, Level=1
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+[DEBUG] Touche pressée: Return (13)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+Changement d'état: 5 -> 7
+Retour au menu Python dans 3 secondes...
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Return (13)
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-07 10:00:41 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_space.jpg - Couldn't open assets/worlds/background_space.jpg: No such file or directory
+2026-02-07 10:00:41 - SI3LN - INFO - Returning to Python UI...
+2026-02-07 10:01:59 - SI3LN - INFO - Initialisation du jeu...
+2026-02-07 10:01:59 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-07 10:01:59 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-07 10:01:59 - SI3LN - INFO - Players loaded in 120ms (lazy loading enabled)
+2026-02-07 10:01:59 - SI3LN - INFO - Preloading character animations...
+2026-02-07 10:01:59 - SI3LN - INFO - Animations preloaded in 96ms - Ready for smooth selection!
+2026-02-07 10:02:00 - SI3LN - INFO - Window resized to 814x915
+2026-02-07 10:02:04 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-02-07 10:02:04 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Marine', '1', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-07 10:02:04 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-07 10:02:22 - SI3LN - INFO - C++ exited with code 0
+2026-02-07 10:02:22 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Marine
+Level selected: 1
+Player selected: 0
+Game configured: World=Marine, Level=1
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-07 10:02:22 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_marine.jpg - Couldn't open assets/worlds/background_marine.jpg: No such file or directory
+2026-02-07 10:02:22 - SI3LN - INFO - Returning to Python UI...
+2026-02-07 10:02:22 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-07 10:06:10 - SI3LN - INFO - Initialisation du jeu...
+2026-02-07 10:06:10 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-07 10:06:10 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-07 10:06:10 - SI3LN - INFO - Players loaded in 147ms (lazy loading enabled)
+2026-02-07 10:06:10 - SI3LN - INFO - Preloading character animations...
+2026-02-07 10:06:10 - SI3LN - INFO - Animations preloaded in 108ms - Ready for smooth selection!
+2026-02-07 10:06:11 - SI3LN - INFO - Window resized to 825x915
+2026-02-07 10:06:14 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-07 10:06:17 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-02-07 10:06:17 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Marine', '1', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-07 10:06:17 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-07 10:07:45 - SI3LN - INFO - C++ exited with code 0
+2026-02-07 10:07:45 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Marine
+Level selected: 1
+Player selected: 0
+Game configured: World=Marine, Level=1
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: Keypad Enter (1073741912)
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: Z (122)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: D (100)
+[DEBUG] Touche pressée: Q (113)
+[DEBUG] Touche pressée: Space (32)
+Changement d'état: 5 -> 7
+Retour au menu Python dans 3 secondes...
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-07 10:07:45 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_marine.jpg - Couldn't open assets/worlds/background_marine.jpg: No such file or directory
+2026-02-07 10:07:45 - SI3LN - INFO - Returning to Python UI...
+2026-02-07 10:09:37 - SI3LN - INFO - Initialisation du jeu...
+2026-02-07 10:09:38 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-07 10:09:38 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-07 10:09:38 - SI3LN - INFO - Players loaded in 126ms (lazy loading enabled)
+2026-02-07 10:09:38 - SI3LN - INFO - Preloading character animations...
+2026-02-07 10:09:38 - SI3LN - INFO - Animations preloaded in 102ms - Ready for smooth selection!
+2026-02-07 10:09:39 - SI3LN - INFO - Window resized to 814x915
+2026-02-07 10:09:41 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-07 10:09:43 - SI3LN - INFO - Launching C++ game engine for world=Space, level=1
+2026-02-07 10:09:43 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Space', '1', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-07 10:09:43 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-07 10:10:22 - SI3LN - INFO - C++ exited with code 0
+2026-02-07 10:10:22 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Space
+Level selected: 1
+Player selected: 0
+Game configured: World=Space, Level=1
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: Keypad Enter (1073741912)
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+Changement d'état: 5 -> 7
+Retour au menu Python dans 3 secondes...
+[DEBUG] Touche pressée: Return (13)
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-07 10:10:22 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_space.jpg - Couldn't open assets/worlds/background_space.jpg: No such file or directory
+2026-02-07 10:10:22 - SI3LN - INFO - Returning to Python UI...
+2026-02-07 10:10:22 - SI3LN - INFO - Window resized to 1920x1080
+2026-02-07 10:10:23 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-07 10:12:03 - SI3LN - INFO - Initialisation du jeu...
+2026-02-07 10:12:03 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-07 10:12:04 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-07 10:12:04 - SI3LN - INFO - Players loaded in 135ms (lazy loading enabled)
+2026-02-07 10:12:04 - SI3LN - INFO - Preloading character animations...
+2026-02-07 10:12:04 - SI3LN - INFO - Animations preloaded in 102ms - Ready for smooth selection!
+2026-02-07 10:12:05 - SI3LN - INFO - Window resized to 825x915
+2026-02-07 10:24:20 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-07 10:24:22 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-02-07 10:24:22 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Marine', '1', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-07 10:24:22 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-07 10:24:40 - SI3LN - INFO - C++ exited with code 0
+2026-02-07 10:24:40 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Marine
+Level selected: 1
+Player selected: 0
+Game configured: World=Marine, Level=1
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-07 10:24:40 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_marine.jpg - Couldn't open assets/worlds/background_marine.jpg: No such file or directory
+2026-02-07 10:24:40 - SI3LN - INFO - Returning to Python UI...
+2026-02-09 17:28:10 - SI3LN - INFO - Initialisation du jeu...
+2026-02-09 17:28:10 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-09 17:28:10 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-09 17:28:10 - SI3LN - INFO - Players loaded in 170ms (lazy loading enabled)
+2026-02-09 17:28:10 - SI3LN - INFO - Preloading character animations...
+2026-02-09 17:28:25 - SI3LN - INFO - Animations preloaded in 14846ms - Ready for smooth selection!
+2026-02-09 17:28:26 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-09 17:28:26 - SI3LN - INFO - Window resized to 869x974
+2026-02-09 17:28:29 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-09 17:28:54 - SI3LN - INFO - Launching C++ game engine for world=Space, level=2
+2026-02-09 17:28:55 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Space', '2', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-09 17:28:55 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-09 17:29:32 - SI3LN - INFO - C++ exited with code 0
+2026-02-09 17:29:32 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Space
+Level selected: 2
+Player selected: 0
+Game configured: World=Space, Level=2
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+[DEBUG] Touche pressée: Return (13)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+Changement d'état: 5 -> 7
+Retour au menu Python dans 3 secondes...
+[DEBUG] Touche pressée: Return (13)
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-09 17:29:32 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_space.jpg - Couldn't open assets/worlds/background_space.jpg: No such file or directory
+2026-02-09 17:29:32 - SI3LN - INFO - Returning to Python UI...
+2026-02-10 16:12:04 - SI3LN - INFO - Initialisation du jeu...
+2026-02-10 16:12:04 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-10 16:12:04 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-10 16:12:05 - SI3LN - INFO - Players loaded in 253ms (lazy loading enabled)
+2026-02-10 16:12:05 - SI3LN - INFO - Preloading character animations...
+2026-02-10 16:12:22 - SI3LN - INFO - Animations preloaded in 17614ms - Ready for smooth selection!
+2026-02-10 16:12:23 - SI3LN - INFO - Window resized to 869x974
+2026-02-10 16:12:24 - SI3LN - INFO - Window resized to 812x974
+2026-02-10 16:12:41 - SI3LN - INFO - Window resized to 1804x1014
+2026-02-10 16:13:01 - SI3LN - INFO - Launching C++ game engine for world=Desert, level=1
+2026-02-10 16:13:01 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Desert', '1', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-10 16:13:01 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-10 16:14:03 - SI3LN - INFO - C++ exited with code 0
+2026-02-10 16:14:03 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Desert
+Level selected: 1
+Player selected: 0
+Game configured: World=Desert, Level=1
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+[DEBUG] Touche pressée: Return (13)
+[DEBUG] Touche pressée: Return (13)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Up (1073741906)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Down (1073741905)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+Changement d'état: 5 -> 7
+Retour au menu Python dans 3 secondes...
+[DEBUG] Touche pressée: Return (13)
+[DEBUG] Touche pressée: Return (13)
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-10 16:14:03 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_desert.jpg - Couldn't open assets/worlds/background_desert.jpg: No such file or directory
+2026-02-10 16:14:03 - SI3LN - INFO - Returning to Python UI...
+2026-02-20 17:25:31 - SI3LN - INFO - Initialisation du jeu...
+2026-02-20 17:25:32 - SI3LN - INFO - Assets chargés avec succès.
+2026-02-20 17:25:32 - SI3LN - INFO - Loading player portraits (optimized with lazy loading)...
+2026-02-20 17:25:33 - SI3LN - INFO - Players loaded in 197ms (lazy loading enabled)
+2026-02-20 17:25:33 - SI3LN - INFO - Preloading character animations...
+2026-02-20 17:25:49 - SI3LN - INFO - Animations preloaded in 16007ms - Ready for smooth selection!
+2026-02-20 17:25:50 - SI3LN - INFO - Window resized to 1429x980
+2026-02-20 17:25:50 - SI3LN - INFO - Window resized to 819x980
+2026-02-20 17:25:54 - SI3LN - INFO - Launching C++ game engine for world=Marine, level=1
+2026-02-20 17:25:55 - SI3LN - INFO - Executing C++: ['/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build/SI3LN', 'Marine', '1', '0', 'windowed'] (cwd=/home/hugex/Holbeton/SI3LN/game_ui_python/../game_engine_C++/build)
+2026-02-20 17:25:55 - SI3LN - INFO - Attempting C++ launch with SDL_VIDEODRIVER=<default>
+2026-02-20 17:26:14 - SI3LN - INFO - C++ exited with code 0
+2026-02-20 17:26:14 - SI3LN - INFO - C++ stdout:
+_____ _____ _____ _____ _____ _____ _____ _____ 
+  |  ___|_   _|  ___|_   _|_   _| \_  |  ___|_   _|
+  | |__   | | | |_    | |   | |   | | | |__   | |  
+  |  __|  | | |  _|   | |   | |   | | |  __|  | |  
+  | |___  | | | |___  | |  _| |_  | | | |___  | |  
+  |_____| |_| |_____| |_| |_____| |_| |_____| |_|  
+
+World selected: Marine
+Level selected: 1
+Player selected: 0
+Game configured: World=Marine, Level=1
+Loading assets...
+Assets loaded!
+Game initialized successfully!
+Window mode: WINDOWED
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Return (13)
+Changement d'état: 0 -> 5
+[DEBUG] Spawned 24 enemies
+[DEBUG] Touche pressée: Return (13)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Space (32)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Left (1073741904)
+[DEBUG] Touche pressée: Right (1073741903)
+[DEBUG] Touche pressée: Escape (27)
+Changement d'état: 5 -> 6
+[DEBUG] Touche pressée: Q (113)
+Game cleaned up successfully!
+
+Thanks for playing!
+2026-02-20 17:26:14 - SI3LN - ERROR - C++ stderr:
+Warning: Failed to load texture: assets/worlds/background_marine.jpg - Couldn't open assets/worlds/background_marine.jpg: No such file or directory
+2026-02-20 17:26:14 - SI3LN - INFO - Returning to Python UI...
+2026-02-20 17:26:14 - SI3LN - INFO - Window resized to 1813x1020
